@@ -1,0 +1,2 @@
+# To run the generate data script:
+qsub run_game.sh

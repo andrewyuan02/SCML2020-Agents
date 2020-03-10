@@ -1,2 +1,5 @@
 # To run the generate data script:
 qsub run_game.sh
+
+# To check on what the grid is currently running
+qstat

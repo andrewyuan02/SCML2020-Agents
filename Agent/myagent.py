@@ -135,7 +135,7 @@ class MyAgent(SCML2020Agent):
         self.data.production_cost = self.awi.profile.costs[0][self.data.process]
 
         self.data.last_day = (
-                self.data.n_processes - self.data.process
+            (self.data.n_processes - self.data.process)
         )  # Last day to buy inputs
 
         self.data.agents = self.awi._world.agents
@@ -217,8 +217,8 @@ class MyAgent(SCML2020Agent):
         """Called at every production step by the world
         Production scheduling and negotiations"""
         super().step()
-        self.negotiation_manager.step()
         self.propagate_inputs()  # Plan how much to buy at each step
+        self.negotiation_manager.step()
 
         print("Current step:", self.get_current_step())
 
@@ -264,12 +264,7 @@ class MyAgent(SCML2020Agent):
     ) -> None:
         """Called when a negotiation the agent is a party of ends with
         agreement"""
-        print(
-            "NEGOTIATION SUCCEEDED:",
-            self.get_current_step(),
-            "Contract negotiation succeeded",
-            contract,
-        )
+        # print("NEGOTIATION SUCCEEDED:", self.get_current_step(), "Contract negotiation succeeded", contract)
 
     def on_contract_executed(self, contract: Contract) -> None:
         """Called when a contract executes successfully and fully"""
@@ -466,6 +461,7 @@ class MyAgent(SCML2020Agent):
 
         Produce as much as you can while checking input count and available money
         """
+        print("production is called")
         input_count = self.get_input_inventory()
         balance = self.plan.available_money
         pay_count = int(
@@ -473,12 +469,6 @@ class MyAgent(SCML2020Agent):
         )  # How many can you produce with infinite production capacity
         scheduled_count = min(input_count, pay_count, self.data.n_lines)
 
-        surplus = (
-            scheduled_count - self.data.n_lines
-            if scheduled_count > self.data.n_lines
-            else 0
-        )
-        self.plan.expected_input[self.get_current_step() + 1] += surplus
 
         self.plan.available_output += scheduled_count
         self.plan.available_money -= scheduled_count * self.data.production_cost

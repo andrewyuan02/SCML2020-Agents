@@ -60,6 +60,8 @@ from negmas import (
     Negotiator,
     SAONegotiator,
 )
+
+
 from negmas.helpers import get_class, humanize_time
 from scml.scml2020 import AWI, SCML2020Agent, SCML2020World
 from scml.scml2020.agents import (
@@ -82,7 +84,6 @@ from utils import *
 def update_list(target_list: List[int], start_index: int, change: int):
     for i in range(start_index, len(target_list)):
         target_list[i] += change
-
 
 
 
@@ -172,7 +173,7 @@ class MyAgent(SCML2020Agent):
 
         self.plan.min_sell_price = output_catalog_price  # TODO: Predict
         self.plan.max_sell_price = (
-                self.data.catalog_price_list[self.data.process] * 2
+                output_catalog_price * 2 - 1
         )  # TODO: Predict?
 
         # ================================
@@ -219,6 +220,7 @@ class MyAgent(SCML2020Agent):
         super().step()
         self.propagate_inputs()  # Plan how much to buy at each step
         self.negotiation_manager.step()
+        self.schedule_production()
 
         print("Current step:", self.get_current_step())
 
@@ -374,11 +376,13 @@ class MyAgent(SCML2020Agent):
 
     def _sign_sell_contracts(self, sell_contracts, available_output):
         # returns sell contract indexes which are to be signed
-        if available_output is 0:
+        if len(sell_contracts) == 0 or available_output == 0:
             return []
         dp = len(sell_contracts) * [
             ((available_output + 1) * [None])
         ]  # initialize matrix
+
+        # print('DP:', len(dp), len(dp[0]), '\nParam:', len(sell_contracts), available_output)
 
         profit, signed_contracts = self._solve_knapsack(
             sell_contracts, dp, len(sell_contracts) - 1, available_output
@@ -387,18 +391,20 @@ class MyAgent(SCML2020Agent):
         return signed_contracts
 
     def _solve_knapsack(self, sell_contracts, dp, index, available_output):
+
         if dp[index][available_output] is not None:
             return dp[index][available_output]
 
         quantity = sell_contracts[index][0].agreement["quantity"]
+        unit_price = sell_contracts[index][0].agreement["unit_price"]
         value = (
-                sell_contracts[index][0].agreement["unit_price"] * quantity
+                unit_price * quantity
         )  # how much is the contract worth
         time = sell_contracts[index][0].agreement["time"]
 
         if index < 0 or available_output == 0:
             result = (0, [])
-        elif quantity > available_output:  # Not enough inputs
+        elif quantity > available_output or unit_price < self.plan.min_sell_price:  # Not enough inputs or too cheap
             result = self._solve_knapsack(
                 sell_contracts, dp, index - 1, available_output
             )
@@ -406,10 +412,11 @@ class MyAgent(SCML2020Agent):
             profit1, signed1 = self._solve_knapsack(
                 sell_contracts, dp, index - 1, available_output
             )  # don't sign
-            profit2, signed2 = value + self._solve_knapsack(
+            profit2, signed2 = self._solve_knapsack(
                 sell_contracts, dp, index - 1, available_output - quantity
             )  # sign
 
+            profit2 += value
             signed2 = copy.deepcopy(signed2)
             signed2.append(sell_contracts[index][1])
 
@@ -452,6 +459,21 @@ class MyAgent(SCML2020Agent):
     # Production Callbacks
     # ====================
 
+    def schedule_production(self):
+        commands = self.get_commands()[self.get_current_step()]
+        input_count = self.get_input_inventory()
+        balance = self.plan.available_money
+        pay_count = int(
+            balance / self.data.production_cost
+        )  # How many can you produce with infinite production capacity
+        scheduled_count = min(input_count, pay_count, self.data.n_lines)
+
+        self.plan.available_output += scheduled_count
+        self.plan.available_money -= scheduled_count * self.data.production_cost
+
+        for i in range(scheduled_count):
+            commands[i] = self.data.process
+
     def confirm_production(
             self, commands: np.ndarray, balance: int, inventory: np.ndarray
     ) -> np.ndarray:
@@ -461,21 +483,7 @@ class MyAgent(SCML2020Agent):
 
         Produce as much as you can while checking input count and available money
         """
-        print("production is called")
-        input_count = self.get_input_inventory()
-        balance = self.plan.available_money
-        pay_count = int(
-            balance / self.data.production_cost
-        )  # How many can you produce with infinite production capacity
-        scheduled_count = min(input_count, pay_count, self.data.n_lines)
-
-
-        self.plan.available_output += scheduled_count
-        self.plan.available_money -= scheduled_count * self.data.production_cost
-
-        for i in range(scheduled_count):
-            commands[i] = self.data.process
-        return commands
+        pass  # Not used anymore
 
     def on_failures(self, failures: List[Failure]) -> None:
         """Called when production fails. If you are careful in
@@ -512,8 +520,8 @@ competitors = [
         DecentralizingAgent,
         IndDecentralizingAgent,
         MovingRangeAgent,
-        # BuyCheapSellExpensiveAgent,
-        # RandomAgent,
+        BuyCheapSellExpensiveAgent,
+        RandomAgent,
 ]
 
 
@@ -548,7 +556,7 @@ def run(n_steps=20, ):
 def run_tournament(
         competition="std",
         reveal_names=True,
-        n_steps=20,
+        n_steps=50,
         n_configs=2,
         max_n_worlds_per_config=None,
         n_runs_per_world=1,
@@ -575,14 +583,7 @@ def run_tournament(
         - To speed it up, use a smaller `n_step` value
 
     """
-    competitors = [
-        MyAgent,
-        DecentralizingAgent,
-        IndDecentralizingAgent,
-        MovingRangeAgent,
-        # BuyCheapSellExpensiveAgent,
-        # RandomAgent,
-    ]
+
     start = time.perf_counter()
     if competition == "std":
         results = anac2020_std(
@@ -631,8 +632,8 @@ def run_single_session():
     fig.show()
 
 def main():
-    # run()
-    run_single_session()
+    run()
+    # run_single_session()
     print("Finished...")
 
 

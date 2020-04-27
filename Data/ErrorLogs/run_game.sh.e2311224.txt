@@ -1,0 +1,42 @@
+Unable to init server: Could not connect: Connection refused
+Unable to init server: Could not connect: Connection refused
+
+(kgenerate.py:22243): Gdk-CRITICAL **: 00:05:23.186: gdk_cursor_new_for_display: assertion 'GDK_IS_DISPLAY (display)' failed
+
+(kgenerate.py:22243): Gdk-CRITICAL **: 00:05:23.192: gdk_cursor_new_for_display: assertion 'GDK_IS_DISPLAY (display)' failed
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/multiprocessing/pool.py", line 121, in worker
+    result = (True, func(*args, **kwds))
+  File "/usr/lib/python3.7/multiprocessing/pool.py", line 44, in mapstar
+    return list(map(*args))
+  File "/gpfs/main/home/jtsatsar/scml20/kgenerate.py", line 41, in computeHelper
+    world.run()
+  File "/home/jtsatsar/.local/lib/python3.7/site-packages/negmas/situated.py", line 3016, in run
+    if not self.step():
+  File "/home/jtsatsar/.local/lib/python3.7/site-packages/negmas/situated.py", line 2926, in step
+    operation_map[operation]()
+  File "/home/jtsatsar/.local/lib/python3.7/site-packages/negmas/situated.py", line 2902, in _execute_contracts
+    resolution,
+  File "/home/jtsatsar/.local/lib/python3.7/site-packages/negmas/situated.py", line 2673, in call
+    raise e
+  File "/home/jtsatsar/.local/lib/python3.7/site-packages/negmas/situated.py", line 2667, in call
+    return method(*args, **kwargs)
+  File "/gpfs/main/home/jtsatsar/scml20/myagent.py", line 288, in on_contract_breached
+    assert False, "You breached contract?!?!?"
+AssertionError: You breached contract?!?!?
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/gpfs/main/home/jtsatsar/scml20/kgenerate.py", line 52, in <module>
+    compute(trials)
+  File "/gpfs/main/home/jtsatsar/scml20/kgenerate.py", line 46, in compute
+    pool.map(computeHelper, n_trials)
+  File "/usr/lib/python3.7/multiprocessing/pool.py", line 268, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/usr/lib/python3.7/multiprocessing/pool.py", line 657, in get
+    raise self._value
+AssertionError: You breached contract?!?!?

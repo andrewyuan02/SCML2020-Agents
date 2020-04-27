@@ -1,0 +1,986 @@
+Current step: 0
+CONTRACT BREACH: 03MyA@1, 00Buy@0 agreed on {'quantity': 8, 'time': 1, 'unit_price': 9} [id 7fd0a11a-4ff4-4660-840a-09e889ae6b77]
+CONTRACT BREACH: 03MyA@1, 01Buy@0 agreed on {'quantity': 8, 'time': 1, 'unit_price': 9} [id 52dd76a6-fa8d-4a4b-9c29-3e7f67c481d9]
+Current step: 1
+CONTRACT BREACH: 03MyA@1, 01Buy@0 agreed on {'quantity': 7, 'time': 2, 'unit_price': 9} [id 3c713c14-9d51-4bae-9426-0e2ded7d3bdc]
+CONTRACT BREACH: 03MyA@1, 00Buy@0 agreed on {'quantity': 7, 'time': 2, 'unit_price': 10} [id 1cfdf459-b5fb-4157-936b-c220fa3c13ca]
+Current step: 2
+Current step: 3
+Current step: 4
+CONTRACT EXECUTED: BUY: False 03MyA@1, 05Buy@2 agreed on {'quantity': 14, 'time': 5, 'unit_price': 43} [id c36b1494-8f6b-42f2-b972-d156e0d3789a]
+Current step: 5
+Current step: 6
+Current step: 7
+CONTRACT EXECUTED: BUY: False 03MyA@1, 04Dec@2 agreed on {'quantity': 7, 'time': 8, 'unit_price': 42} [id c1ad26be-b0e5-4d2a-a48a-694783b95917]
+Current step: 8
+CONTRACT EXECUTED: BUY: False 03MyA@1, 05Buy@2 agreed on {'quantity': 9, 'time': 9, 'unit_price': 42} [id 5f4befd5-2796-4c9c-a74c-b8486aecc0ce]
+Current step: 9
+Current step: 10
+Current step: 11
+Current step: 12
+Current step: 13
+Current step: 14
+Current step: 15
+Current step: 16
+Current step: 17
+Current step: 18
+Current step: 19
+Current step: 20
+Current step: 21
+Current step: 22
+Current step: 23
+Current step: 24
+Current step: 25
+Current step: 26
+Current step: 27
+Current step: 28
+Current step: 29
+Current step: 30
+Current step: 31
+Current step: 32
+Current step: 33
+Current step: 34
+Current step: 35
+Current step: 36
+Current step: 37
+Current step: 38
+Current step: 39
+Current step: 40
+Current step: 41
+BANKRUPT: 02Ran@1 went bankrupt :( quantity: [] compensation money: 0
+Current step: 42
+Current step: 43
+Current step: 44
+Current step: 45
+Current step: 46
+Current step: 47
+Current step: 48
+Current step: 49
+Current step: 0
+CONTRACT BREACH: 04MyA@2, 03Buy@1 agreed on {'quantity': 6, 'time': 1, 'unit_price': 11} [id 1f9cfdcd-d22a-4f76-84af-179660f4efe2]
+Current step: 1
+Current step: 2
+Current step: 3
+Current step: 4
+Current step: 5
+Current step: 6
+Current step: 7
+Current step: 8
+Current step: 9
+Current step: 10
+Current step: 11
+Current step: 12
+Current step: 13
+Current step: 14
+Current step: 15
+Current step: 16
+Current step: 17
+Current step: 18
+Current step: 19
+Current step: 20
+Current step: 21
+CONTRACT EXECUTED: BUY: False BUYER, 04MyA@2 agreed on {'time': 22, 'quantity': 5, 'unit_price': 35} [id 9148bf2f-a148-4a96-8bd2-970526b563e8]
+CONTRACT EXECUTED: BUY: False BUYER, 04MyA@2 agreed on {'time': 22, 'quantity': 1, 'unit_price': 35} [id 97070a6c-1d97-4bd9-b6ab-680acd7ed1d8]
+Current step: 22
+Current step: 23
+Current step: 24
+Current step: 25
+Current step: 26
+Current step: 27
+Current step: 28
+Current step: 29
+Current step: 30
+Current step: 31
+Current step: 32
+Current step: 33
+Current step: 34
+Current step: 35
+Current step: 36
+Current step: 37
+BANKRUPT: 00Ran@0 went bankrupt :( quantity: [] compensation money: 0
+Current step: 38
+Current step: 39
+Current step: 40
+Current step: 41
+Current step: 42
+Current step: 43
+Current step: 44
+Current step: 45
+Current step: 46
+Current step: 47
+Current step: 48
+Current step: 49
+Current step: 0
+CONTRACT BREACH: 02MyA@1, 01Buy@0 agreed on {'quantity': 3, 'time': 1, 'unit_price': 8} [id 51a9c057-c0d2-45e2-ba77-9285cb151ba7]
+Current step: 1
+CONTRACT BREACH: 02MyA@1, 01Buy@0 agreed on {'quantity': 3, 'time': 2, 'unit_price': 8} [id ec0ef297-acc4-4e7e-9db8-19e536ddf676]
+Current step: 2
+Current step: 3
+CONTRACT EXECUTED: BUY: False 02MyA@1, 05Buy@2 agreed on {'quantity': 1, 'time': 4, 'unit_price': 25} [id 187f4eeb-8c65-4917-959f-8c5d80493747]
+Current step: 4
+CONTRACT EXECUTED: BUY: False 02MyA@1, 04Buy@2 agreed on {'quantity': 1, 'time': 5, 'unit_price': 25} [id 57279074-177a-444b-b793-5f9e796558e9]
+Current step: 5
+Current step: 6
+Current step: 7
+CONTRACT EXECUTED: BUY: False 02MyA@1, 05Buy@2 agreed on {'quantity': 1, 'time': 8, 'unit_price': 25} [id 19959280-9bb8-4a37-9417-025e163d1ea2]
+Current step: 8
+CONTRACT EXECUTED: BUY: False 00Dec@0, 02MyA@1 agreed on {'quantity': 2, 'time': 9, 'unit_price': 23} [id f3e3045d-c1af-48fa-a02f-2cccfefba92c]
+Current step: 9
+Current step: 10
+CONTRACT EXECUTED: BUY: False 02MyA@1, 04Buy@2 agreed on {'quantity': 1, 'time': 11, 'unit_price': 25} [id 6ea5e388-03f9-4b96-bb6b-22377685e68a]
+CONTRACT EXECUTED: BUY: False 02MyA@1, 05Buy@2 agreed on {'quantity': 1, 'time': 11, 'unit_price': 25} [id a9396abb-6500-4449-8299-88b8e10c04dc]
+Current step: 11
+BANKRUPT: 03Ran@1 went bankrupt :( quantity: [] compensation money: 0
+CONTRACT EXECUTED: BUY: False 02MyA@1, 04Buy@2 agreed on {'quantity': 1, 'time': 12, 'unit_price': 25} [id 76528f3f-f4bb-4423-aabd-20d7ab554493]
+Current step: 12
+Current step: 13
+Current step: 14
+Current step: 15
+Current step: 16
+Current step: 17
+Current step: 18
+Current step: 19
+Current step: 20
+Current step: 21
+Current step: 22
+Current step: 23
+Current step: 24
+Current step: 25
+Current step: 26
+Current step: 27
+Current step: 28
+Current step: 29
+Current step: 30
+Current step: 31
+Current step: 32
+Current step: 33
+Current step: 34
+Current step: 35
+Current step: 36
+Current step: 37
+Current step: 38
+Current step: 39
+Current step: 40
+Current step: 41
+Current step: 42
+Current step: 43
+Current step: 44
+Current step: 45
+Current step: 46
+Current step: 47
+Current step: 48
+Current step: 49
+CONTRACT EXECUTED: BUY: True 00MyA@0, SELLER agreed on {'time': 0, 'quantity': 3, 'unit_price': 10} [id cd34cc88-617e-4223-80b1-0d5477391ab1]
+Current step: 0
+CONTRACT EXECUTED: BUY: True 00MyA@0, SELLER agreed on {'time': 1, 'quantity': 4, 'unit_price': 10} [id c9b6a212-a179-4139-b4ae-0dc6c2a25f89]
+Current step: 1
+Current step: 2
+CONTRACT EXECUTED: BUY: True 00MyA@0, SELLER agreed on {'time': 3, 'quantity': 4, 'unit_price': 10} [id 5068abb9-43ff-4518-9c48-51de2ea0a45f]
+CONTRACT EXECUTED: BUY: False 00MyA@0, 02Buy@1 agreed on {'quantity': 2, 'time': 3, 'unit_price': 31} [id 46194c0f-35ea-4d46-b380-44b8c7ce3210]
+Current step: 3
+Current step: 4
+Current step: 5
+Current step: 6
+CONTRACT EXECUTED: BUY: False 00MyA@0, 03Dec@1 agreed on {'quantity': 1, 'time': 7, 'unit_price': 31} [id b72d2723-4acb-4af3-a6f5-9b2288324d9f]
+Current step: 7
+Current step: 8
+CONTRACT EXECUTED: BUY: False 00MyA@0, 03Dec@1 agreed on {'quantity': 1, 'time': 9, 'unit_price': 31} [id b7759dbc-3d46-46b0-b584-6f1e4fe7f9bc]
+Current step: 9
+CONTRACT EXECUTED: BUY: False 00MyA@0, 03Dec@1 agreed on {'quantity': 7, 'time': 10, 'unit_price': 30} [id e557656f-7332-43d3-830b-278bbe284ac9]
+Current step: 10
+Current step: 11
+Current step: 12
+Current step: 13
+Current step: 14
+Current step: 15
+Current step: 16
+Current step: 17
+Current step: 18
+Current step: 19
+Current step: 20
+Current step: 21
+Current step: 22
+Current step: 23
+Current step: 24
+Current step: 25
+Current step: 26
+Current step: 27
+Current step: 28
+BANKRUPT: 02Buy@1 went bankrupt :( quantity: [] compensation money: 0
+Current step: 29
+Current step: 30
+Current step: 31
+Current step: 32
+Current step: 33
+Current step: 34
+Current step: 35
+Current step: 36
+Current step: 37
+Current step: 38
+Current step: 39
+Current step: 40
+Current step: 41
+Current step: 42
+Current step: 43
+Current step: 44
+Current step: 45
+Current step: 46
+Current step: 47
+Current step: 48
+Current step: 49
+Current step: 0
+CONTRACT BREACH: 07MyA@3, 04Buy@2 agreed on {'quantity': 3, 'time': 1, 'unit_price': 19} [id c044241e-da12-4cdb-b8eb-0b240173c385]
+CONTRACT BREACH: 07MyA@3, 05Ran@2 agreed on {'quantity': 6, 'time': 1, 'unit_price': 4} [id 6d6c0e56-9eb4-4a1d-a5dd-dcc408f4b4e0]
+Current step: 1
+Current step: 2
+Current step: 3
+Current step: 4
+Current step: 5
+Current step: 6
+Current step: 7
+Current step: 8
+Current step: 9
+Current step: 10
+Current step: 11
+Current step: 12
+Current step: 13
+Current step: 14
+Current step: 15
+Current step: 16
+Current step: 17
+Current step: 18
+Current step: 19
+Current step: 20
+Current step: 21
+Current step: 22
+CONTRACT EXECUTED: BUY: False BUYER, 07MyA@3 agreed on {'time': 23, 'quantity': 4, 'unit_price': 44} [id 38f4be7a-7e40-44ad-afe4-3f0ba41c981b]
+CONTRACT EXECUTED: BUY: False BUYER, 07MyA@3 agreed on {'time': 23, 'quantity': 3, 'unit_price': 44} [id cdfcc94b-3ac8-4c97-ad13-d25912d0dcb9]
+Current step: 23
+Current step: 24
+Current step: 25
+CONTRACT EXECUTED: BUY: False BUYER, 07MyA@3 agreed on {'time': 26, 'quantity': 2, 'unit_price': 44} [id a0f1581e-4d8b-4b75-bb80-980a02feff82]
+Current step: 26
+Current step: 27
+Current step: 28
+Current step: 29
+Current step: 30
+Current step: 31
+Current step: 32
+Current step: 33
+Current step: 34
+Current step: 35
+Current step: 36
+Current step: 37
+Current step: 38
+Current step: 39
+Current step: 40
+Current step: 41
+Current step: 42
+Current step: 43
+Current step: 44
+Current step: 45
+Current step: 46
+Current step: 47
+Current step: 48
+Current step: 49
+Current step: 0
+CONTRACT BREACH: 02MyA@1, 01Ran@0 agreed on {'quantity': 8, 'time': 1, 'unit_price': 2} [id dc5a0614-94f0-4d1f-89e3-6c989518b60b]
+Current step: 1
+Current step: 2
+CONTRACT EXECUTED: BUY: True 02MyA@1, 00Dec@0 agreed on {'quantity': 8, 'time': 3, 'unit_price': 11} [id 3b60033a-143a-4810-a646-968ba6ce45a5]
+CONTRACT BREACH: 02MyA@1, 01Ran@0 agreed on {'quantity': 6, 'time': 3, 'unit_price': 3} [id df7fb7fb-e4cf-4140-a7d1-69aeb9324533]
+CONTRACT BREACH: 02MyA@1, 01Ran@0 agreed on {'quantity': 2, 'time': 3, 'unit_price': 2} [id ae91a0ec-bba4-46a7-94c9-4137b67fe2ad]
+Current step: 3
+Current step: 4
+CONTRACT EXECUTED: BUY: False 02MyA@1, 05Ran@2 agreed on {'quantity': 1, 'time': 5, 'unit_price': 45} [id aa4d9b6d-b896-4c3b-ad3d-904e64b6a3a3]
+Current step: 5
+Current step: 6
+CONTRACT EXECUTED: BUY: False 02MyA@1, 05Ran@2 agreed on {'quantity': 11, 'time': 7, 'unit_price': 43} [id 14801bed-c662-43c9-b175-c99dbdce639c]
+Current step: 7
+Current step: 8
+CONTRACT EXECUTED: BUY: False 02MyA@1, 05Ran@2 agreed on {'quantity': 6, 'time': 9, 'unit_price': 47} [id 9a1f1e58-cd8b-496a-8495-c4a1a5198253]
+Current step: 9
+Current step: 10
+CONTRACT EXECUTED: BUY: False 02MyA@1, 04Dec@2 agreed on {'quantity': 6, 'time': 11, 'unit_price': 36} [id a86c2d8d-68d1-4afc-b52d-6e648463aa9f]
+Current step: 11
+Current step: 12
+Current step: 13
+Current step: 14
+Current step: 15
+Current step: 16
+Current step: 17
+Current step: 18
+Current step: 19
+Current step: 20
+Current step: 21
+Current step: 22
+Current step: 23
+Current step: 24
+Current step: 25
+Current step: 26
+Current step: 27
+Current step: 28
+Current step: 29
+Current step: 30
+Current step: 31
+Current step: 32
+Current step: 33
+Current step: 34
+Current step: 35
+Current step: 36
+Current step: 37
+Current step: 38
+Current step: 39
+Current step: 40
+Current step: 41
+Current step: 42
+Current step: 43
+Current step: 44
+Current step: 45
+Current step: 46
+Current step: 47
+Current step: 48
+Current step: 49
+Current step: 0
+Current step: 1
+CONTRACT BREACH: 04MyA@2, 02Ran@1 agreed on {'quantity': 8, 'time': 2, 'unit_price': 2} [id 4e49de39-c234-498c-aff3-549b81e45116]
+CONTRACT BREACH: 04MyA@2, 03Buy@1 agreed on {'quantity': 2, 'time': 2, 'unit_price': 11} [id 3309569a-04b4-4cda-ba98-18b6c4b37d07]
+CONTRACT BREACH: 04MyA@2, 03Buy@1 agreed on {'quantity': 1, 'time': 2, 'unit_price': 11} [id 93557260-cae9-41aa-af93-f1cc4d6d39e2]
+CONTRACT BREACH: 04MyA@2, 02Ran@1 agreed on {'quantity': 3, 'time': 2, 'unit_price': 3} [id 4022fffc-1a3d-48b7-b207-37ba935ddc1d]
+Current step: 2
+Current step: 3
+Current step: 4
+Current step: 5
+Current step: 6
+CONTRACT EXECUTED: BUY: False 04MyA@2, 07Buy@3 agreed on {'quantity': 3, 'time': 7, 'unit_price': 47} [id 2bdd082d-ab94-4183-a25e-f6ecb198d0f8]
+Current step: 7
+Current step: 8
+CONTRACT EXECUTED: BUY: False 04MyA@2, 07Buy@3 agreed on {'quantity': 6, 'time': 9, 'unit_price': 48} [id f75fa849-ef72-4bdf-be44-60b83bd02a0d]
+Current step: 9
+Current step: 10
+CONTRACT EXECUTED: BUY: False 04MyA@2, 06Dec@3 agreed on {'quantity': 5, 'time': 11, 'unit_price': 48} [id 27fde5ff-50ed-4277-8c50-a85b60df2ab9]
+Current step: 11
+Current step: 12
+Current step: 13
+Current step: 14
+Current step: 15
+Current step: 16
+Current step: 17
+Current step: 18
+Current step: 19
+Current step: 20
+Current step: 21
+Current step: 22
+Current step: 23
+Current step: 24
+Current step: 25
+Current step: 26
+Current step: 27
+Current step: 28
+Current step: 29
+Current step: 30
+Current step: 31
+Current step: 32
+Current step: 33
+Current step: 34
+Current step: 35
+Current step: 36
+Current step: 37
+Current step: 38
+Current step: 39
+Current step: 40
+Current step: 41
+Current step: 42
+Current step: 43
+Current step: 44
+Current step: 45
+Current step: 46
+Current step: 47
+Current step: 48
+Current step: 49
+Current step: 0
+CONTRACT BREACH: 06MyA@3, 05Ran@2 agreed on {'quantity': 7, 'time': 1, 'unit_price': 3} [id 87839565-7a9f-427e-b43f-7872c99d01c1]
+CONTRACT BREACH: 06MyA@3, 04Ran@2 agreed on {'quantity': 9, 'time': 1, 'unit_price': 1} [id 257ee39c-30b9-4ded-9cbd-2be9c3fd3a05]
+Current step: 1
+Current step: 2
+Current step: 3
+Current step: 4
+Current step: 5
+Current step: 6
+Current step: 7
+Current step: 8
+Current step: 9
+Current step: 10
+Current step: 11
+Current step: 12
+Current step: 13
+Current step: 14
+Current step: 15
+Current step: 16
+Current step: 17
+Current step: 18
+Current step: 19
+Current step: 20
+Current step: 21
+Current step: 22
+CONTRACT EXECUTED: BUY: False BUYER, 06MyA@3 agreed on {'time': 23, 'quantity': 3, 'unit_price': 55} [id 1ec2fdf7-f77d-4d35-bf66-e24b994458ec]
+Current step: 23
+CONTRACT EXECUTED: BUY: False BUYER, 06MyA@3 agreed on {'time': 24, 'quantity': 5, 'unit_price': 55} [id a8f74a4d-15c3-4fbb-b775-6494de9b43e7]
+Current step: 24
+CONTRACT EXECUTED: BUY: False BUYER, 06MyA@3 agreed on {'time': 25, 'quantity': 8, 'unit_price': 55} [id 282af5e7-469a-4ed3-9a3c-c22bb0c92b18]
+Current step: 25
+Current step: 26
+Current step: 27
+Current step: 28
+Current step: 29
+Current step: 30
+Current step: 31
+Current step: 32
+Current step: 33
+Current step: 34
+Current step: 35
+Current step: 36
+Current step: 37
+Current step: 38
+Current step: 39
+Current step: 40
+Current step: 41
+Current step: 42
+Current step: 43
+Current step: 44
+Current step: 45
+Current step: 46
+Current step: 47
+Current step: 48
+Current step: 49
+Current step: 0
+Current step: 1
+CONTRACT BREACH: 02MyA@1, 01Ran@0 agreed on {'quantity': 3, 'time': 2, 'unit_price': 1} [id 6c12959f-fe9e-423d-bb73-15e4fd85dc86]
+CONTRACT BREACH: 02MyA@1, 00Ran@0 agreed on {'quantity': 10, 'time': 2, 'unit_price': 4} [id 3b938fa4-a840-4a70-93d5-355cb34f4cfe]
+CONTRACT BREACH: 02MyA@1, 01Ran@0 agreed on {'quantity': 2, 'time': 2, 'unit_price': 1} [id 024c998d-c7e9-41f5-bd18-64c26a45bebb]
+CONTRACT BREACH: 02MyA@1, 00Ran@0 agreed on {'quantity': 3, 'time': 2, 'unit_price': 1} [id 6ebb5a8f-0c26-43c5-b29c-00c283917492]
+Current step: 2
+Current step: 3
+CONTRACT EXECUTED: BUY: False 02MyA@1, 04Ran@2 agreed on {'quantity': 9, 'time': 4, 'unit_price': 40} [id 988e9c46-ebda-4b39-a1c2-b74ba3c516f4]
+Current step: 4
+Current step: 5
+Current step: 6
+Current step: 7
+Current step: 8
+CONTRACT EXECUTED: BUY: False 02MyA@1, 05Buy@2 agreed on {'quantity': 9, 'time': 9, 'unit_price': 33} [id cfaf7d86-6102-44f6-991d-877b380e3a9d]
+Current step: 9
+Current step: 10
+Current step: 11
+Current step: 12
+Current step: 13
+Current step: 14
+Current step: 15
+Current step: 16
+Current step: 17
+Current step: 18
+Current step: 19
+Current step: 20
+Current step: 21
+Current step: 22
+Current step: 23
+Current step: 24
+Current step: 25
+Current step: 26
+Current step: 27
+Current step: 28
+Current step: 29
+Current step: 30
+Current step: 31
+Current step: 32
+Current step: 33
+Current step: 34
+Current step: 35
+Current step: 36
+Current step: 37
+Current step: 38
+Current step: 39
+Current step: 40
+Current step: 41
+Current step: 42
+Current step: 43
+Current step: 44
+Current step: 45
+Current step: 46
+Current step: 47
+Current step: 48
+Current step: 49
+Current step: 50
+Current step: 51
+Current step: 52
+Current step: 53
+Current step: 54
+Current step: 55
+Current step: 56
+Current step: 57
+Current step: 58
+Current step: 59
+Current step: 60
+Current step: 61
+Current step: 62
+Current step: 63
+Current step: 64
+Current step: 65
+Current step: 66
+Current step: 67
+Current step: 68
+Current step: 69
+Current step: 70
+Current step: 71
+Current step: 72
+Current step: 73
+Current step: 74
+Current step: 75
+Current step: 76
+Current step: 77
+Current step: 78
+Current step: 79
+Current step: 80
+Current step: 81
+Current step: 82
+Current step: 83
+Current step: 84
+Current step: 85
+Current step: 86
+Current step: 87
+Current step: 88
+Current step: 89
+Current step: 90
+Current step: 91
+Current step: 92
+Current step: 93
+Current step: 94
+Current step: 95
+Current step: 96
+Current step: 97
+Current step: 98
+Current step: 99
+Current step: 0
+CONTRACT BREACH: 05MyA@2, 03Ran@1 agreed on {'quantity': 2, 'time': 1, 'unit_price': 3} [id e064ef2d-2105-451c-9545-4171de9de330]
+Current step: 1
+Current step: 2
+Current step: 3
+Current step: 4
+Current step: 5
+Current step: 6
+Current step: 7
+Current step: 8
+Current step: 9
+Current step: 10
+Current step: 11
+CONTRACT EXECUTED: BUY: False 02Dec@1, 05MyA@2 agreed on {'quantity': 1, 'time': 12, 'unit_price': 33} [id db8761bc-d1e5-4aac-9ae9-8ece7742ae9e]
+Current step: 12
+Current step: 13
+CONTRACT EXECUTED: BUY: False 02Dec@1, 05MyA@2 agreed on {'quantity': 1, 'time': 14, 'unit_price': 33} [id d75c1da7-f03d-4a2d-ac0d-4d29fe470d78]
+Current step: 14
+Current step: 15
+Current step: 16
+Current step: 17
+CONTRACT EXECUTED: BUY: False 02Dec@1, 05MyA@2 agreed on {'quantity': 1, 'time': 18, 'unit_price': 33} [id 6b4109d1-807a-4c79-b368-feff28968e78]
+Current step: 18
+Current step: 19
+Current step: 20
+CONTRACT EXECUTED: BUY: False 02Dec@1, 05MyA@2 agreed on {'quantity': 1, 'time': 21, 'unit_price': 33} [id 64cb701e-37a2-4ce6-8a95-d5095936b588]
+Current step: 21
+Current step: 22
+Current step: 23
+CONTRACT EXECUTED: BUY: False 02Dec@1, 05MyA@2 agreed on {'quantity': 1, 'time': 24, 'unit_price': 33} [id ce18ff1f-97f8-47c5-ae19-f05cc72079a1]
+Current step: 24
+Current step: 25
+Current step: 26
+Current step: 27
+Current step: 28
+Current step: 29
+Current step: 30
+Current step: 31
+CONTRACT EXECUTED: BUY: False 02Dec@1, 05MyA@2 agreed on {'quantity': 1, 'time': 32, 'unit_price': 33} [id db01c007-5ad6-485b-9e9a-0c6db88d9174]
+Current step: 32
+Current step: 33
+Current step: 34
+CONTRACT EXECUTED: BUY: False 02Dec@1, 05MyA@2 agreed on {'quantity': 1, 'time': 35, 'unit_price': 33} [id 4ea3cf17-85b6-4261-a707-cde36d3a95b0]
+Current step: 35
+Current step: 36
+Current step: 37
+Current step: 38
+Current step: 39
+Current step: 40
+CONTRACT EXECUTED: BUY: False 02Dec@1, 05MyA@2 agreed on {'quantity': 1, 'time': 41, 'unit_price': 33} [id b3f681c6-0dde-467d-812a-313f236aef64]
+Current step: 41
+Current step: 42
+CONTRACT EXECUTED: BUY: False 02Dec@1, 05MyA@2 agreed on {'quantity': 1, 'time': 43, 'unit_price': 33} [id dc57a6f1-b342-4123-9a4a-47ccaf31af7c]
+Current step: 43
+Current step: 44
+Current step: 45
+Current step: 46
+Current step: 47
+Current step: 48
+Current step: 49
+Current step: 50
+Current step: 51
+CONTRACT EXECUTED: BUY: False 02Dec@1, 05MyA@2 agreed on {'quantity': 1, 'time': 52, 'unit_price': 33} [id b90b489e-1903-46a0-a407-703fe2cf6d4e]
+Current step: 52
+Current step: 53
+CONTRACT EXECUTED: BUY: False 02Dec@1, 05MyA@2 agreed on {'quantity': 1, 'time': 54, 'unit_price': 33} [id 54422923-26d5-4559-ba9d-437767bc0e27]
+Current step: 54
+Current step: 55
+Current step: 56
+Current step: 57
+Current step: 58
+Current step: 59
+Current step: 60
+Current step: 61
+Current step: 62
+CONTRACT EXECUTED: BUY: False 02Dec@1, 05MyA@2 agreed on {'quantity': 1, 'time': 63, 'unit_price': 33} [id 92cea018-0a6a-48cb-b893-24cda47169a5]
+Current step: 63
+Current step: 64
+CONTRACT EXECUTED: BUY: False 02Dec@1, 05MyA@2 agreed on {'quantity': 1, 'time': 65, 'unit_price': 33} [id 613a10e8-18c6-4312-8215-687cbf20ada9]
+Current step: 65
+Current step: 66
+Current step: 67
+Current step: 68
+CONTRACT EXECUTED: BUY: False 02Dec@1, 05MyA@2 agreed on {'quantity': 1, 'time': 69, 'unit_price': 33} [id 39e51972-35af-4c56-b0f8-0ec059854ddb]
+Current step: 69
+Current step: 70
+CONTRACT EXECUTED: BUY: False 02Dec@1, 05MyA@2 agreed on {'quantity': 1, 'time': 71, 'unit_price': 33} [id 5a0a355a-1b9b-4b04-8dda-e4b507970799]
+Current step: 71
+Current step: 72
+Current step: 73
+Current step: 74
+CONTRACT EXECUTED: BUY: False 02Dec@1, 05MyA@2 agreed on {'quantity': 1, 'time': 75, 'unit_price': 33} [id 75205739-19ad-49e1-ab72-548441c55e1d]
+Current step: 75
+Current step: 76
+Current step: 77
+Current step: 78
+Current step: 79
+Current step: 80
+CONTRACT EXECUTED: BUY: False 02Dec@1, 05MyA@2 agreed on {'quantity': 1, 'time': 81, 'unit_price': 33} [id a23ebcb4-72fe-4bc0-8acf-53fea087a92a]
+Current step: 81
+CONTRACT EXECUTED: BUY: False 02Dec@1, 05MyA@2 agreed on {'quantity': 1, 'time': 82, 'unit_price': 33} [id 43369851-926f-4243-8595-4067ec87f5ce]
+Current step: 82
+Current step: 83
+Current step: 84
+Current step: 85
+Current step: 86
+CONTRACT EXECUTED: BUY: False 02Dec@1, 05MyA@2 agreed on {'quantity': 1, 'time': 87, 'unit_price': 33} [id a9b8bc32-fad7-4298-9015-80e974f2eca4]
+Current step: 87
+CONTRACT EXECUTED: BUY: False 02Dec@1, 05MyA@2 agreed on {'quantity': 1, 'time': 88, 'unit_price': 33} [id 605fb02f-217e-4b30-b13e-073e9179f87c]
+Current step: 88
+Current step: 89
+Current step: 90
+Current step: 91
+Current step: 92
+Current step: 93
+Current step: 94
+Current step: 95
+Current step: 96
+Current step: 97
+Current step: 98
+Current step: 99
+Current step: 0
+CONTRACT BREACH: 04MyA@2, 02Ran@1 agreed on {'quantity': 2, 'time': 1, 'unit_price': 1} [id 14e3678f-4d5a-4130-84d7-d681554c4ce2]
+CONTRACT BREACH: 04MyA@2, 03Buy@1 agreed on {'quantity': 5, 'time': 1, 'unit_price': 13} [id ebc11a48-5e17-4f1b-8828-ca442824670b]
+Current step: 1
+Current step: 2
+Current step: 3
+Current step: 4
+Current step: 5
+Current step: 6
+Current step: 7
+Current step: 8
+Current step: 9
+Current step: 10
+Current step: 11
+Current step: 12
+Current step: 13
+Current step: 14
+Current step: 15
+Current step: 16
+Current step: 17
+Current step: 18
+Current step: 19
+Current step: 20
+Current step: 21
+Current step: 22
+Current step: 23
+Current step: 24
+Current step: 25
+Current step: 26
+Current step: 27
+Current step: 28
+Current step: 29
+Current step: 30
+Current step: 31
+Current step: 32
+Current step: 33
+Current step: 34
+Current step: 35
+Current step: 36
+Current step: 37
+Current step: 38
+Current step: 39
+Current step: 40
+CONTRACT EXECUTED: BUY: False BUYER, 04MyA@2 agreed on {'time': 41, 'quantity': 3, 'unit_price': 40} [id 1bd77988-a782-4f80-913c-8870fbf3f914]
+Current step: 41
+CONTRACT EXECUTED: BUY: False BUYER, 04MyA@2 agreed on {'time': 42, 'quantity': 3, 'unit_price': 40} [id 3ec882c3-9765-4dff-81a9-bf760ea01f91]
+CONTRACT EXECUTED: BUY: False BUYER, 04MyA@2 agreed on {'time': 42, 'quantity': 1, 'unit_price': 40} [id 61416da6-ae11-4960-9356-5fd88537bc7d]
+Current step: 42
+Current step: 43
+Current step: 44
+Current step: 45
+Current step: 46
+Current step: 47
+Current step: 48
+Current step: 49
+Current step: 50
+Current step: 51
+Current step: 52
+Current step: 53
+Current step: 54
+Current step: 55
+Current step: 56
+Current step: 57
+Current step: 58
+Current step: 59
+Current step: 60
+Current step: 61
+Current step: 62
+Current step: 63
+Current step: 64
+Current step: 65
+Current step: 66
+Current step: 67
+Current step: 68
+Current step: 69
+Current step: 70
+Current step: 71
+Current step: 72
+Current step: 73
+Current step: 74
+Current step: 75
+Current step: 76
+Current step: 77
+Current step: 78
+Current step: 79
+Current step: 80
+Current step: 81
+Current step: 82
+Current step: 83
+Current step: 84
+Current step: 85
+Current step: 86
+Current step: 87
+Current step: 88
+Current step: 89
+Current step: 90
+Current step: 91
+Current step: 92
+Current step: 93
+Current step: 94
+Current step: 95
+Current step: 96
+Current step: 97
+Current step: 98
+Current step: 99
+Current step: 0
+CONTRACT BREACH: 03MyA@1, 01Ran@0 agreed on {'quantity': 1, 'time': 1, 'unit_price': 1} [id f6bdd0c9-0487-4512-91cf-51d6561e902b]
+Current step: 1
+CONTRACT BREACH: 03MyA@1, 00Ran@0 agreed on {'quantity': 5, 'time': 2, 'unit_price': 3} [id dcec1127-0559-495d-8981-c37590403f24]
+CONTRACT BREACH: 03MyA@1, 00Ran@0 agreed on {'quantity': 7, 'time': 2, 'unit_price': 3} [id 58a3e370-9130-488b-9ac2-0422e328079d]
+Current step: 2
+CONTRACT EXECUTED: BUY: False 03MyA@1, 05Ran@2 agreed on {'quantity': 1, 'time': 3, 'unit_price': 43} [id c3c64b55-0ec7-4369-aa02-d6bb45fabe3d]
+Current step: 3
+Current step: 4
+CONTRACT EXECUTED: BUY: False 03MyA@1, 05Ran@2 agreed on {'quantity': 10, 'time': 5, 'unit_price': 38} [id c4eb967c-746b-4aa2-aae1-448be7864e0b]
+Current step: 5
+CONTRACT EXECUTED: BUY: False 03MyA@1, 05Ran@2 agreed on {'quantity': 2, 'time': 6, 'unit_price': 44} [id 1d232f4d-e19a-44a2-aecd-fb62bb86dda4]
+Current step: 6
+Current step: 7
+Current step: 8
+Current step: 9
+Current step: 10
+Current step: 11
+Current step: 12
+Current step: 13
+Current step: 14
+Current step: 15
+Current step: 16
+Current step: 17
+Current step: 18
+Current step: 19
+Current step: 20
+Current step: 21
+Current step: 22
+Current step: 23
+Current step: 24
+Current step: 25
+Current step: 26
+Current step: 27
+Current step: 28
+Current step: 29
+Current step: 30
+Current step: 31
+Current step: 32
+Current step: 33
+Current step: 34
+Current step: 35
+Current step: 36
+Current step: 37
+Current step: 38
+Current step: 39
+Current step: 40
+Current step: 41
+Current step: 42
+Current step: 43
+Current step: 44
+Current step: 45
+Current step: 46
+Current step: 47
+Current step: 48
+Current step: 49
+Current step: 50
+Current step: 51
+Current step: 52
+Current step: 53
+Current step: 54
+Current step: 55
+Current step: 56
+Current step: 57
+Current step: 58
+Current step: 59
+Current step: 60
+Current step: 61
+Current step: 62
+Current step: 63
+Current step: 64
+Current step: 65
+Current step: 66
+Current step: 67
+Current step: 68
+Current step: 69
+Current step: 70
+Current step: 71
+Current step: 72
+Current step: 73
+Current step: 74
+Current step: 75
+Current step: 76
+Current step: 77
+Current step: 78
+Current step: 79
+Current step: 80
+Current step: 81
+Current step: 82
+Current step: 83
+Current step: 84
+Current step: 85
+Current step: 86
+Current step: 87
+Current step: 88
+Current step: 89
+Current step: 90
+Current step: 91
+Current step: 92
+Current step: 93
+Current step: 94
+Current step: 95
+Current step: 96
+Current step: 97
+Current step: 98
+Current step: 99
+CONTRACT EXECUTED: BUY: True 00MyA@0, SELLER agreed on {'time': 0, 'quantity': 3, 'unit_price': 10} [id 0670e403-fea0-4c0c-bde3-b5309fc073f1]
+CONTRACT EXECUTED: BUY: True 00MyA@0, SELLER agreed on {'time': 0, 'quantity': 1, 'unit_price': 10} [id 35c2d55c-cdaa-434d-92ac-3b8b8bb37ab9]
+Current step: 0
+CONTRACT EXECUTED: BUY: True 00MyA@0, SELLER agreed on {'time': 1, 'quantity': 1, 'unit_price': 10} [id c7d8f39f-a817-419f-ab6a-eef884edfe0e]
+CONTRACT EXECUTED: BUY: True 00MyA@0, SELLER agreed on {'time': 1, 'quantity': 2, 'unit_price': 10} [id 63cea5a4-3cea-45d0-81ae-2634014691c0]
+CONTRACT EXECUTED: BUY: True 00MyA@0, SELLER agreed on {'time': 1, 'quantity': 2, 'unit_price': 10} [id b15a55fa-0a52-49ec-a621-f0f338c2e123]
+Current step: 1
+CONTRACT EXECUTED: BUY: True 00MyA@0, SELLER agreed on {'time': 2, 'quantity': 1, 'unit_price': 10} [id 1c807cb0-767f-4866-958a-7e8ace5166ed]
+CONTRACT EXECUTED: BUY: True 00MyA@0, SELLER agreed on {'time': 2, 'quantity': 2, 'unit_price': 10} [id 23fbc956-e2a4-497e-b7d5-5bc63e14eec1]
+CONTRACT EXECUTED: BUY: True 00MyA@0, SELLER agreed on {'time': 2, 'quantity': 1, 'unit_price': 10} [id db2e5f79-d870-41a0-bbc6-d2613928bbe9]
+Current step: 2
+CONTRACT EXECUTED: BUY: True 00MyA@0, SELLER agreed on {'time': 3, 'quantity': 1, 'unit_price': 10} [id e783c0de-efad-4dfe-a578-c03170148cba]
+CONTRACT EXECUTED: BUY: False 00MyA@0, 03Buy@1 agreed on {'quantity': 5, 'time': 3, 'unit_price': 17} [id c51c278b-15e5-438b-9b1a-81ac036a512d]
+Current step: 3
+CONTRACT EXECUTED: BUY: True 00MyA@0, SELLER agreed on {'time': 4, 'quantity': 1, 'unit_price': 10} [id ae7e4e5e-f02c-4971-8401-4013e0e53e7f]
+CONTRACT EXECUTED: BUY: True 00MyA@0, SELLER agreed on {'time': 4, 'quantity': 2, 'unit_price': 10} [id 024f9e51-168b-4a26-8d27-c5e1392ef93f]
+CONTRACT EXECUTED: BUY: True 02Dec@1, 00MyA@0 agreed on {'quantity': 1, 'time': 4, 'unit_price': 9} [id f5872413-ace6-4a1b-b670-fc58f972b1ee]
+Current step: 4
+CONTRACT EXECUTED: BUY: False 00MyA@0, 03Buy@1 agreed on {'quantity': 3, 'time': 5, 'unit_price': 25} [id 0471cb5e-a703-4ad6-a832-d78067378d9a]
+Current step: 5
+Current step: 6
+CONTRACT EXECUTED: BUY: False 00MyA@0, 03Buy@1 agreed on {'quantity': 2, 'time': 7, 'unit_price': 25} [id ea86a119-a4a5-4c3a-8a68-f71fd7dcb47b]
+CONTRACT EXECUTED: BUY: False 00MyA@0, 03Buy@1 agreed on {'quantity': 1, 'time': 7, 'unit_price': 25} [id af5bab46-4da3-462a-81ef-6fb8ae1565a4]
+Current step: 7
+CONTRACT EXECUTED: BUY: False 00MyA@0, 02Dec@1 agreed on {'quantity': 1, 'time': 8, 'unit_price': 25} [id 027cf26a-3180-4a6e-ac08-6e06ea44e196]
+Current step: 8
+Current step: 9
+Current step: 10
+CONTRACT EXECUTED: BUY: False 00MyA@0, 03Buy@1 agreed on {'quantity': 3, 'time': 11, 'unit_price': 25} [id 7d750c37-fdeb-44ed-842d-a9daad450798]
+Current step: 11
+Current step: 12
+CONTRACT EXECUTED: BUY: False 00MyA@0, 03Buy@1 agreed on {'quantity': 1, 'time': 13, 'unit_price': 25} [id d57570c9-d90f-4007-ad3f-70d9364ace89]
+Current step: 13
+CONTRACT BREACH: 00MyA@0, 03Buy@1 agreed on {'quantity': 1, 'time': 14, 'unit_price': 25} [id 84a72325-3cf8-48e7-a971-1cfc8cad1c09]
+Current step: 0
+Current step: 1
+Current step: 2
+Current step: 3
+Current step: 4
+Current step: 5
+Current step: 6
+Current step: 7
+Current step: 8
+Current step: 9
+Current step: 10
+Current step: 11
+Current step: 12
+Current step: 13
+Current step: 14
+Current step: 15
+Current step: 16
+Current step: 17
+Current step: 18
+Current step: 19
+Current step: 20
+Current step: 21
+Current step: 22
+Current step: 23
+Current step: 24
+Current step: 25
+Current step: 26
+Current step: 27
+Current step: 28
+Current step: 29
+Current step: 30
+Current step: 31
+Current step: 32
+Current step: 33
+Current step: 34
+Current step: 35
+Current step: 36
+Current step: 37
+Current step: 38
+Current step: 39
+Current step: 40
+Current step: 41
+Current step: 42
+Current step: 43
+Current step: 44
+Current step: 45
+BANKRUPT: 00Ran@0 went bankrupt :( quantity: [] compensation money: 0
+Current step: 46
+Current step: 47
+Current step: 48
+Current step: 49
+CONTRACT EXECUTED: BUY: True 01MyA@0, SELLER agreed on {'time': 0, 'quantity': 4, 'unit_price': 10} [id 059f90a0-9785-4810-ace2-de7934162f42]
+Current step: 0
+CONTRACT EXECUTED: BUY: True 01MyA@0, SELLER agreed on {'time': 1, 'quantity': 1, 'unit_price': 10} [id 90d8c303-1ea0-454b-9e2d-bc3ece5fd5a5]
+CONTRACT EXECUTED: BUY: True 01MyA@0, SELLER agreed on {'time': 1, 'quantity': 1, 'unit_price': 10} [id de9a2267-6c3a-4436-be6a-fb92430e2a2c]
+Current step: 1
+CONTRACT EXECUTED: BUY: True 01MyA@0, SELLER agreed on {'time': 2, 'quantity': 2, 'unit_price': 10} [id b6f13010-80f4-4cff-895b-45427772fdd5]
+CONTRACT EXECUTED: BUY: True 03Dec@1, 01MyA@0 agreed on {'quantity': 5, 'time': 2, 'unit_price': 9} [id bc6817d2-add1-4cc6-bf70-1dac684d6387]
+CONTRACT BREACH: 03Dec@1, 01MyA@0 agreed on {'quantity': 5, 'time': 2, 'unit_price': 8} [id 3b241492-daa6-4a84-b923-9909199eff14]

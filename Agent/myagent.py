@@ -1,38 +1,3 @@
-"""
-**Submitted to ANAC 2020 SCML**
-*Authors* type-your-team-member-names-with-their-emails here
-
-
-This code is free to use or update given that proper attribution is given to
-the authors and the ANAC 2020 SCML.
-
-This module implements a factory manager for the SCM 2020 league of ANAC 2019
-competition. This version will not use subcomponents. Please refer to the
-[game description](http://www.yasserm.com/scml/scml2020.pdf) for all the
-callbacks and subcomponents available.
-
-Your agent can learn about the state of the world and itself by accessing
-properties in the AWI it has. For example:
-
-- The number of simulation steps (days): self.awi.n_steps
-- The current step (day): self.awi.current_steps
-- The factory state: self.awi.state
-- Availability for producton: self.awi.available_for_production
-
-
-Your agent can act in the world by calling methods in the AWI it has.
-For example:
-
-- *self.awi.request_negotiation(...)*  # requests a negotiation with one partner
-- *self.awi.request_negotiations(...)* # requests a set of negotiations
-
-
-You can access the full list of these capabilities on the documentation.
-
-- For properties/methods available only to SCM agents, check the list
-  [here](https://scml.readthedocs.io/en/latest/api/scml.scml2020.AWI.html)
-
-"""
 
 # required for running the test tournament
 import copy
@@ -45,6 +10,8 @@ from dataclasses import dataclass
 from pprint import pprint
 
 import matplotlib.pyplot as plt  # for graphs
+
+from nvm_lib.nvm_lib import NVMLib
 
 
 from typing import Any, Dict, List, Optional, Tuple, Union
@@ -78,6 +45,7 @@ from scml.scml2020.world import Failure
 from tabulate import tabulate
 
 from mynegotiationmanager import MyNegotiationManager
+from myindependentnegotiatonmanager import MyIndependentNegotiationManager
 from utils import *
 
 
@@ -87,7 +55,7 @@ def update_list(target_list: List[int], start_index: int, change: int):
 
 
 
-class MyAgent(SCML2020Agent):
+class PandemicFlow(SCML2020Agent):
     """
     This is the only class you *need* to implement. The current skeleton has a
     basic do-nothing implementation.
@@ -96,7 +64,6 @@ class MyAgent(SCML2020Agent):
     in your agent. See the documentation for more details
 
     """
-
     # =====================
     # Time-Driven Callbacks
     # =====================
@@ -105,6 +72,7 @@ class MyAgent(SCML2020Agent):
         super().__init__(**kwargs)
         self.data = None
         self.plan = None
+        self.negotiation_manager = None
 
     def init(self):
         """Called once after the agent-world interface is initialized"""
@@ -146,16 +114,17 @@ class MyAgent(SCML2020Agent):
         # ================================
         self.plan = AgentPlan()
 
-        # self.plan.available_production = self.data.n_steps * [self.data.n_lines]  # keeps track of lines which are free
 
         self.plan.target_input = (
                 self.data.n_lines * 2
         )  # How many input i need to have at each time step TODO: Predict
 
+        self.plan.target_output = self.data.n_lines * 2  # Do not have more than this amount
+
         # self.plan.true_input = self.data.n_steps * [0]  # At step t, agent will have this many inputs for sure
         self.plan.expected_input = []  # At step t, agent expects to receive this many inputs
         for i in range((self.data.last_day + 1)):
-            self.plan.expected_input.append(BuyPlan(self.plan.target_input, self.data.n_lines))
+            self.plan.expected_input.append(BuyPlan(self, self.plan.target_input, self.plan.target_output, self.data.n_lines))
 
         self.plan.available_output = 0
         # self.plan.expected_output = self.data.n_steps * [0]
@@ -169,22 +138,29 @@ class MyAgent(SCML2020Agent):
         )  # Default profit
 
         self.plan.min_buy_price = 1
-        self.plan.max_buy_price = input_catalog_price  # TODO: Predict
+        self.plan.max_buy_price = input_catalog_price + int(profit/2) - 1  # TODO: Predict
 
-        self.plan.min_sell_price = output_catalog_price  # TODO: Predict
+        self.plan.min_sell_price = output_catalog_price - int(profit/2) + 1  # TODO: Predict
         self.plan.max_sell_price = (
-                output_catalog_price * 2 - 1
+                output_catalog_price * 2
         )  # TODO: Predict?
 
         # ================================
         # Negotiation Components
         # ================================
 
-        self.negotiation_manager = MyNegotiationManager(
-            data=self.data, plan=self.plan, awi=self.awi, agent=self
-        )
+        self.negotiation_manager = MyNegotiationManager(data=self.data, plan=self.plan, awi=self.awi, agent=self)
+        # self.negotiation_manager = MyIndependentNegotiationManager(data=self.data, plan=self.plan, awi=self.awi, agent=self)
 
         # print("checkpoint")
+
+        # ================================
+        # Stats Components
+        # ================================
+        self.stat = AgentStatistics()
+        self.stat.agent = self
+
+        self.stat.print_supply_chain()
 
     # ================================
     # Dynamic Information
@@ -193,8 +169,11 @@ class MyAgent(SCML2020Agent):
     def get_current_step(self):
         return self.awi.current_step
 
-    def get_balance(self):  # there is also balance change available
+    def get_balance(self):
         return self.awi.state.balance
+
+    def get_balance_change(self):
+        return self.get_balance() - self.data.initial_balance
 
     def get_input_inventory(self):  # there is also inventory change available
         return self.awi.state.inventory[self.data.input_product]
@@ -222,7 +201,9 @@ class MyAgent(SCML2020Agent):
         self.negotiation_manager.step()
         self.schedule_production()
 
-        print("Current step:", self.get_current_step())
+        #print("Current step:", self.get_current_step())
+
+
 
     def propagate_inputs(self):  # each step
         excess_prev = max(self.get_input_inventory() - self.data.n_lines,
@@ -260,6 +241,7 @@ class MyAgent(SCML2020Agent):
         """Called when a negotiation the agent is a party of ends without
         agreement"""
         # print("NEGOTIATION FAILED", self.get_current_step(),"Contract negotiation failed", annotation)
+        self.stat.on_negotiation_failure(partners, annotation, mechanism, state)
 
     def on_negotiation_success(
             self, contract: Contract, mechanism: AgentMechanismInterface
@@ -267,6 +249,8 @@ class MyAgent(SCML2020Agent):
         """Called when a negotiation the agent is a party of ends with
         agreement"""
         # print("NEGOTIATION SUCCEEDED:", self.get_current_step(), "Contract negotiation succeeded", contract)
+        self.stat.on_negotiation_success(contract, mechanism)
+
 
     def on_contract_executed(self, contract: Contract) -> None:
         """Called when a contract executes successfully and fully"""
@@ -362,6 +346,8 @@ class MyAgent(SCML2020Agent):
     ) -> None:
         """Called to inform you about the final status of all contracts in
         a step (day)"""
+        self.stat.on_contracts_finalized(signed, cancelled, rejectors)
+
         for contract in signed:
             quantity = contract.agreement["quantity"]
             time = contract.agreement["time"]
@@ -461,7 +447,8 @@ class MyAgent(SCML2020Agent):
 
     def schedule_production(self):
         commands = self.get_commands()[self.get_current_step()]
-        input_count = self.get_input_inventory()
+        #input_count = self.get_input_inventory()
+        input_count = self.plan.buy_plan[self.get_current_step()]
         balance = self.plan.available_money
         pay_count = int(
             balance / self.data.production_cost
@@ -516,12 +503,12 @@ class MyAgent(SCML2020Agent):
 
 
 competitors = [
-        MyAgent,
-        DecentralizingAgent,
-        IndDecentralizingAgent,
-        MovingRangeAgent,
-        BuyCheapSellExpensiveAgent,
-        RandomAgent,
+        PandemicFlow,
+        #DecentralizingAgent,
+        #IndDecentralizingAgent,
+        #MovingRangeAgent,
+        #BuyCheapSellExpensiveAgent,
+        #RandomAgent,
 ]
 
 
@@ -631,9 +618,13 @@ def run_single_session():
     score.set(xlabel='Simulation Step', ylabel='Player Score (%)')
     fig.show()
 
+
+
+
 def main():
     run()
     # run_single_session()
+
     print("Finished...")
 
 

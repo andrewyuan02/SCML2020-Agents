@@ -143,9 +143,9 @@ class MyNegotiationManager:
 
     def _qrange(self, step: int, sell: bool) -> Tuple[int, int]:
         if sell:
-            upper_bound = self.plan.available_output  # Sell everything
+            upper_bound = self.plan.sell_plan[step]  # Sell everything
         else:
-            upper_bound = self.data.n_lines  # Production capacity
+            upper_bound = self.data.buy_plan[step]  # Production capacity
 
         return 1, upper_bound
 

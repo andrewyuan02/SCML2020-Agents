@@ -1,0 +1,849 @@
+index,id,seller_name,buyer_name,seller_type,buyer_type,delivery_time,quantity,unit_price,signed_at,nullified_at,concluded_at,signatures,issues,seller,buyer,product_name,caller,is_buy,product,n_neg_steps,executed_at,breaches,erred_at,dropped_at
+78,703bce58-ea24-4d0b-be26-5bbf6140ff9e,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,0,5,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,0,,-1,-1
+73,8ed56202-129a-4651-9b53-0047757b1e36,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,0,5,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,0,,-1,-1
+50,854295de-d2c6-40af-b502-33d565e8aa4e,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,0,5,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,0,,-1,-1
+158,44a1d861-be2b-4b23-9dbb-d6c0660d2e88,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,0,5,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,0,,-1,-1
+192,297255da-90e9-43ed-aac6-095977c484df,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,1,8,26,-1,-1,1,,"[quantity: (1, 10), time: (1, 5), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,8,-1,,-1,-1
+198,604fe986-9280-40bd-ae51-d2f83c4f14b3,00Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,1,1,9,-1,-1,1,,"[quantity: (1, 5), time: (1, 4), unit_price: (1, 17)]",00Dec@0,02Dec@1,p1,02Dec@1,True,1,17,-1,,-1,-1
+190,c0c5ade2-c051-4edf-8d1d-98d2dd1f1d12,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,1,9,25,-1,-1,1,,"[quantity: (1, 10), time: (1, 6), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+121,5b3d5923-3e0c-401b-a00f-b76e932caa79,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,1,2,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,1,,-1,-1
+188,1c2e0d92-2e3d-4ac9-bc5f-76c508dbe753,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,1,5,26,-1,-1,1,,"[quantity: (1, 8), time: (1, 13), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,8,-1,,-1,-1
+185,1911d954-bd4a-42c9-8c29-3884166067b9,00Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,1,9,25,-1,-1,1,,"[quantity: (1, 10), time: (1, 6), unit_price: (17, 34)]",00Dec@0,02Dec@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+184,b8ab8953-0ea7-434a-a3b7-0d5c4b03bb17,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,1,9,25,-1,-1,1,,"[quantity: (1, 10), time: (1, 6), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+200,3d1c98f0-7cd0-421b-acec-1b233ea403b2,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,1,9,25,-1,-1,1,,"[quantity: (1, 10), time: (1, 6), unit_price: (17, 34)]",01Dec@0,02Dec@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+23,8b4eed81-1e87-484b-b411-63c398d56bef,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,1,5,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,1,,-1,-1
+14,efeb62c1-42e8-4cc4-9b96-b1b6bd88099d,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,1,4,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,1,,-1,-1
+203,06887868-c31c-4e2d-841a-d5ae7197e231,00Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,1,1,9,-1,-1,1,,"[quantity: (1, 5), time: (1, 5), unit_price: (1, 17)]",00Dec@0,02Dec@1,p1,02Dec@1,True,1,17,-1,,-1,-1
+161,9b55a707-185d-479e-b53f-f317ec022308,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,1,5,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,1,,-1,-1
+201,a9024eb8-286d-4db7-923d-4a27ce23c467,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,1,3,9,-1,-1,1,,"[quantity: (1, 10), time: (1, 2), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,17,-1,,-1,-1
+113,8545d1ee-929e-44fa-8145-29cf613d72a1,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,1,4,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,1,,-1,-1
+206,7f11ce62-6d10-49a9-81a8-2c8babe5f265,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,2,15,27,-1,-1,1,,"[quantity: (1, 18), time: (2, 7), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+89,6151a3de-57ea-4f0b-9706-8b2ade9a0210,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,2,4,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,2,,-1,-1
+35,2dc3f442-7232-4a0e-9513-3978fc7ec84f,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,2,2,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,2,,-1,-1
+199,60c67e96-6d65-4678-b4fa-c6902ddc7d66,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,2,5,46,-1,-1,1,,"[quantity: (1, 5), time: (1, 6), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,14,-1,,-1,-1
+227,238fbfa4-681e-4cc9-ad7b-0719baacb1e0,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,2,20,17,-1,-1,2,,"[quantity: (1, 20), time: (2, 5), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,2,-1,,-1,-1
+228,feb8b7b6-6e6c-4a66-918a-de351aeb2176,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,2,30,17,-1,-1,2,,"[quantity: (1, 30), time: (2, 5), unit_price: (17, 34)]",01Dec@0,02Dec@1,p1,01Dec@0,False,1,2,-1,,-1,-1
+229,86e159cf-d7ad-49dc-abe9-c5d212dcd0ed,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,2,6,13,-1,-1,2,,"[quantity: (1, 7), time: (2, 6), unit_price: (1, 26)]",02Dec@1,04Ind@2,p2,04Ind@2,True,2,17,-1,,-1,-1
+225,954a040b-5e9e-4138-a9cf-d89b110d818c,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,2,5,40,-1,-1,2,,"[quantity: (1, 5), time: (2, 7), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,,-1,-1
+186,58c244ba-3c0f-4826-9770-043eab467914,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,2,10,25,-1,-1,1,,"[quantity: (1, 12), time: (2, 7), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+183,b61d5a09-bc05-4cf7-b480-68700cc1012b,00Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,2,1,9,1,-1,1,02Dec@1|00Dec@0,"[quantity: (1, 5), time: (1, 2), unit_price: (1, 17)]",00Dec@0,02Dec@1,p1,02Dec@1,True,1,17,2,,-1,-1
+133,779a6e0a-074e-430b-8b69-f62572a6ffc2,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,2,4,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,2,,-1,-1
+173,bd9c0a69-644b-41c4-af60-d40753226e83,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,2,3,9,1,-1,1,03MyA@1|00Dec@0,"[quantity: (1, 10), time: (1, 2), unit_price: (1, 17)]",00Dec@0,03MyA@1,p1,03MyA@1,True,1,18,2,,-1,-1
+139,26ab03a3-35c1-4a20-aa35-cd2add735846,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,2,5,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,2,,-1,-1
+147,0a5d6979-7f11-4c86-801c-304b1381acb7,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,2,5,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,2,,-1,-1
+116,8666d69f-55dd-428e-9054-a1d72e44981a,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,3,6,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,3,,-1,-1
+230,4d163e67-b075-4a72-9c0c-afaa73492d48,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,3,4,52,-1,-1,2,,"[quantity: (1, 5), time: (3, 8), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,9,-1,,-1,-1
+129,c065f944-e03d-474a-bdca-c03d887ad21a,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,3,4,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,3,,-1,-1
+223,e7cd0dfc-793a-4d07-b7ce-ba7c93fb538b,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,3,5,40,-1,-1,2,,"[quantity: (1, 5), time: (3, 8), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,,-1,-1
+170,8b678a45-8b19-4abe-aa70-d9bc8dbda83f,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,3,12,25,1,-1,1,01Dec@0|02Dec@1,"[quantity: (1, 16), time: (3, 8), unit_price: (17, 34)]",01Dec@0,02Dec@1,p1,01Dec@0,False,1,17,3,,-1,-1
+144,24aa3dd1-3a8e-4560-b24f-b892c6954064,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,3,2,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,3,,-1,-1
+165,c46edeee-dc76-47f5-86db-f1f4e5c18d46,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,3,4,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,04Ind@2:product(1.0),-1,-1
+193,cf44107b-972d-4e32-b9d6-81411d01d985,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,3,5,51,-1,-1,1,,"[quantity: (1, 5), time: (2, 7), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,13,-1,,-1,-1
+46,a8533bb6-cd40-4463-b7d5-eeab45a84d5b,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,3,5,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,3,,-1,-1
+4,fd804fc5-b1f3-4e17-96f2-b7319dcf78c9,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,3,3,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,3,,-1,-1
+178,5d73a27d-7e5d-4ae2-a3de-494f71d64b26,00Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,3,1,9,1,-1,1,02Dec@1|00Dec@0,"[quantity: (1, 5), time: (1, 3), unit_price: (1, 17)]",00Dec@0,02Dec@1,p1,02Dec@1,True,1,17,3,,-1,-1
+25,cebcbc8d-fac0-4c24-b1a0-7bd736223480,05Ran@2,BUYER,RandomAgent,_SystemAgent,3,2,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+30,2b33ea0a-5866-47cc-8d40-768c29ed3b5b,05Ran@2,BUYER,RandomAgent,_SystemAgent,3,4,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+32,57a57536-d314-4214-816c-2b0eb18f76c6,05Ran@2,BUYER,RandomAgent,_SystemAgent,3,6,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+34,6a05f041-30a9-42c9-b51f-892932195785,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,3,4,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,-1,04Ind@2:product(1.0),-1,-1
+162,a9a39b04-3540-47d7-adfa-3a027d68a91c,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,4,6,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,4,,-1,-1
+143,4a18b52c-8097-4d3c-92f8-3ed28ce7de7d,05Ran@2,BUYER,RandomAgent,_SystemAgent,4,3,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+127,c728f35a-480f-4c9b-8fd3-1b65ca05f6ce,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,4,2,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,-1,04Ind@2:product(1.0),-1,-1
+18,7e73f09d-6f38-4562-bf8f-b9ad0154b054,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,4,3,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,4,,-1,-1
+105,a849c86b-41e9-460b-b30a-aa9297c6fe25,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,4,5,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,04Ind@2:product(1.0),-1,-1
+215,7934c908-7b6d-4120-8877-ffea94f6a66a,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,4,6,14,2,-1,2,05Ran@2|02Dec@1,"[quantity: (1, 10), time: (2, 6), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,18,4,,-1,-1
+224,c27b6ad0-7f0c-4fc6-a60f-92db1c36484d,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,4,2,52,-1,-1,2,,"[quantity: (1, 5), time: (2, 7), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,8,-1,,-1,-1
+37,da515159-02d8-4aba-8edc-e3e838a6fe1e,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,4,5,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,-1,04Ind@2:product(1.0),-1,-1
+233,ba74cca1-9cd4-4862-a34c-7db99194c581,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,4,18,27,-1,-1,2,,"[quantity: (1, 18), time: (4, 9), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+247,379974f9-64c4-433c-8bf3-4620e51f5269,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,4,18,27,-1,-1,3,,"[quantity: (1, 18), time: (4, 9), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+263,3105639e-ae04-40a6-82af-7a090cda5c04,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,4,40,26,-1,-1,4,,"[quantity: (1, 40), time: (4, 6), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+205,4b425118-16dd-46ce-b2c1-4129b39c0b18,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,4,5,46,-1,-1,1,,"[quantity: (1, 5), time: (3, 8), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,15,-1,,-1,-1
+48,41695816-f3e1-4d65-a2b9-87b42f287e9e,05Ran@2,BUYER,RandomAgent,_SystemAgent,4,5,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+53,5d196ef2-450d-426f-a94a-b75be2533ce7,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,4,3,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,4,,-1,-1
+44,6309b19e-0df9-4084-87d5-33707dde0772,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,4,5,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,4,,-1,-1
+56,2f5a3e2b-2167-4345-ba33-04f16dae983b,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,4,3,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,4,,-1,-1
+45,4fafc299-7f9f-480a-ab13-967588652a51,05Ran@2,BUYER,RandomAgent,_SystemAgent,5,5,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+41,f9fbc0f7-ac48-492a-b476-ec5d33a588fd,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,5,7,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,5,,-1,-1
+101,61ea5716-815a-4cf6-bc2a-c79fe133e5a5,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,5,5,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,04Ind@2:product(1.0),-1,-1
+103,14ef6a84-16e1-48cf-ba10-b3e1be893f34,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,5,3,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,5,,-1,-1
+280,bd0c0123-6e61-4ebe-bc76-dda98609bf0d,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,5,84,26,-1,-1,5,,"[quantity: (1, 84), time: (5, 8), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+70,89dc4a1a-ab6d-4167-a5da-dc429ba89544,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,5,4,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,04Ind@2:product(1.0),-1,-1
+9,0b095112-455d-4faa-aefe-7ddade515b21,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,5,2,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,5,,-1,-1
+112,8339831d-1eee-41c4-b878-1d7eac253df0,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,5,4,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,5,,-1,-1
+134,fbc54e63-e77d-4c8e-a7e0-9ccf8f271f46,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,5,4,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,5,,-1,-1
+237,3f6436ea-fbbb-444f-9a9b-e8bfb7dc3d50,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,5,4,20,3,-1,3,05Ran@2|02Dec@1,"[quantity: (1, 12), time: (3, 7), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,15,5,,-1,-1
+63,f83f317d-668d-4123-abef-bcd67c894522,05Ran@2,BUYER,RandomAgent,_SystemAgent,5,4,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+169,2cc3e772-ef54-44a2-9d28-1d0020150e55,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,5,11,25,1,-1,1,01Dec@0|02Dec@1,"[quantity: (1, 14), time: (5, 10), unit_price: (17, 34)]",01Dec@0,02Dec@1,p1,01Dec@0,False,1,17,5,,-1,-1
+249,d5e25e3e-c8f7-48c9-83c6-7cefd87fad90,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,5,21,44,-1,-1,3,,"[quantity: (1, 61), time: (3, 6), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+26,5b51d27f-8a0e-4c1d-8868-e56f5047eb00,05Ran@2,BUYER,RandomAgent,_SystemAgent,5,2,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+104,e6f6cba1-eef8-4096-acb4-37f6d66355f7,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,6,1,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,04Ind@2:product(1.0),-1,-1
+47,82de6599-73aa-41a9-9e23-de44d4753e8e,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,6,1,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,6,,-1,-1
+202,926de879-5167-46ad-a8bf-835023918a4d,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,6,5,46,-1,-1,1,,"[quantity: (1, 5), time: (5, 10), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,14,-1,,-1,-1
+10,8ab8a575-df2a-4744-b015-1a8cf6dd57f8,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,6,7,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,6,,-1,-1
+96,b420fcdc-944d-4ae3-aa0c-a3380f669e7e,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,6,3,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,6,,-1,-1
+40,773f85d9-5066-413f-aa27-1322bff48f4b,05Ran@2,BUYER,RandomAgent,_SystemAgent,6,4,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+278,ff78827b-cce7-43ec-ab30-32930e77624f,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,6,44,35,-1,-1,5,,"[quantity: (1, 150), time: (5, 7), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+92,9e325f29-1df7-42a9-8599-5ee62099c688,05Ran@2,BUYER,RandomAgent,_SystemAgent,6,4,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+212,5cce6b96-ef8b-4a5c-a6e5-b42aca0a2133,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,6,5,40,2,-1,2,02Dec@1|04Ind@2,"[quantity: (1, 5), time: (6, 11), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,6,,-1,-1
+118,cee3a3d8-fdc6-45d9-847f-afcd239ca925,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,6,8,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,-1,04Ind@2:product(1.0),-1,-1
+301,2c4e4237-c6e5-4659-a1d7-5a399e69d713,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,6,91,39,-1,-1,6,,"[quantity: (1, 106), time: (6, 7), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+221,fd727839-be1e-4440-8a1b-14f29f662b79,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,6,4,51,2,-1,2,02Dec@1|05Ran@2,"[quantity: (1, 5), time: (6, 11), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,11,6,,-1,-1
+167,ce683acb-f479-474b-996d-6a292b539a44,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,6,13,25,1,-1,1,01Dec@0|02Dec@1,"[quantity: (1, 17), time: (6, 11), unit_price: (17, 34)]",01Dec@0,02Dec@1,p1,01Dec@0,False,1,17,6,,-1,-1
+258,16ce19de-de32-4955-a90f-deb1e8fccc90,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,6,9,27,4,-1,4,02Dec@1|05Ran@2,"[quantity: (1, 159), time: (4, 7), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,2,-1,02Dec@1:product(0.4444444444444444),-1,-1
+155,50c6f54d-101b-4737-980b-3654a60fe0a2,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,6,9,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,6,,-1,-1
+296,28ebe4ca-c7fe-48d0-b7f9-aa0d2c6880ab,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,6,6,25,-1,-1,6,,"[quantity: (1, 10), time: (6, 10), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,10,-1,,-1,-1
+38,8346cf5a-5ed4-40c3-9eac-21916402293b,05Ran@2,BUYER,RandomAgent,_SystemAgent,6,3,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+295,8f0c61b2-d943-487f-a689-39366cc11cdf,03MyA@1,04Ind@2,MyAgent,IndDecentralizingAgent,6,23,26,-1,-1,6,,"[quantity: (1, 23), time: (6, 9), unit_price: (26, 51)]",03MyA@1,04Ind@2,p2,03MyA@1,False,2,2,-1,,-1,-1
+71,e9f8954c-a2ef-4e15-9f4c-4bc6686992cf,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,7,5,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,-1,04Ind@2:product(0.8),-1,-1
+320,c74c97d6-f146-436e-bc34-23af82143509,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,7,28,26,-1,-1,7,,"[quantity: (1, 28), time: (7, 9), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+28,051c4600-c855-4a61-b785-34359b5ff1b1,05Ran@2,BUYER,RandomAgent,_SystemAgent,7,4,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+86,8d3a0a14-e487-4f7f-a20f-351b29b42fc6,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,7,4,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,7,,-1,-1
+49,aeb59b7f-8393-43eb-baba-ca1940fd3eea,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,7,3,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,7,,-1,-1
+176,a7a4e4a1-4db3-4c33-8d0e-3c03975d9e0a,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,7,18,24,1,-1,1,01Dec@0|02Dec@1,"[quantity: (1, 18), time: (2, 7), unit_price: (17, 34)]",01Dec@0,02Dec@1,p1,01Dec@0,False,1,17,7,,-1,-1
+19,ee1baa8a-c018-464e-a5fa-1d2fff03b565,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,7,5,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,7,,-1,-1
+164,8b7a7c71-b267-4d0c-8677-69766f5f49b8,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,7,2,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,04Ind@2:product(1.0),-1,-1
+327,85265ed0-689c-4525-8b35-eec0675ace0e,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,7,15,26,-1,-1,7,,"[quantity: (1, 15), time: (7, 7), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+6,794ca036-a228-40b3-8f9a-95024d43843d,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,7,4,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,7,,-1,-1
+208,d5336c94-ba0c-4c48-8460-58572729d781,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,7,2,51,2,-1,2,02Dec@1|05Ran@2,"[quantity: (1, 5), time: (4, 9), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,11,7,,-1,-1
+94,ce605dd2-fc81-44ca-a310-1956cca8a1ac,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,7,5,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,7,,-1,-1
+222,6412a5e3-0614-4776-87d6-2f3190357c77,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,7,16,38,2,-1,2,02Dec@1|04Ind@2,"[quantity: (1, 18), time: (7, 12), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,02Dec@1:product(0.5),-1,-1
+33,6928260a-43b4-4496-aa3e-2c128274cca2,05Ran@2,BUYER,RandomAgent,_SystemAgent,7,5,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+20,387c7d1d-7229-49c5-9e6b-ba799d072900,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,7,3,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,7,,-1,-1
+194,2d9b300b-989f-4b53-b6d1-d42d98a8269b,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,7,5,46,-1,-1,1,,"[quantity: (1, 5), time: (6, 11), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,15,-1,,-1,-1
+324,bebfa2d0-a662-46ab-93cd-12f4770d2119,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,8,7,23,-1,-1,7,,"[quantity: (1, 10), time: (7, 11), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,13,-1,,-1,-1
+131,68712ed1-317a-421e-a4d6-9100f02540cc,05Ran@2,BUYER,RandomAgent,_SystemAgent,8,6,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+11,337ee07b-8f8b-42f6-aca3-643fa16780d6,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,8,8,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,8,,-1,-1
+88,42ac9834-ea24-4489-8b7e-76026319452b,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,8,6,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,8,,-1,-1
+248,3058403b-47f3-44fe-b860-04d8298b0760,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,8,12,25,-1,-1,3,,"[quantity: (1, 16), time: (8, 13), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+195,1a62c13d-e79e-44b3-bc7b-394cc98c9b73,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,8,12,26,-1,-1,1,,"[quantity: (1, 16), time: (3, 8), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+137,52485005-bbb6-4615-8365-9fff267b3360,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,8,3,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,8,,-1,-1
+235,212f4b84-8a4a-4511-b7ae-e40d33f5a722,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,8,21,52,3,-1,3,02Dec@1|05Ran@2,"[quantity: (1, 23), time: (8, 13), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,8,-1,02Dec@1:product(0.5238095238095238),-1,-1
+152,285738ad-9436-4ce5-bc10-f487164b15e0,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,8,2,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,8,,-1,-1
+300,7f10f08d-231a-4f3b-95d3-a0c04f13acbe,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,8,8,18,-1,-1,6,,"[quantity: (1, 10), time: (6, 15), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,16,-1,,-1,-1
+150,d01abe89-cbfd-41f9-9a8e-26ccabeea197,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,8,4,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,8,,-1,-1
+204,20e9803c-5b81-49ac-9338-b0e9d1463e61,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,8,5,51,-1,-1,1,,"[quantity: (1, 5), time: (4, 9), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,11,-1,,-1,-1
+166,6e1a90c7-dddc-468c-abd9-884d27637cf6,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,8,7,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,8,,-1,-1
+251,b297b5f0-afd0-42db-84d3-63907291ed09,03MyA@1,05Ran@2,MyAgent,RandomAgent,8,3,43,4,-1,4,03MyA@1|05Ran@2,"[quantity: (1, 3), time: (4, 9), unit_price: (26, 51)]",03MyA@1,05Ran@2,p2,03MyA@1,False,2,16,8,,-1,-1
+130,37054987-ce23-41af-b516-5d0a8e2ea94b,05Ran@2,BUYER,RandomAgent,_SystemAgent,8,4,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+362,bc4e51e7-2b5e-46b6-b589-dbad93d839b9,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,9,9,16,-1,-1,9,,"[quantity: (1, 13), time: (9, 13), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,17,-1,,-1,-1
+172,88544a9e-b91c-4e65-b1c9-cb8a81f5c523,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,9,10,26,1,-1,1,01Dec@0|02Dec@1,"[quantity: (1, 12), time: (4, 9), unit_price: (17, 34)]",01Dec@0,02Dec@1,p1,01Dec@0,False,1,17,9,,-1,-1
+141,479030df-2aae-4ff9-8e20-5b8169b747fe,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,9,3,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,9,,-1,-1
+277,b126bad3-568f-4156-8945-5f5c68ac2ecb,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,9,13,26,-1,-1,5,,"[quantity: (1, 13), time: (5, 15), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,9,-1,,-1,-1
+182,991808de-ad89-4b97-951c-644e511e2a45,00Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,9,18,24,1,-1,1,00Dec@0|02Dec@1,"[quantity: (1, 18), time: (4, 9), unit_price: (17, 34)]",00Dec@0,02Dec@1,p1,00Dec@0,False,1,17,9,,-1,-1
+57,317d1d2e-ee8e-4650-b0a8-b745441073db,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,9,5,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,9,,-1,-1
+360,83fb78a8-8592-48a1-b5d5-76028cc49de3,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,9,31,33,-1,-1,9,,"[quantity: (1, 33), time: (9, 12), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+54,df51d5ad-994b-4838-a678-f72bce2a1971,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,9,3,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,9,,-1,-1
+156,ef31bbab-250b-41da-a88f-b93e273bc904,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,9,5,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,04Ind@2:product(0.4),-1,-1
+299,42260cf2-c0f7-4989-9c54-9334760b2234,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,9,23,17,-1,-1,6,,"[quantity: (1, 58), time: (6, 14), unit_price: (1, 17)]",00Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+3,36a6349a-f75a-4bde-b6be-a5be125a6673,05Ran@2,BUYER,RandomAgent,_SystemAgent,9,2,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+210,7e8761e1-1089-4f6e-8014-782b51ddc625,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,9,2,50,2,-1,2,02Dec@1|05Ran@2,"[quantity: (1, 5), time: (5, 10), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,13,9,,-1,-1
+207,96548674-8e59-487f-b1ae-84b32d48e9ba,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,9,5,38,2,-1,2,02Dec@1|04Ind@2,"[quantity: (1, 5), time: (4, 9), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,9,,-1,-1
+51,706f4e1d-a591-4101-b22d-04869cb70fd3,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,9,5,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,9,,-1,-1
+302,4b251be1-5f15-4a3a-ab00-39ac12c64e43,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,9,23,17,-1,-1,6,,"[quantity: (1, 57), time: (6, 12), unit_price: (1, 17)]",00Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+15,f8474436-53d5-4b07-9806-9d6d702c70a6,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,9,4,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,9,,-1,-1
+16,9b922482-fd31-4da9-86ae-2b20c663a6bd,05Ran@2,BUYER,RandomAgent,_SystemAgent,9,5,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+2,d54faecb-75f5-41b2-a01e-f5813cf239d2,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,9,3,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,9,,-1,-1
+42,4ada80f0-3091-42c5-a24c-083e2a331b7e,05Ran@2,BUYER,RandomAgent,_SystemAgent,9,5,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+294,b9007cde-f00a-46da-863d-cb3158cfbca1,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,10,18,27,-1,-1,6,,"[quantity: (1, 18), time: (10, 15), unit_price: (17, 34)]",01Dec@0,02Dec@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+304,66aba92a-6602-4f2c-885a-7aa44463066e,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,10,6,14,-1,-1,6,,"[quantity: (1, 8), time: (6, 10), unit_price: (1, 26)]",02Dec@1,04Ind@2,p2,04Ind@2,True,2,17,-1,,-1,-1
+342,a3abc516-fa44-4852-9b1f-c18e897c1ff8,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,10,34,17,-1,-1,8,,"[quantity: (1, 34), time: (8, 10), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+376,ad5d4288-0130-4bdf-9d0f-9e9d31aad660,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,10,7,13,-1,-1,10,,"[quantity: (1, 9), time: (10, 14), unit_price: (1, 26)]",02Dec@1,04Ind@2,p2,04Ind@2,True,2,17,-1,,-1,-1
+213,bb798b66-d496-465c-88ad-8e944d454133,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,10,15,51,2,-1,2,02Dec@1|05Ran@2,"[quantity: (1, 18), time: (7, 12), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,12,-1,02Dec@1:product(0.4666666666666667),-1,-1
+373,53ec0657-ee2d-4e92-a989-919f105fa2c5,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,10,7,22,-1,-1,10,,"[quantity: (1, 10), time: (10, 15), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,14,-1,,-1,-1
+163,f2f5cd59-79cc-4207-b433-526561f593c8,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,10,4,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,10,,-1,-1
+177,77cf027a-a8cc-463a-9034-3d015fe1addd,00Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,10,11,26,1,-1,1,00Dec@0|02Dec@1,"[quantity: (1, 16), time: (5, 10), unit_price: (17, 34)]",00Dec@0,02Dec@1,p1,00Dec@0,False,1,17,10,,-1,-1
+252,fd06b5b3-f95f-4b9c-add0-0b74c71377ed,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,10,12,23,4,-1,4,05Ran@2|02Dec@1,"[quantity: (1, 12), time: (4, 15), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,12,-1,02Dec@1:product(1.0),-1,-1
+211,19d0f23a-16c7-4504-b5d2-28fe226b0634,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,10,5,38,2,-1,2,02Dec@1|04Ind@2,"[quantity: (1, 5), time: (5, 10), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,10,,-1,-1
+276,90a80fb6-9d7f-4be2-be6a-96190ef30413,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,10,18,27,-1,-1,5,,"[quantity: (1, 18), time: (10, 15), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+341,43b28a58-9d83-479d-8938-dd3e1e1fd469,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,10,34,17,-1,-1,8,,"[quantity: (1, 35), time: (8, 14), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+189,e204d4b2-41b6-404e-b0e3-425f69a37b1b,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,10,12,26,-1,-1,1,,"[quantity: (1, 16), time: (5, 10), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+356,58c9b69a-ed81-412e-96b3-9b8ebdf32ee8,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,10,18,27,-1,-1,9,,"[quantity: (1, 18), time: (10, 15), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+91,ac73654e-fefc-4174-b3f7-ed677d8a4870,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,10,3,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,10,,-1,-1
+43,be4ff695-1aad-42ca-8027-7447d800d5e5,05Ran@2,BUYER,RandomAgent,_SystemAgent,10,6,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+24,58ba8385-b91e-40c5-8e5e-5bceff9aab4f,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,10,5,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,10,,-1,-1
+138,1edb792d-0c4d-46f1-a5f6-832fb8f41204,05Ran@2,BUYER,RandomAgent,_SystemAgent,10,3,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+122,a505ca83-6d13-4cc7-b4a0-37f483c9d406,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,10,4,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,-1,04Ind@2:product(0.25),-1,-1
+67,6efff84e-48ee-4fa8-b2f4-017a3b4dd9e5,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,10,4,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,10,,-1,-1
+145,77949bfd-08bf-4ac8-980f-2144111207e8,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,10,5,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,04Ind@2:product(1.0),-1,-1
+39,9c2afb2f-2d80-49ab-87b9-129199e448fa,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,10,2,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,10,,-1,-1
+146,5b998994-a328-44a7-88c8-0dd79e5ffafb,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,10,4,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,10,,-1,-1
+196,94b0608d-5dd9-4f98-9304-ff1bc752a528,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,11,13,26,-1,-1,1,,"[quantity: (1, 17), time: (6, 11), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+317,7537b194-ace3-407a-b8d2-1adb4a047132,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,11,6,14,7,-1,7,04Ind@2|02Dec@1,"[quantity: (1, 7), time: (7, 11), unit_price: (1, 26)]",02Dec@1,04Ind@2,p2,04Ind@2,True,2,17,11,,-1,-1
+77,7c420489-3803-4d2f-b505-55e7229a7597,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,11,1,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,11,,-1,-1
+72,f4f181e3-25a5-448b-aabc-0365c0360874,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,11,5,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,11,,-1,-1
+110,1517cca8-8640-4d25-bf6e-a430853a8a49,05Ran@2,BUYER,RandomAgent,_SystemAgent,11,2,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+80,11e9c32e-5330-4fe8-ac71-4ec7589e1ae0,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,11,8,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,04Ind@2:product(0.5),-1,-1
+394,ce9b1de9-c242-46fc-a11a-b22a05114fdc,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,11,6,13,-1,-1,11,,"[quantity: (1, 8), time: (11, 15), unit_price: (1, 26)]",02Dec@1,04Ind@2,p2,04Ind@2,True,2,17,-1,,-1,-1
+343,50568a30-141e-4426-afed-bbf5de6eea8a,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,11,11,18,-1,-1,8,,"[quantity: (1, 11), time: (8, 15), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,15,-1,,-1,-1
+274,f433a199-9d12-40df-a568-01c226368405,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,11,1,49,5,-1,5,02Dec@1|05Ran@2,"[quantity: (1, 1), time: (10, 15), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,12,11,,-1,-1
+111,2bb65130-4f23-43cf-bb37-b422477e85a3,05Ran@2,BUYER,RandomAgent,_SystemAgent,11,5,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+283,6138f134-db4a-4b4b-a30a-59d75314ae3b,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,11,13,25,6,-1,6,01Dec@0|02Dec@1,"[quantity: (1, 17), time: (11, 16), unit_price: (17, 34)]",01Dec@0,02Dec@1,p1,01Dec@0,False,1,17,11,,-1,-1
+157,6ca1feb0-df2e-43c9-8318-8f393eada26d,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,11,1,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,11,,-1,-1
+265,86d14ed3-1428-42cc-94c6-646a52cb3695,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,11,58,17,-1,-1,4,,"[quantity: (1, 58), time: (4, 11), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+154,7d5b3860-f6b0-48c6-a23e-325bec57aa67,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,11,5,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,11,,-1,-1
+61,ea3e6af3-c78b-4901-9564-6b8e4234f970,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,11,4,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,11,,-1,-1
+149,2f9466ed-bd9a-4bd8-8638-95852a052ee6,05Ran@2,BUYER,RandomAgent,_SystemAgent,11,4,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+290,bf3e52b1-f2d3-4d29-92d5-058bfbd63497,00Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,11,11,25,6,-1,6,00Dec@0|02Dec@1,"[quantity: (1, 13), time: (11, 16), unit_price: (17, 34)]",00Dec@0,02Dec@1,p1,00Dec@0,False,1,17,11,,-1,-1
+303,53ec18de-3826-4b69-8d61-1f21763382dc,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,11,13,25,-1,-1,6,,"[quantity: (1, 17), time: (11, 16), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+135,9c564bf4-680a-46bc-9a18-976fe65b5c72,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,11,5,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,11,,-1,-1
+293,f9dc8d8a-e1c0-4630-9333-286515abc15f,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,12,1,44,-1,-1,6,,"[quantity: (1, 1), time: (10, 15), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,15,-1,,-1,-1
+82,669e9810-ba2e-492f-9c25-3655285d4dee,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,12,3,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,12,,-1,-1
+52,8cdcbc49-ee65-4a2c-a33c-de323af1910f,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,12,6,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,12,,-1,-1
+108,8c27b07b-68d7-426a-9003-25c89b2bcfb9,05Ran@2,BUYER,RandomAgent,_SystemAgent,12,7,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+264,16b72282-0412-4f1a-b336-15db740a82b3,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,12,5,26,-1,-1,4,,"[quantity: (1, 5), time: (9, 14), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+124,1fb00ea9-f834-494c-a919-85de5852a34e,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,12,7,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,-1,04Ind@2:product(0.14285714285714285),-1,-1
+99,9bf7f4d4-cd6e-4c6b-9a7d-e1104b47e24b,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,12,7,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,12,,-1,-1
+17,d89e15c9-1f08-453f-ad05-f29ce6202b39,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,12,2,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,12,,-1,-1
+98,c50183aa-0ec1-46f5-97de-5720b298581a,05Ran@2,BUYER,RandomAgent,_SystemAgent,12,3,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+232,6e513383-bb5d-4ed8-b88d-ca3b26fe65b2,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,12,12,26,-1,-1,2,,"[quantity: (1, 15), time: (7, 12), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+74,af4d9053-2a10-4914-b87b-ab029bead2b3,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,12,2,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,12,,-1,-1
+310,dc57f291-d55b-4a84-b0c7-e499fc39acd8,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,12,4,21,7,-1,7,05Ran@2|02Dec@1,"[quantity: (1, 7), time: (7, 15), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,14,12,,-1,-1
+140,f87f1ac3-5a6c-4570-93fb-bfb1f3743fb4,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,12,3,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,-1,04Ind@2:product(1.0),-1,-1
+309,0aa8efa9-6f85-4ffa-bb4b-7a9b05763eaa,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,12,1,52,7,-1,7,02Dec@1|05Ran@2,"[quantity: (1, 1), time: (10, 15), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,15,12,,-1,-1
+350,5ca3be6b-3ec9-46b9-9349-81ff1b062fe7,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,12,1,52,9,-1,9,02Dec@1|05Ran@2,"[quantity: (1, 1), time: (10, 15), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,14,12,,-1,-1
+325,1386116f-f4d2-4d63-b142-99fb35d8405e,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,12,11,25,-1,-1,7,,"[quantity: (1, 14), time: (12, 17), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+219,d57b23d5-bd25-4f39-a2fa-5271c40d936a,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,12,2,26,2,-1,2,05Ran@2|02Dec@1,"[quantity: (1, 8), time: (2, 15), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,5,12,,-1,-1
+321,62924c68-145e-4bd9-b35e-290da2e765bd,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,12,22,17,-1,-1,7,,"[quantity: (1, 57), time: (7, 17), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+246,69f3afc9-48b4-48e3-b2cb-dc809560f158,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,13,58,17,-1,-1,3,,"[quantity: (1, 58), time: (3, 13), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+55,a8f06a48-2e71-409c-af09-581d22828e4f,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,13,4,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,13,,-1,-1
+64,da9727a0-2f45-4cdb-bdbf-f7d2badee40e,05Ran@2,BUYER,RandomAgent,_SystemAgent,13,6,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+238,221e8c08-a181-4e6b-bbfd-41b1d3d19a31,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,13,19,40,3,-1,3,02Dec@1|04Ind@2,"[quantity: (1, 23), time: (8, 13), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,02Dec@1:product(0.21052631578947367),-1,-1
+29,44f58c91-086a-4765-b933-da45f84f4ef0,05Ran@2,BUYER,RandomAgent,_SystemAgent,13,4,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+65,01ad89f3-83bb-4102-96ac-3f833eff2e47,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,13,5,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,13,,-1,-1
+87,ae58ead3-4578-4e1a-a273-9ee351f1a8b8,05Ran@2,BUYER,RandomAgent,_SystemAgent,13,1,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+390,b0731328-cc4b-4c33-ba43-311f42edb3ae,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,13,2,23,11,-1,11,05Ran@2|02Dec@1,"[quantity: (1, 9), time: (11, 15), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,13,-1,02Dec@1:product(1.0),-1,-1
+136,6f77bde3-07b2-431d-b1b8-273494857ff0,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,13,6,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,13,,-1,-1
+119,e4fcd7de-988f-45fc-bd52-20cd4d255570,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,13,3,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,-1,04Ind@2:product(1.0),-1,-1
+340,4dc6e197-fce8-44ea-a8a7-08e3c091cbda,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,13,13,25,-1,-1,8,,"[quantity: (1, 17), time: (13, 18), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+109,b3ced00a-1327-4c1e-9e10-d28bf955e2a9,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,13,5,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,13,,-1,-1
+114,8783a5fb-095a-4fc3-a05b-23db3a0a3d68,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,13,6,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,04Ind@2:product(1.0),-1,-1
+160,81e645cf-8aba-4937-a0cb-e20fd9a9ed0f,05Ran@2,BUYER,RandomAgent,_SystemAgent,14,4,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+151,2fe44f4b-e3cf-4ee8-b793-78e27b36c9db,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,14,2,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,14,,-1,-1
+1,135aab5a-181a-4aac-a21b-2f4ad6e12ad0,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,14,6,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,14,,-1,-1
+292,a3058b0f-376b-4e24-abed-9bbf4adfb427,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,14,11,52,-1,-1,6,,"[quantity: (1, 15), time: (11, 16), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,11,-1,,-1,-1
+132,51a3e755-915b-412d-858e-6e2535263bc7,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,14,4,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,14,,-1,-1
+36,15643758-de3d-4334-adca-c4ee3c7cebe5,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,14,4,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,14,,-1,-1
+120,399e3cfb-9002-4000-b649-505839be5787,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,14,3,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,14,,-1,-1
+117,a9ec1ccf-c662-419b-ac67-24ccc7049fd0,05Ran@2,BUYER,RandomAgent,_SystemAgent,14,6,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+115,459c0fd6-30a3-4447-9fd9-ad979064907d,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,14,6,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,14,,-1,-1
+279,7084d78a-2925-4db1-b7ad-7d3d52f8b269,03MyA@1,05Ran@2,MyAgent,RandomAgent,14,13,25,-1,-1,5,,"[quantity: (1, 13), time: (5, 15), unit_price: (1, 26)]",03MyA@1,05Ran@2,p2,05Ran@2,True,2,10,-1,,-1,-1
+0,4a4a371a-2a13-44ff-a440-a17d719b6627,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,14,5,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,14,,-1,-1
+441,1d85ccea-2f92-4689-8158-63c2397fe17f,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,14,6,48,-1,-1,14,,"[quantity: (1, 8), time: (14, 14), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+387,a5d03862-7852-4757-9560-a9a6e530e4fa,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,14,8,26,11,-1,11,05Ran@2|02Dec@1,"[quantity: (1, 8), time: (11, 15), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,6,14,,-1,-1
+334,34e3cf52-6154-4d12-a13c-c365a8b0ff2d,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,14,1,50,8,-1,8,02Dec@1|05Ran@2,"[quantity: (1, 1), time: (10, 15), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,12,14,,-1,-1
+353,fe723d5b-95f9-4170-94b3-f89564f2da25,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,15,4,50,9,-1,9,02Dec@1|05Ran@2,"[quantity: (1, 4), time: (14, 19), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,11,15,,-1,-1
+326,dc9daa75-9697-459f-94ff-f9f3c69652de,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,15,18,24,-1,-1,7,,"[quantity: (1, 18), time: (10, 15), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+440,e4deabb0-0cdc-4fd1-a6fa-5a3ca6f99d05,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,15,6,26,-1,-1,14,,"[quantity: (1, 10), time: (14, 18), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,9,-1,,-1,-1
+462,dc1e0119-c707-4b9e-ac8f-cb71cc92bc44,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,15,68,17,-1,-1,15,,"[quantity: (1, 68), time: (15, 18), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,2,-1,,-1,-1
+366,b596f424-3a1b-4d1d-a449-704a8ee9cace,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,15,4,46,10,-1,10,02Dec@1|05Ran@2,"[quantity: (1, 4), time: (14, 19), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,15,15,,-1,-1
+370,f97a4833-99ed-4ee0-af9c-b8a10121c70d,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,15,1,52,10,-1,10,02Dec@1|05Ran@2,"[quantity: (1, 1), time: (10, 15), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,5,15,,-1,-1
+345,5f721339-649a-4e47-8416-81e64205c769,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,15,18,24,-1,-1,8,,"[quantity: (1, 18), time: (10, 15), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+79,1f760faf-2d72-442c-915e-17f39c9a1398,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,15,4,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,15,,-1,-1
+31,1a491dc1-4bee-430f-b719-0a3558c3a71c,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,15,6,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,15,,-1,-1
+27,41ba3692-c400-4eeb-bf04-a072e67c620a,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,15,4,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,15,,-1,-1
+59,b4b10799-7975-4ff3-82ed-84a7313bb160,05Ran@2,BUYER,RandomAgent,_SystemAgent,15,5,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+7,0500fe61-4f6e-41c3-b360-0ff1d132d5a0,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,15,4,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,15,,-1,-1
+406,70e39644-3125-4572-a30d-330e6c549a67,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,15,10,25,-1,-1,12,,"[quantity: (1, 10), time: (12, 15), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,12,-1,,-1,-1
+107,ff5a5fdb-c117-4bfc-ad32-ed3d3e668bc4,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,15,1,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,15,,-1,-1
+460,1bbf68d4-2aa1-447c-bac5-dc52b780f122,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,15,5,17,-1,-1,15,,"[quantity: (1, 54), time: (15, 25), unit_price: (1, 17)]",00Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+69,cfa4e31e-5eaa-461a-8e6f-931674f28772,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,15,3,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,15,,-1,-1
+83,74ef326b-6073-424f-8e96-0b4293d66147,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,15,5,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,15,,-1,-1
+125,ada45245-b77e-40d4-b0be-dd0e2b462328,05Ran@2,BUYER,RandomAgent,_SystemAgent,15,3,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+106,93fb87c4-6ed6-4427-a096-5ea033bcea5e,05Ran@2,BUYER,RandomAgent,_SystemAgent,15,5,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+76,0d049c6c-7674-4b3a-a3bc-bfcea28cf251,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,16,6,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,-1,04Ind@2:product(1.0),-1,-1
+58,629e86a5-b4cd-4b9b-8f83-73f79aeb2b47,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,16,3,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,-1,04Ind@2:product(0.3333333333333333),-1,-1
+148,24e3676e-104f-4610-8856-de2cbccef829,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,16,5,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,16,,-1,-1
+95,001c6541-f70c-4fac-971e-13cc2eae764f,05Ran@2,BUYER,RandomAgent,_SystemAgent,16,4,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+484,bf73491c-da3c-4f1e-8b2c-564c63234d90,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,16,18,26,-1,-1,16,,"[quantity: (1, 18), time: (16, 18), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+323,d3f3ec81-bec9-4faf-a670-6857bd0b1bb3,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,16,27,37,-1,-1,7,,"[quantity: (1, 27), time: (12, 17), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,,-1,-1
+5,33b1c0ad-5484-4872-a381-308ec88a1f04,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,16,4,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,16,,-1,-1
+364,26b36956-6fdc-4439-b16d-901c55ee5428,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,16,1,52,10,-1,10,02Dec@1|05Ran@2,"[quantity: (1, 1), time: (15, 20), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,11,-1,02Dec@1:product(1.0),-1,-1
+392,00034c71-62e1-409d-9691-55b1920834db,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,16,18,27,-1,-1,11,,"[quantity: (1, 18), time: (16, 21), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+22,b21c57d6-2094-4263-a841-4c82fea68f69,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,16,3,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,16,,-1,-1
+297,816a3b82-26c5-4463-899c-d90c36d9e78a,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,16,15,40,-1,-1,6,,"[quantity: (1, 15), time: (11, 16), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,,-1,-1
+391,9b198bde-54dd-4f41-ac7b-8df76a311c6d,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,16,2,51,-1,-1,11,,"[quantity: (1, 4), time: (14, 19), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,13,-1,,-1,-1
+128,8cb85b22-3a24-4ba6-bb8d-d649534d65de,05Ran@2,BUYER,RandomAgent,_SystemAgent,16,4,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+306,00ebeed7-abcb-4b5b-b866-352831d49569,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,16,10,51,7,-1,7,02Dec@1|05Ran@2,"[quantity: (1, 27), time: (12, 17), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,15,-1,02Dec@1:product(0.3),-1,-1
+126,4fafacac-16eb-4861-b6af-b0c63707ccf4,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,16,4,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,16,,-1,-1
+142,5c29da62-1251-456b-ba48-6a9cbee95229,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,16,3,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,-1,04Ind@2:product(1.0),-1,-1
+68,c1ed197e-d05b-4759-b4e8-40335e1bcfd7,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,16,4,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,16,,-1,-1
+322,d1f13616-b395-4209-b5dc-3f8c0964bd41,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,17,11,26,-1,-1,7,,"[quantity: (1, 16), time: (12, 17), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+410,a406305e-aab7-4893-9132-2c976fbf556c,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,17,10,25,-1,-1,12,,"[quantity: (1, 12), time: (17, 22), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+314,3edef8ef-3723-40ed-aa3d-caa58c466495,00Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,17,12,26,7,-1,7,00Dec@0|02Dec@1,"[quantity: (1, 16), time: (12, 17), unit_price: (17, 34)]",00Dec@0,02Dec@1,p1,00Dec@0,False,1,17,17,,-1,-1
+385,bf75b235-4902-49b2-a211-598166f9099d,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,17,1,52,11,-1,11,02Dec@1|05Ran@2,"[quantity: (1, 1), time: (15, 20), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,7,-1,02Dec@1:product(1.0),-1,-1
+12,a39ddf05-cdb4-4c53-8493-a2bbd7932522,05Ran@2,BUYER,RandomAgent,_SystemAgent,17,5,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+8,41e22bdc-674a-4f56-bd5b-0f12cf73de57,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,17,2,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,-1,04Ind@2:product(1.0),-1,-1
+425,7cb7dda9-a6e6-4e1e-889b-112c1cb1376a,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,17,1,39,-1,-1,13,,"[quantity: (1, 4), time: (17, 22), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,,-1,-1
+60,73740349-92e4-4a8e-80b2-023d13bc8115,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,17,6,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,17,,-1,-1
+159,1c4589ac-56af-47b0-8edc-f8d35fac4a63,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,17,4,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,17,,-1,-1
+461,11d13a1c-596f-495f-ab55-2664da2caf8a,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,17,6,35,-1,-1,15,,"[quantity: (1, 24), time: (15, 18), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+459,5067b97c-c25d-4a47-b86e-39970d4f19f9,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,17,1,39,-1,-1,15,,"[quantity: (1, 4), time: (17, 22), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,,-1,-1
+84,a89e93f8-6e53-472d-a35a-f618684646b1,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,17,4,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,17,,-1,-1
+62,953ce3ae-a5a2-41f3-a10b-3532d4d22ec1,05Ran@2,BUYER,RandomAgent,_SystemAgent,17,4,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+85,59c12b44-5a7a-4b5f-ab05-ebcaaa64e503,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,17,3,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,17,,-1,-1
+90,e72aa0e9-61be-450a-9242-9635699dccc7,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,17,6,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,04Ind@2:product(1.0),-1,-1
+93,2400cddd-0db9-45aa-a5fb-18b980b28819,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,17,3,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,-1,04Ind@2:product(1.0),-1,-1
+97,d02e69ac-8932-42aa-994e-d2857bdbab80,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,17,3,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,17,,-1,-1
+466,185cec34-929d-4ac6-897a-34d95b02c368,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,17,2,48,-1,-1,15,,"[quantity: (1, 4), time: (17, 22), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,14,-1,,-1,-1
+463,61c3a56b-7fe0-439f-89fe-27de64a01c29,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,17,12,17,-1,-1,15,,"[quantity: (1, 60), time: (15, 23), unit_price: (1, 17)]",00Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+100,477af8f2-1762-40ed-9fdf-17d36d9e2d44,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,18,7,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,18,,-1,-1
+332,b0075d15-1cb6-4aef-81a8-1c617b8d8843,00Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,18,13,26,8,-1,8,00Dec@0|02Dec@1,"[quantity: (1, 17), time: (13, 18), unit_price: (17, 34)]",00Dec@0,02Dec@1,p1,00Dec@0,False,1,17,18,,-1,-1
+417,042cf130-8cea-4c94-88b0-221f84039467,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,18,10,25,13,-1,13,01Dec@0|02Dec@1,"[quantity: (1, 12), time: (18, 23), unit_price: (17, 34)]",01Dec@0,02Dec@1,p1,01Dec@0,False,1,17,18,,-1,-1
+13,82634739-a10b-417c-9a2c-47f47fc35399,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,18,6,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,18,,-1,-1
+123,fa5b794c-9f82-4634-a2dc-cdc5982702bc,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,18,5,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,04Ind@2:product(1.0),-1,-1
+21,d096336e-9507-4b56-88fc-b015d06895db,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,18,4,10,0,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,18,,-1,-1
+344,68615424-972d-4191-aed6-d0bc1caaa149,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,18,11,26,-1,-1,8,,"[quantity: (1, 13), time: (13, 18), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+153,1f0ce859-8b2f-415a-9fa5-f09af41c22c3,05Ran@2,BUYER,RandomAgent,_SystemAgent,18,6,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+81,1e847f59-6156-4ea7-a72a-63d70b6d38e7,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,18,3,10,0,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,18,,-1,-1
+75,bbf6ecdf-777c-4912-86a0-922347fcdfe2,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,18,4,35,0,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,-1,04Ind@2:product(1.0),-1,-1
+102,b54436d7-992a-4e2a-8451-6208ebc61dff,05Ran@2,BUYER,RandomAgent,_SystemAgent,18,3,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+518,e91d9393-57b3-460f-a170-db5df3aeefc1,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,18,39,26,-1,-1,18,,"[quantity: (1, 39), time: (18, 21), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+396,d79220ef-51b1-4364-96ee-a3db51e5a523,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,18,4,49,12,-1,12,02Dec@1|05Ran@2,"[quantity: (1, 4), time: (17, 22), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,12,18,,-1,-1
+467,2ee141d2-0fc0-4fc3-b89b-f2fd2bc91e23,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,18,8,25,16,-1,16,05Ran@2|02Dec@1,"[quantity: (1, 13), time: (16, 20), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,11,-1,02Dec@1:product(0.25),-1,-1
+66,b6425f15-3c34-4fa0-8278-2ed389514857,05Ran@2,BUYER,RandomAgent,_SystemAgent,18,2,35,0,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+442,98dbc03b-ef29-4b44-89a7-500dd36e5b5b,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,19,13,27,-1,-1,14,,"[quantity: (1, 15), time: (19, 24), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+444,48e9d08f-de96-4227-a50e-09f881410c49,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,19,24,51,-1,-1,14,,"[quantity: (1, 27), time: (19, 24), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,11,-1,,-1,-1
+197,cc711be4-8c57-4237-b8c4-c0c73dc0e50c,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,19,6,35,-1,-1,-1,BUYER,[],04Ind@2,BUYER,p3,BUYER,True,3,0,-1,,-1,-1
+191,dd2ecc59-d79b-48e7-8515-74f8ee08fc5b,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,19,3,35,-1,-1,-1,BUYER,[],04Ind@2,BUYER,p3,BUYER,True,3,0,-1,,-1,-1
+187,3cf7da6c-3ad7-4a99-8a01-a96a4b1245c6,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,19,3,35,-1,-1,-1,BUYER,[],04Ind@2,BUYER,p3,BUYER,True,3,0,-1,,-1,-1
+181,141b459d-3e74-4e16-a99b-fa87483f1ff5,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,19,3,10,1,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,19,,-1,-1
+180,a2dd8705-fab5-4517-b1d2-1daba9d189b7,05Ran@2,BUYER,RandomAgent,_SystemAgent,19,3,35,1,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+501,fb646038-0b03-4c79-ba0f-2b16aa04e52e,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,19,36,36,-1,-1,17,,"[quantity: (1, 37), time: (17, 20), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+389,9b030bdc-7eef-4641-ae29-098c16dedfdb,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,19,1,39,11,-1,11,02Dec@1|04Ind@2,"[quantity: (1, 4), time: (14, 19), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,19,,-1,-1
+357,2752f444-e4e9-49ad-964a-90185a4bf96d,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,19,12,26,-1,-1,9,,"[quantity: (1, 15), time: (14, 19), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+407,f813619a-4761-4c1b-80f6-10ae60245997,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,19,46,17,-1,-1,12,,"[quantity: (1, 48), time: (12, 21), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+435,b109f27a-7bc4-48d7-9b3d-fcdd598e3dac,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,19,12,25,14,-1,14,01Dec@0|02Dec@1,"[quantity: (1, 15), time: (19, 24), unit_price: (17, 34)]",01Dec@0,02Dec@1,p1,01Dec@0,False,1,17,19,,-1,-1
+409,87baddb6-3f90-4f51-9249-dc0f3abb0e9c,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,19,46,17,-1,-1,12,,"[quantity: (1, 52), time: (12, 22), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+358,138b426c-017c-4304-836e-d0ff5b928b00,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,19,12,26,-1,-1,9,,"[quantity: (1, 15), time: (14, 19), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+532,b13d43e3-d580-4231-a35d-969b299d6b60,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,19,1,51,-1,-1,19,,"[quantity: (1, 1), time: (19, 20), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+537,4c659777-f39c-406c-96c0-3251e111a555,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,19,2,9,-1,-1,19,,"[quantity: (1, 5), time: (19, 23), unit_price: (1, 17)]",01Dec@0,02Dec@1,p1,02Dec@1,True,1,17,-1,,-1,-1
+408,7f9fb0da-bb84-438b-a21a-8939001abcf8,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,19,46,17,-1,-1,12,,"[quantity: (1, 46), time: (12, 19), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+538,8a81e10b-b62f-4fc7-b2b2-f43699e346c9,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,19,5,10,-1,-1,19,,"[quantity: (1, 5), time: (19, 28), unit_price: (1, 17)]",01Dec@0,02Dec@1,p1,02Dec@1,True,1,17,-1,,-1,-1
+168,906c3d3c-450d-4a7f-95e7-8b88863ca467,05Ran@2,BUYER,RandomAgent,_SystemAgent,19,5,35,1,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+351,614e7a70-d301-4291-a2b2-1e78d5274844,00Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,19,12,26,9,-1,9,00Dec@0|02Dec@1,"[quantity: (1, 15), time: (14, 19), unit_price: (17, 34)]",00Dec@0,02Dec@1,p1,00Dec@0,False,1,17,19,,-1,-1
+171,b5243ab5-2d2e-4c6c-9f9c-85dc19aa0dc1,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,19,6,10,1,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,19,,-1,-1
+174,128bea7a-5b20-4267-b0f6-1354907a255f,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,19,2,10,1,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,19,,-1,-1
+175,4a819fba-2c15-4448-b8cb-27adad86c8d0,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,19,6,10,1,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,19,,-1,-1
+179,0d0b41cb-7ffa-4645-af22-6a84388a7d21,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,19,3,10,1,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,19,,-1,-1
+465,67cfe79c-65d0-40f8-a03e-6880bf23272c,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,20,12,25,-1,-1,15,,"[quantity: (1, 16), time: (20, 25), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+375,3b81cd37-cc42-4962-bd56-0515122f933b,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,20,11,26,-1,-1,10,,"[quantity: (1, 13), time: (15, 20), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+378,cc3acd78-7f85-4e8b-ab29-f2fa9d0e14e0,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,20,11,26,-1,-1,10,,"[quantity: (1, 17), time: (15, 20), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+379,b6e3c6b7-642d-483e-9d3a-e1d50b9a2bfa,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,20,46,17,-1,-1,10,,"[quantity: (1, 46), time: (10, 20), unit_price: (1, 17)]",00Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+464,dd15088f-fcdc-49cb-b349-7c339f2c5c7c,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,20,5,25,-1,-1,15,,"[quantity: (1, 5), time: (18, 23), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+458,7a6e6f52-9732-4faa-82cf-914a6603c7c0,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,20,11,25,-1,-1,15,,"[quantity: (1, 14), time: (20, 25), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+490,a6cfcb6e-0860-495c-bebf-fa2a8eee3be6,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,20,1,42,17,-1,17,02Dec@1|05Ran@2,"[quantity: (1, 2), time: (20, 25), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,16,-1,02Dec@1:product(1.0),-1,-1
+209,cdda8821-192c-43c9-a687-172d1a625623,05Ran@2,BUYER,RandomAgent,_SystemAgent,20,6,35,2,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+533,fb05d932-4e27-4ee8-b824-f5ae48cf8477,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,20,16,17,-1,-1,19,,"[quantity: (1, 23), time: (19, 26), unit_price: (1, 17)]",01Dec@0,02Dec@1,p1,02Dec@1,True,1,2,-1,,-1,-1
+422,6d99f44d-2a89-4a57-853f-8456a7a6c6e6,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,20,6,48,-1,-1,13,,"[quantity: (1, 13), time: (18, 23), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,15,-1,,-1,-1
+513,0b5b3982-024e-4162-8a68-4a93629d3e25,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,20,1,39,18,-1,18,02Dec@1|04Ind@2,"[quantity: (1, 2), time: (20, 25), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,02Dec@1:product(1.0),-1,-1
+540,e1472628-9c27-47af-895e-204a4daf214d,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,20,11,26,-1,-1,19,,"[quantity: (1, 11), time: (19, 23), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,8,-1,,-1,-1
+231,2ef6ce7e-cdb2-460e-9f66-c8b5ddfcddf0,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,20,5,35,-1,-1,-1,BUYER,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,,-1,-1
+505,76813e98-f1d3-4b04-9f0c-3c37bf2f4396,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,20,1,48,18,-1,18,02Dec@1|05Ran@2,"[quantity: (1, 2), time: (20, 25), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,13,-1,02Dec@1:product(1.0),-1,-1
+226,321b2842-f746-42e6-86e5-9caf08d71d53,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,20,5,35,-1,-1,-1,BUYER,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,,-1,-1
+220,8ba543de-99fc-49a4-a481-2652a0aa8d9d,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,20,4,10,2,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,20,,-1,-1
+496,006224b3-18ef-4b8e-a42b-42e036d0c154,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,20,1,39,17,-1,17,02Dec@1|04Ind@2,"[quantity: (1, 2), time: (20, 25), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,02Dec@1:product(1.0),-1,-1
+217,ab5ea7b3-1dda-4f2e-aea9-109ca369a806,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,20,6,10,2,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,20,,-1,-1
+216,05424845-f8e6-4657-a14a-5cc3cc11fdbf,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,20,5,10,2,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,20,,-1,-1
+214,75d4f7dc-c604-4392-86e1-b28aad3625f5,05Ran@2,BUYER,RandomAgent,_SystemAgent,20,4,35,2,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+427,a8523e67-14f9-402f-84e9-7ccc9072e177,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,20,27,41,14,-1,14,02Dec@1|04Ind@2,"[quantity: (1, 27), time: (19, 24), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,02Dec@1:product(0.2962962962962963),-1,-1
+218,b369bb74-fcb3-42f2-8368-82b09f702251,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,20,5,10,2,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,20,,-1,-1
+495,56494678-59cf-4844-9ca4-5cb4fd600127,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,21,2,26,17,-1,17,05Ran@2|02Dec@1,"[quantity: (1, 10), time: (17, 21), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,16,21,,-1,-1
+475,3f906c0e-5b8b-46e6-9a81-85de6bb7d808,00Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,21,12,25,16,-1,16,00Dec@0|02Dec@1,"[quantity: (1, 15), time: (21, 26), unit_price: (17, 34)]",00Dec@0,02Dec@1,p1,00Dec@0,False,1,17,21,,-1,-1
+482,061cdb74-7006-440e-8938-6df9d62b56b5,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,21,12,25,-1,-1,16,,"[quantity: (1, 15), time: (21, 26), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+577,df60445f-c8d5-4d8a-b82e-499eb61bea1c,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,21,5,13,-1,-1,21,,"[quantity: (1, 5), time: (21, 25), unit_price: (1, 26)]",02Dec@1,04Ind@2,p2,04Ind@2,True,2,17,-1,,-1,-1
+574,73dfe7df-2525-4b70-92f1-f62adcc91685,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,21,5,13,-1,-1,21,,"[quantity: (1, 10), time: (21, 25), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,17,-1,,-1,-1
+445,a635cc2e-fbc0-4d94-a894-0f63b370eb21,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,21,5,26,-1,-1,14,,"[quantity: (1, 5), time: (18, 23), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+477,b2e8cf4e-1e2a-400b-b1cd-0d9be90970b0,00Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,21,3,26,16,-1,16,00Dec@0|02Dec@1,"[quantity: (1, 3), time: (19, 24), unit_price: (17, 34)]",00Dec@0,02Dec@1,p1,00Dec@0,False,1,17,21,,-1,-1
+424,dc87bd7f-e9c7-4ba8-a7d6-5480b39bfeba,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,21,5,26,-1,-1,13,,"[quantity: (1, 12), time: (18, 23), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+514,4ec44f17-94aa-4d99-994a-cb64a59d2082,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,21,5,44,18,-1,18,02Dec@1|05Ran@2,"[quantity: (1, 5), time: (21, 26), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,16,21,,-1,-1
+423,d728f9dd-fac2-46a4-a665-1573b7073bdc,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,21,5,26,-1,-1,13,,"[quantity: (1, 5), time: (18, 23), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+239,a582ac66-ba08-45c9-82d8-09e5172cd5a9,05Ran@2,BUYER,RandomAgent,_SystemAgent,21,5,35,3,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+250,7639b421-7e56-43eb-ac28-1abac15882f7,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,21,2,35,-1,-1,-1,BUYER,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,,-1,-1
+245,ecfc844f-547c-4a18-8ac0-7c5fdd3bd838,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,21,6,35,-1,-1,-1,BUYER,[],04Ind@2,BUYER,p3,BUYER,True,3,0,-1,,-1,-1
+244,4e15aaa9-e066-4ec2-9f8a-06f6e206f353,05Ran@2,BUYER,RandomAgent,_SystemAgent,21,4,35,3,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+243,1d9778e8-73e2-47ec-a957-79d53c7cd3f1,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,21,3,10,3,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,21,,-1,-1
+242,15923c0e-e0aa-45af-89f5-f0a2430ae0d5,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,21,5,10,3,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,21,,-1,-1
+236,ccfca3b1-001d-48af-a24d-25f916d8cdb5,05Ran@2,BUYER,RandomAgent,_SystemAgent,21,3,35,3,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+240,53dbadc4-6e78-439b-8825-d2b5c4363c15,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,21,3,10,3,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,21,,-1,-1
+234,139e6e3e-6d1d-43c3-ae6f-5ebcf88d0f06,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,21,4,10,3,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,21,,-1,-1
+241,a418d205-634a-4dee-ae68-921de38a13ab,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,21,5,10,3,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,21,,-1,-1
+539,b6437094-a4f8-4afd-8f93-d90f2ad6a0bc,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,22,5,17,-1,-1,19,,"[quantity: (1, 46), time: (19, 25), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,7,-1,,-1,-1
+254,8e1a5f0f-7f37-453d-a0c7-afb787f6a888,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,22,4,10,4,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,22,,-1,-1
+261,771cb3f6-d964-4ecd-8c88-d3379ce8eb17,05Ran@2,BUYER,RandomAgent,_SystemAgent,22,3,35,4,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+438,50779ddd-4a0f-4705-adf5-9ee32e1ea879,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,22,1,39,14,-1,14,02Dec@1|04Ind@2,"[quantity: (1, 4), time: (17, 22), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,02Dec@1:product(1.0),-1,-1
+439,dd446fe5-7cec-437c-8e94-07603fb58a3a,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,22,3,52,14,-1,14,02Dec@1|05Ran@2,"[quantity: (1, 4), time: (17, 22), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,12,-1,02Dec@1:product(1.0),-1,-1
+443,25cff97e-8a37-4e52-bf61-f67e626d40a0,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,22,3,25,-1,-1,14,,"[quantity: (1, 3), time: (19, 24), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+415,7a5c4d1c-6fc2-4ed9-a5fd-0d33d8de4811,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,22,3,50,13,-1,13,02Dec@1|05Ran@2,"[quantity: (1, 4), time: (17, 22), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,12,-1,02Dec@1:product(1.0),-1,-1
+253,a469d068-8bd8-4277-92f2-6000069433be,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,22,6,10,4,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,22,,-1,-1
+451,63ea1a43-992c-422d-a0e7-ec2557e4f388,00Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,22,3,25,15,-1,15,00Dec@0|02Dec@1,"[quantity: (1, 3), time: (19, 24), unit_price: (17, 34)]",00Dec@0,02Dec@1,p1,00Dec@0,False,1,17,22,,-1,-1
+524,e7d09e07-4609-463f-bd01-d50091b7d0a5,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,22,5,17,19,-1,19,02Dec@1|01Dec@0,"[quantity: (1, 5), time: (19, 25), unit_price: (1, 17)]",01Dec@0,02Dec@1,p1,02Dec@1,True,1,7,22,,-1,-1
+500,977e2251-60e4-4230-84e3-80696d9a9108,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,22,3,25,-1,-1,17,,"[quantity: (1, 3), time: (19, 24), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+497,345fe8e5-5faf-41a6-a2eb-3d790c1a4f0f,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,22,5,46,17,-1,17,02Dec@1|05Ran@2,"[quantity: (1, 5), time: (21, 26), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,14,-1,02Dec@1:product(1.0),-1,-1
+480,cc0a1514-cca4-4914-9f5c-097b56f95bfb,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,22,2,46,-1,-1,16,,"[quantity: (1, 2), time: (20, 25), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,14,-1,,-1,-1
+262,9abb6a3c-43be-4456-bdba-dc15212b5c72,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,22,3,35,-1,-1,-1,BUYER,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,,-1,-1
+260,260abb01-045a-46ac-9e58-682fcb87c19e,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,22,3,10,4,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,22,,-1,-1
+483,8d3256a3-bf04-4e98-b405-05d61d1692f2,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,22,5,49,-1,-1,16,,"[quantity: (1, 5), time: (21, 26), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,12,-1,,-1,-1
+259,c4f5e9f6-d69e-4396-9def-0ad54575d663,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,22,6,10,4,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,22,,-1,-1
+257,24f1b39a-5ae9-44f4-8d56-68b18b68c7a4,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,22,1,10,4,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,22,,-1,-1
+256,0b4e45c1-c387-4572-8430-2d0338e9b9f4,05Ran@2,BUYER,RandomAgent,_SystemAgent,22,4,35,4,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+266,884072aa-aa41-4ebe-add5-bdfba49a0df5,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,22,4,35,-1,-1,-1,BUYER,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,,-1,-1
+499,c29b38f9-ca8a-4d14-a213-839dfcbf52a0,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,22,19,27,-1,-1,17,,"[quantity: (1, 19), time: (22, 27), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+412,270679ff-6cbb-411c-9938-852d17a070b4,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,22,13,40,13,-1,13,02Dec@1|04Ind@2,"[quantity: (1, 13), time: (18, 23), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,22,,-1,-1
+457,e3305a4a-a630-4e44-97cf-cbef021ee5d5,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,22,2,46,15,-1,15,02Dec@1|05Ran@2,"[quantity: (1, 2), time: (20, 25), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,15,-1,02Dec@1:product(1.0),-1,-1
+255,d0585d43-bad8-4ced-957e-9f001da5243b,05Ran@2,BUYER,RandomAgent,_SystemAgent,22,6,35,4,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+269,1b75b617-3ead-4650-aa6e-be971f1d6d91,05Ran@2,BUYER,RandomAgent,_SystemAgent,23,4,35,5,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+267,f642a38a-002e-4455-843a-95a2d3ef0b7d,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,23,4,10,5,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,23,,-1,-1
+270,a72300b5-b1af-4fcf-8509-737ee716296d,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,23,6,10,5,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,23,,-1,-1
+271,e7a5e82f-67aa-4203-ba5d-a8d849363e68,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,23,4,10,5,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,23,,-1,-1
+272,fc817ea9-938f-4879-9f73-114f7a1b3e2c,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,23,6,10,5,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,23,,-1,-1
+273,a6b4be42-595b-48f5-bc29-f864c3026dca,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,23,4,35,5,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,23,,-1,-1
+507,08b5d0a1-d8e1-4408-88f3-d0ce9c2da562,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,23,8,49,18,-1,18,02Dec@1|05Ran@2,"[quantity: (1, 8), time: (23, 28), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,12,23,,-1,-1
+275,7de53df5-9e61-473c-b346-f1cda6b56106,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,23,6,35,5,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,23,,-1,-1
+268,2a6c502e-c210-47a2-bf86-1bda34fd6075,05Ran@2,BUYER,RandomAgent,_SystemAgent,23,6,35,5,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+519,c700d8c7-f666-4d42-a42b-b611bc1f9770,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,23,12,25,-1,-1,18,,"[quantity: (1, 16), time: (23, 28), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+541,35ca020b-127f-431f-8df1-590a3780e624,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,23,16,17,-1,-1,19,,"[quantity: (1, 58), time: (19, 29), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+612,d86978bd-9c2e-4b7d-9e97-6949f2f573ad,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,23,7,16,-1,-1,23,,"[quantity: (1, 10), time: (23, 27), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,16,-1,,-1,-1
+590,20b27b4a-3c8b-4702-8baf-9845363a3d91,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,23,5,25,-1,-1,22,,"[quantity: (1, 8), time: (22, 26), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,12,-1,,-1,-1
+287,dee7a609-c810-45bc-a50e-53d63465709c,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,24,3,10,6,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,24,,-1,-1
+288,0063aab6-78e4-47d2-9415-f66509029bd2,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,24,5,10,6,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,24,,-1,-1
+534,578de315-4bc8-4de9-b2a1-b95d1b167025,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,24,8,50,-1,-1,19,,"[quantity: (1, 8), time: (23, 28), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,11,-1,,-1,-1
+289,a6b6ae0a-5f53-4c56-8c99-601074c067ff,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,24,4,10,6,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,24,,-1,-1
+535,74969328-fcd9-4b2f-9fd4-6ea91f153e82,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,24,12,25,-1,-1,19,,"[quantity: (1, 15), time: (24, 29), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+291,c1739394-a485-462f-980b-0dd793b78386,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,24,4,10,6,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,24,,-1,-1
+298,157f7fa4-e747-4c3c-8715-36a28221dae8,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,24,8,35,-1,-1,-1,BUYER,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,,-1,-1
+536,b172de5f-f37a-41b1-847a-13b6c057a1a0,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,24,12,25,-1,-1,19,,"[quantity: (1, 15), time: (24, 29), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+559,9f8aa408-a187-4a05-971c-ca193f26ed5c,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,24,4,51,-1,-1,20,,"[quantity: (1, 5), time: (24, 29), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,10,-1,,-1,-1
+286,e34dc151-de8d-499e-bad2-774eab31ed15,05Ran@2,BUYER,RandomAgent,_SystemAgent,24,2,35,6,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+285,b91afc28-be5a-4546-9975-3e5d55d2a75e,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,24,2,35,6,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,24,,-1,-1
+284,0d1946ff-5479-4eec-a7b3-cb23cd40c201,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,24,3,35,6,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,24,,-1,-1
+597,3e373dfd-4099-43b5-a1e6-2afbafedb0b6,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,24,15,17,-1,-1,22,,"[quantity: (1, 46), time: (22, 30), unit_price: (1, 17)]",00Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+281,0217841b-5ede-41a8-abcd-70c8d1d9fa03,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,24,4,10,6,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,24,,-1,-1
+282,954da57c-5df3-48b9-ac00-c44aa512fdea,05Ran@2,BUYER,RandomAgent,_SystemAgent,24,5,35,6,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+531,7e83cc2b-1361-4a80-bd96-cb2b295beacd,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,24,5,44,-1,-1,19,,"[quantity: (1, 5), time: (24, 29), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,16,-1,,-1,-1
+526,b58809aa-d4ea-4192-8cd2-4a6ce1afc934,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,25,3,46,19,-1,19,02Dec@1|05Ran@2,"[quantity: (1, 3), time: (21, 26), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,15,25,,-1,-1
+591,3aa41418-8b1c-4d3c-9422-29ee8b6c473e,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,25,3,33,-1,-1,22,,"[quantity: (1, 5), time: (22, 25), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+449,c8d8e7fa-1350-48e8-a0e6-5ef8eb4f2162,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,25,12,26,15,-1,15,01Dec@0|02Dec@1,"[quantity: (1, 16), time: (20, 25), unit_price: (17, 34)]",01Dec@0,02Dec@1,p1,01Dec@0,False,1,17,25,,-1,-1
+605,183eda60-a721-4454-abf2-5bf178cda939,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,25,1,51,23,-1,23,02Dec@1|05Ran@2,"[quantity: (1, 2), time: (25, 30), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,10,25,,-1,-1
+611,ad01c96b-d9ce-4266-afb5-9270f21e1f92,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,25,32,40,-1,-1,23,,"[quantity: (1, 39), time: (23, 26), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+633,5893dcfa-a497-481b-8d66-12ab45c45e33,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,25,1,48,-1,-1,24,,"[quantity: (1, 2), time: (25, 30), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,13,-1,,-1,-1
+637,224386bf-1ce6-475e-9413-039ec444b6b5,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,25,15,17,-1,-1,24,,"[quantity: (1, 31), time: (24, 30), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,6,-1,,-1,-1
+639,ddff25d8-702b-4a8b-9436-83a011854cd6,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,25,5,24,-1,-1,24,,"[quantity: (1, 12), time: (24, 28), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,12,-1,,-1,-1
+654,9db52f82-7d50-4f71-a657-6777c345af3c,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,25,1,47,-1,-1,25,,"[quantity: (1, 2), time: (25, 25), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+657,3b78a149-f6a6-4f82-bf95-a45aeec8d2cd,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,25,7,35,-1,-1,25,,"[quantity: (1, 7), time: (25, 26), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+659,53920b12-8f86-4f44-9900-c37b06167129,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,25,46,26,-1,-1,25,,"[quantity: (1, 46), time: (25, 28), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+558,bf9d96c7-2372-4832-ad80-e86f57e57b99,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,25,1,39,-1,-1,20,,"[quantity: (1, 2), time: (25, 30), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,,-1,-1
+313,40c4d86e-8e57-4df5-b9fa-c7a57cf9092c,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,25,5,10,7,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,25,,-1,-1
+554,7e6c3dd1-2c8d-45be-b35f-f4f47f1a0865,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,25,41,17,-1,-1,20,,"[quantity: (1, 42), time: (20, 29), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+555,eae01365-cb86-4027-acfe-a49480d91d6f,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,25,41,17,-1,-1,20,,"[quantity: (1, 46), time: (20, 27), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+308,a8a29510-3747-4a05-9cd8-77a12df93da9,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,25,3,10,7,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,25,,-1,-1
+311,08c5c92c-d74f-482d-98a4-8a4fd6840c4d,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,25,6,10,7,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,25,,-1,-1
+312,99d51a07-09be-4751-8e3c-de8456435bc5,05Ran@2,BUYER,RandomAgent,_SystemAgent,25,4,35,7,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+307,b38a841e-0d60-48e5-b510-3cf24b6e49b2,05Ran@2,BUYER,RandomAgent,_SystemAgent,25,3,35,7,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+316,69276126-7b29-4dd8-a4de-fac949faaa60,05Ran@2,BUYER,RandomAgent,_SystemAgent,25,4,35,7,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+319,ea02892e-9acb-4123-be71-52c77906b0c2,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,25,4,35,7,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,25,,-1,-1
+318,6e9a801c-3db6-425b-8a2c-1046ec3418c3,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,25,3,10,7,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,25,,-1,-1
+556,a9eca163-1fbe-40c1-8dbc-7bb460db808c,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,25,14,27,-1,-1,20,,"[quantity: (1, 16), time: (25, 30), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+305,a5471bb9-d2b5-4da3-ac0e-b9f9ee3b8da6,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,25,5,35,7,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,25,,-1,-1
+557,ef00d65c-fd3e-4a5a-a541-3db962fc05a7,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,25,41,17,-1,-1,20,,"[quantity: (1, 47), time: (20, 26), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+315,96617e5c-67ec-48cc-a8e9-0a42b5af252a,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,25,3,10,7,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,25,,-1,-1
+337,f6b3a5c2-58a5-4f3a-b84c-bd9a2527eab3,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,26,5,10,8,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,26,,-1,-1
+661,c5a09b37-f7b6-4e07-8552-2f415b744ed8,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,26,1,49,-1,-1,25,,"[quantity: (1, 1), time: (25, 30), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,12,-1,,-1,-1
+339,53ffc4fb-ee8e-4a24-827f-32e433f35c50,05Ran@2,BUYER,RandomAgent,_SystemAgent,26,3,35,8,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+663,7fd5f77f-279c-4e3b-9e0d-9d8e50e82328,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,26,29,38,-1,-1,25,,"[quantity: (1, 34), time: (25, 27), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+565,8164c293-a599-4e81-b451-1838188be3e2,00Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,26,11,25,21,-1,21,00Dec@0|02Dec@1,"[quantity: (1, 14), time: (26, 31), unit_price: (17, 34)]",00Dec@0,02Dec@1,p1,00Dec@0,False,1,17,26,,-1,-1
+338,9d910390-ff00-4bf7-bba3-b9d4f77db5dc,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,26,4,35,8,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,26,,-1,-1
+481,8d2770be-b417-43e8-9d19-dae4a27402ba,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,26,12,26,-1,-1,16,,"[quantity: (1, 15), time: (21, 26), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+328,e0f52790-2a45-4d3c-88d2-09da26463999,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,26,4,10,8,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,26,,-1,-1
+478,7c2c40a1-73bf-4721-8205-adbc40c1328f,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,26,12,26,16,-1,16,01Dec@0|02Dec@1,"[quantity: (1, 15), time: (21, 26), unit_price: (17, 34)]",01Dec@0,02Dec@1,p1,01Dec@0,False,1,17,26,,-1,-1
+335,e0509f32-0b63-4e98-9826-8449c356eba7,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,26,5,10,8,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,26,,-1,-1
+576,8b42d62e-8312-41a5-9809-815ac335d0e3,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,26,2,50,-1,-1,21,,"[quantity: (1, 2), time: (25, 30), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,12,-1,,-1,-1
+594,fc3f7bb8-057e-4b55-8ebb-b0a636c3133d,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,26,6,17,-1,-1,22,,"[quantity: (1, 54), time: (22, 31), unit_price: (1, 17)]",00Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+593,c1342361-a64d-4110-b843-585ea9009103,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,26,14,17,-1,-1,22,,"[quantity: (1, 59), time: (22, 32), unit_price: (1, 17)]",00Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+329,e4894741-451a-4dda-8e4c-987997053833,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,26,3,10,8,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,26,,-1,-1
+333,969ead30-71d2-4005-9cb9-6dea6f19abad,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,26,3,10,8,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,26,,-1,-1
+330,d3b65025-517a-4748-a704-bcf66116f798,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,26,5,35,8,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,26,,-1,-1
+336,b333a50d-c9bd-4437-bd64-6913193ad76a,05Ran@2,BUYER,RandomAgent,_SystemAgent,26,5,35,8,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+331,9968f1fd-1e1a-4b38-898b-52586eebaf26,05Ran@2,BUYER,RandomAgent,_SystemAgent,26,3,35,8,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+697,88fd2bc9-83a2-4e85-9c2b-f0a5e56a396d,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,27,1,39,-1,-1,27,,"[quantity: (1, 2), time: (27, 29), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+669,99d9b346-eb4b-4b3b-a402-b4da878cdd54,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,27,5,42,26,-1,26,02Dec@1|05Ran@2,"[quantity: (1, 5), time: (26, 27), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,2,27,,-1,-1
+589,b347dd86-d6f1-4206-9b5e-ad9f6d24921b,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,27,25,52,-1,-1,22,,"[quantity: (1, 27), time: (27, 32), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,8,-1,,-1,-1
+517,1b59131f-b778-4b46-b0ee-ac3cc69a55d3,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,27,19,24,-1,-1,18,,"[quantity: (1, 19), time: (22, 27), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+485,75809a4e-d9e2-47a1-ab62-6ea8f7932a48,00Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,27,8,26,17,-1,17,00Dec@0|02Dec@1,"[quantity: (1, 8), time: (22, 27), unit_price: (17, 34)]",00Dec@0,02Dec@1,p1,00Dec@0,False,1,17,27,,-1,-1
+583,3aeb432e-38f1-42bd-94ea-40b8acbb6e62,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,27,2,46,22,-1,22,02Dec@1|05Ran@2,"[quantity: (1, 2), time: (25, 30), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,15,27,,-1,-1
+581,be651803-a289-4fce-82ec-296ea9df20fa,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,27,11,25,22,-1,22,01Dec@0|02Dec@1,"[quantity: (1, 13), time: (27, 32), unit_price: (17, 34)]",01Dec@0,02Dec@1,p1,01Dec@0,False,1,17,27,,-1,-1
+542,d4683075-1b10-4b34-92c4-2c2f3888a07a,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,27,19,24,-1,-1,19,,"[quantity: (1, 19), time: (22, 27), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+636,18930de9-41a9-43e7-8235-ba850a16c1b3,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,27,14,17,-1,-1,24,,"[quantity: (1, 45), time: (24, 32), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,6,-1,,-1,-1
+619,1b34c479-5e6c-49a8-a39d-30507edc6ec4,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,27,5,33,24,-1,24,02Dec@1|05Ran@2,"[quantity: (1, 39), time: (24, 27), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,2,27,,-1,-1
+546,9ab3ee3c-1fd0-4cf3-9b51-d3382f00b18c,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,27,1,46,20,-1,20,02Dec@1|05Ran@2,"[quantity: (1, 2), time: (25, 30), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,15,27,,-1,-1
+355,d73a1299-17e4-4d2a-bcf2-be3177955876,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,27,5,10,9,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,27,,-1,-1
+656,e639780a-35e6-4422-99c5-ab0e21aac9e0,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,27,9,25,-1,-1,25,,"[quantity: (1, 9), time: (27, 32), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+610,c1dd4f6f-5629-4cb7-a53c-1f0003ae67bb,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,27,9,25,-1,-1,23,,"[quantity: (1, 9), time: (27, 32), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+354,6aa163ac-1c92-44e1-858b-03ebaf3c6815,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,27,6,10,9,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,27,,-1,-1
+352,2f67d1be-48fb-4d15-a848-bd1769ec5c23,05Ran@2,BUYER,RandomAgent,_SystemAgent,27,1,35,9,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+361,c05cb801-051a-4625-bf0e-2afe0a583364,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,27,4,35,-1,-1,-1,BUYER,[],04Ind@2,BUYER,p3,BUYER,True,3,0,-1,,-1,-1
+347,ecf5a120-2c3e-4ee2-a852-d20390f1bb41,05Ran@2,BUYER,RandomAgent,_SystemAgent,27,7,35,9,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+349,fbebc62e-16b0-46b6-bca3-9688701e3538,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,27,6,10,9,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,27,,-1,-1
+359,9bd3b4ee-e35c-4bb4-b40e-66fc89c3249d,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,27,5,35,-1,-1,-1,BUYER,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,,-1,-1
+348,10ccf7bd-3095-40a8-8095-4e3e3d7c51c4,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,27,3,10,9,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,27,,-1,-1
+346,cd0c53b4-7099-4692-81ec-3f143c05761a,05Ran@2,BUYER,RandomAgent,_SystemAgent,27,3,35,9,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+374,2c5681c8-7b6d-44b0-93ea-e816a9b49215,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,28,6,35,-1,-1,-1,BUYER,[],04Ind@2,BUYER,p3,BUYER,True,3,0,-1,,-1,-1
+508,01ab1b98-97ac-47c8-9eba-c005702c94c2,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,28,11,26,18,-1,18,01Dec@0|02Dec@1,"[quantity: (1, 16), time: (23, 28), unit_price: (17, 34)]",01Dec@0,02Dec@1,p1,01Dec@0,False,1,17,28,,-1,-1
+372,29f58a5f-1324-43a7-9fc3-70eb619d8fc4,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,28,6,10,10,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,28,,-1,-1
+617,ded1dbf3-70b8-46da-b001-42b7918fcf03,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,28,5,14,24,-1,24,04Ind@2|02Dec@1,"[quantity: (1, 5), time: (24, 28), unit_price: (1, 26)]",02Dec@1,04Ind@2,p2,04Ind@2,True,2,17,28,,-1,-1
+365,6538fe63-8bc3-4e6c-a4cf-fa9d09c44654,05Ran@2,BUYER,RandomAgent,_SystemAgent,28,4,35,10,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+371,6f49a046-da66-4627-83ee-4f045e8f061c,05Ran@2,BUYER,RandomAgent,_SystemAgent,28,4,35,10,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+651,06271127-6c06-4aee-a53b-7df2f7af8719,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,28,6,26,25,-1,25,05Ran@2|02Dec@1,"[quantity: (1, 10), time: (25, 29), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,11,-1,02Dec@1:product(0.5),-1,-1
+367,ffd0d00e-2183-40a0-ae4c-e1dfc05bf9cc,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,28,3,10,10,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,28,,-1,-1
+368,0c6cd578-1fc5-4a56-84e8-35bb4d576df5,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,28,7,10,10,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,28,,-1,-1
+369,67b9b54b-c1f0-4281-9392-ef6b2d342514,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,28,4,10,10,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,28,,-1,-1
+363,76997614-70a4-46d7-a908-8869a89f537d,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,28,2,35,10,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,28,,-1,-1
+670,5cb1338e-9361-4095-b14c-47e09f724830,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,28,3,25,26,-1,26,05Ran@2|02Dec@1,"[quantity: (1, 9), time: (26, 30), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,15,-1,02Dec@1:product(1.0),-1,-1
+631,acd93e07-ad7d-4b3c-9939-3a36cad9e7c5,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,28,13,17,-1,-1,24,,"[quantity: (1, 48), time: (24, 31), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+707,58bca935-cf5a-42ff-8eb9-c03217b7131c,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,28,1,9,-1,-1,28,,"[quantity: (1, 5), time: (28, 32), unit_price: (1, 17)]",01Dec@0,02Dec@1,p1,02Dec@1,True,1,17,-1,,-1,-1
+588,bdd0b0b2-fc05-4a56-8a4e-02eff14a0b1d,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,28,27,41,22,-1,22,02Dec@1|04Ind@2,"[quantity: (1, 27), time: (27, 32), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,28,,-1,-1
+377,41bf1032-d0d5-4ecd-ac5e-8b3ce2fb9355,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,28,4,35,-1,-1,-1,BUYER,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,,-1,-1
+694,e3a79788-c33d-4c97-ab22-520f6cc766e1,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,28,9,26,-1,-1,27,,"[quantity: (1, 9), time: (27, 30), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,6,-1,,-1,-1
+721,02c01129-1af3-49ce-a7df-3c93dcc204f4,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,29,54,17,-1,-1,29,,"[quantity: (1, 54), time: (29, 32), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,2,-1,,-1,-1
+544,57be59ee-8e3b-4dbd-908f-15c6d37253d6,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,29,5,38,20,-1,20,02Dec@1|04Ind@2,"[quantity: (1, 5), time: (24, 29), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,29,,-1,-1
+393,7ab66def-c043-43ad-9ffc-bcaa0ff8a047,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,29,7,35,-1,-1,-1,BUYER,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,,-1,-1
+641,c02295a6-480d-4fb7-a8db-1fcf49918832,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,29,7,14,25,-1,25,04Ind@2|02Dec@1,"[quantity: (1, 9), time: (25, 29), unit_price: (1, 26)]",02Dec@1,04Ind@2,p2,04Ind@2,True,2,17,-1,02Dec@1:product(1.0),-1,-1
+655,0fe57367-d319-421e-833e-9442a41ca2da,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,29,20,27,-1,-1,25,,"[quantity: (1, 20), time: (28, 33), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+626,3b04d87d-b027-43d7-8167-0af1d38463aa,00Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,29,12,25,24,-1,24,00Dec@0|02Dec@1,"[quantity: (1, 15), time: (29, 34), unit_price: (17, 34)]",00Dec@0,02Dec@1,p1,00Dec@0,False,1,17,29,,-1,-1
+625,67f08eec-82e6-498f-b7f8-c1fd3ce59dce,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,29,7,48,24,-1,24,02Dec@1|05Ran@2,"[quantity: (1, 11), time: (29, 34), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,13,-1,02Dec@1:product(0.2857142857142857),-1,-1
+388,86c5527a-e8ad-4db2-886b-69127b7ab44e,05Ran@2,BUYER,RandomAgent,_SystemAgent,29,5,35,11,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+679,fe1b76d7-86b5-4d65-ab33-65cbd33d3a7e,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,29,34,38,-1,-1,26,,"[quantity: (1, 36), time: (26, 29), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+386,50150138-6308-48b7-a4c6-3affcaceccb5,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,29,8,10,11,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,29,,-1,-1
+560,a9aa75ad-3547-4544-b5bc-a8c43f0b5b52,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,29,2,25,-1,-1,20,,"[quantity: (1, 2), time: (25, 30), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+383,c3cbba61-d02f-48cb-a061-d653e3d8e246,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,29,2,10,11,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,29,,-1,-1
+613,451ffe46-3ad0-428c-9f46-2957a181314f,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,29,20,27,-1,-1,23,,"[quantity: (1, 20), time: (28, 33), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+382,b754393b-7d9c-4de1-986b-bc2d7f544ed0,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,29,4,10,11,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,29,,-1,-1
+380,c9b50f0b-37cb-4ac2-b3c2-36981da1c23c,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,29,6,10,11,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,29,,-1,-1
+384,2f8c9e52-a951-4022-ac78-80c773edbbc4,05Ran@2,BUYER,RandomAgent,_SystemAgent,29,5,35,11,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+381,521fb349-446d-43fd-8974-72b27679f257,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,29,3,35,11,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,29,,-1,-1
+400,8661ead0-3ecc-44f1-9bb3-51248e5ba581,05Ran@2,BUYER,RandomAgent,_SystemAgent,30,4,35,12,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+401,8a1ae209-b001-4652-bd18-e48310edfb73,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,30,7,10,12,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,30,,-1,-1
+399,0ca3f0ca-9ce2-447b-a510-69b2988f71a1,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,30,5,35,12,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,30,,-1,-1
+398,75cc76bb-e484-4611-9964-1ce29520ac19,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,30,3,10,12,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,30,,-1,-1
+405,ea57afaa-200e-425e-a148-4f1b529cf410,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,30,1,10,12,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,30,,-1,-1
+627,f4cd2f7f-ccf3-463b-93f4-11168102655d,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,30,1,39,24,-1,24,02Dec@1|04Ind@2,"[quantity: (1, 2), time: (25, 30), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,30,,-1,-1
+608,73d57a71-fb9a-43fe-a580-ca81b10756e5,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,30,1,39,23,-1,23,02Dec@1|04Ind@2,"[quantity: (1, 2), time: (25, 30), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,30,,-1,-1
+404,03c93dc7-339e-41f9-b267-5c23c3ea5859,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,30,3,35,12,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,30,,-1,-1
+403,08b95afb-8c1b-4922-840f-554c36287a50,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,30,3,10,12,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,30,,-1,-1
+402,faef3ec8-fd1c-468d-9733-9c0b6d1f8ada,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,30,6,10,12,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,30,,-1,-1
+397,aad0d503-0255-4a73-a75d-6d9025b47252,05Ran@2,BUYER,RandomAgent,_SystemAgent,30,4,35,12,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+664,b832611c-0660-4b96-baf2-2fcc297be1bb,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,30,12,25,-1,-1,25,,"[quantity: (1, 15), time: (30, 35), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+713,f316803d-6fbd-492a-902b-45f0fc7f1fef,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,30,15,17,-1,-1,28,,"[quantity: (1, 46), time: (28, 36), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+658,ae9d82dc-abc1-48d3-8f3b-cca9dabff0f6,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,30,11,48,-1,-1,25,,"[quantity: (1, 15), time: (30, 35), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,14,-1,,-1,-1
+395,0f8a98fe-8852-4092-96fa-28cfdab9ade4,05Ran@2,BUYER,RandomAgent,_SystemAgent,30,4,35,12,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+662,01ac328f-2eb5-4ab2-9471-5d3065edbd8d,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,30,12,25,-1,-1,25,,"[quantity: (1, 15), time: (30, 35), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+413,42ab54ea-6364-4544-b9a5-3212d7c6a800,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,31,4,10,13,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,31,,-1,-1
+411,3b4d0acb-619e-44f9-9148-6b94bdaf13a1,05Ran@2,BUYER,RandomAgent,_SystemAgent,31,2,35,13,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+747,308b4c10-f535-4b56-a4e5-739020eaf555,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,31,12,23,-1,-1,31,,"[quantity: (1, 12), time: (31, 35), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,12,-1,,-1,-1
+677,d5564b26-f0ca-4711-b787-b2d69cc09dd9,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,31,13,25,-1,-1,26,,"[quantity: (1, 17), time: (31, 36), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+566,c44e153a-9e2c-43cd-9dbc-7b3d8231fe5b,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,31,16,40,21,-1,21,02Dec@1|04Ind@2,"[quantity: (1, 17), time: (26, 31), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,02Dec@1:product(0.625),-1,-1
+710,e09de72a-0b16-4725-abe2-7d738c984cea,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,31,17,17,-1,-1,28,,"[quantity: (1, 57), time: (28, 37), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+414,5a28e403-61a2-4471-968e-7a385b59429d,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,31,6,35,13,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,31,,-1,-1
+418,8de2a34a-5864-4f43-b121-e5b07daa188f,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,31,5,10,13,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,31,,-1,-1
+419,40746f6c-f7fb-4ab7-b023-e254d3f15604,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,31,4,35,13,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,31,,-1,-1
+420,c0696224-1d48-4e3e-b924-f60157a827a5,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,31,6,10,13,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,31,,-1,-1
+421,8769d088-3b48-41f5-8df9-03d52ff676e1,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,31,5,10,13,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,31,,-1,-1
+575,72b353db-9a94-4854-b6de-9cfd8cb3aac3,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,31,11,26,-1,-1,21,,"[quantity: (1, 14), time: (26, 31), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+563,7ade97e3-164d-4219-8be3-2350abf2c1fc,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,31,12,47,21,-1,21,02Dec@1|05Ran@2,"[quantity: (1, 17), time: (26, 31), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,14,31,,-1,-1
+630,1dab556b-d265-473b-8181-770f6c5ce654,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,31,11,38,-1,-1,24,,"[quantity: (1, 11), time: (29, 34), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,,-1,-1
+416,c140aae6-4c45-44c2-b778-c316f606689e,05Ran@2,BUYER,RandomAgent,_SystemAgent,31,8,35,13,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+693,8edf644d-75ea-44b1-88e0-e15bb27fdc32,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,32,16,17,-1,-1,27,,"[quantity: (1, 46), time: (27, 35), unit_price: (1, 17)]",00Dec@0,03MyA@1,p1,03MyA@1,True,1,7,-1,,-1,-1
+430,34ba4d69-fdbe-4b8a-9b75-5069def685e4,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,32,3,35,14,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,32,,-1,-1
+596,8d68c66d-7031-4018-b8f3-84e672c9d6b6,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,32,9,26,-1,-1,22,,"[quantity: (1, 9), time: (27, 32), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+696,e994cbdf-2b5c-4109-98e4-c09f529f64cc,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,32,12,25,-1,-1,27,,"[quantity: (1, 15), time: (32, 37), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+592,5a748a21-478f-418d-972b-61027019e398,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,32,9,26,-1,-1,22,,"[quantity: (1, 13), time: (27, 32), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+734,c7956143-837b-4489-a97f-4e98074bdbc0,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,32,4,25,-1,-1,30,,"[quantity: (1, 12), time: (30, 34), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,11,-1,,-1,-1
+712,d42ad50a-d667-48b3-a520-c55f7cf2d146,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,32,15,17,-1,-1,28,,"[quantity: (1, 46), time: (28, 38), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+695,252d6006-cba9-45c1-b2a3-d656196c8c9d,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,32,5,40,-1,-1,27,,"[quantity: (1, 5), time: (32, 37), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,,-1,-1
+752,1eecb471-d92d-4928-978f-980bf83cfeac,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,32,4,17,-1,-1,31,,"[quantity: (1, 64), time: (31, 41), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+632,06481086-aedc-488d-9c21-d1417aa896e1,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,32,9,26,-1,-1,24,,"[quantity: (1, 9), time: (27, 32), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+678,3f8b0d71-c100-4f42-977c-93d0f479ebf7,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,32,20,24,-1,-1,26,,"[quantity: (1, 20), time: (28, 33), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+429,61517467-751e-424c-8443-6a1cbc56e002,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,32,2,10,14,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,32,,-1,-1
+428,c694619e-f9f8-4561-aaf1-4372c7b8d41e,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,32,6,10,14,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,32,,-1,-1
+426,b1851b5c-1ab5-4a63-87f8-955aa2a0795c,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,32,4,10,14,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,32,,-1,-1
+629,670aef92-858e-48cd-a9e9-afde0529a76b,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,32,20,24,-1,-1,24,,"[quantity: (1, 20), time: (28, 33), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+432,3e7bfb8e-8408-4357-b87d-2454c7eddfb0,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,32,4,10,14,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,32,,-1,-1
+680,6c2c0ed5-915c-4932-a16f-b4acd31c99ff,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,32,9,26,-1,-1,26,,"[quantity: (1, 9), time: (27, 32), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+434,c0642d1a-0711-434f-a8b6-88296c5f1968,05Ran@2,BUYER,RandomAgent,_SystemAgent,32,3,35,14,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+433,53831095-b8ba-4835-abb4-32fd8d0398f9,05Ran@2,BUYER,RandomAgent,_SystemAgent,32,6,35,14,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+437,1299fae2-5a7b-4c75-9218-4eb5c4f6dd17,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,32,4,10,14,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,32,,-1,-1
+431,ddd28a80-0c20-4c27-9ddd-d28449d3cf48,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,32,5,35,14,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,32,,-1,-1
+764,bda4a46b-1aec-4de2-ba99-6e8c56edd669,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,32,11,23,-1,-1,32,,"[quantity: (1, 11), time: (32, 36), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,13,-1,,-1,-1
+762,43bfe21b-a81f-4aac-863a-a2ce360f3b1c,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,32,8,13,-1,-1,32,,"[quantity: (1, 11), time: (32, 36), unit_price: (1, 26)]",02Dec@1,04Ind@2,p2,04Ind@2,True,2,17,-1,,-1,-1
+436,bf824d23-551e-4889-8758-82842132b9e4,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,32,3,35,14,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,32,,-1,-1
+745,8a2f0878-4fcf-48f2-a7fe-c5c2184d5f9e,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,33,17,17,-1,-1,31,,"[quantity: (1, 27), time: (31, 39), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+770,2664c706-b1cb-484b-a9a9-4d1eb6cfbd22,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,33,41,26,-1,-1,33,,"[quantity: (1, 41), time: (33, 36), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+691,60ac6d9e-506c-446b-89bf-3309728eff77,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,33,16,17,-1,-1,27,,"[quantity: (1, 16), time: (27, 33), unit_price: (1, 17)]",00Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+726,13367f39-0f90-4d48-9ba2-d1b630575df5,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,33,2,48,-1,-1,29,,"[quantity: (1, 5), time: (33, 38), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,13,-1,,-1,-1
+723,3c251567-d4d8-4d2e-b374-f7f62104ffd1,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,33,5,40,-1,-1,29,,"[quantity: (1, 5), time: (33, 38), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,,-1,-1
+768,c27d2b16-6df2-4d43-b4d6-867111f65120,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,33,10,23,-1,-1,33,,"[quantity: (1, 11), time: (33, 37), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,13,-1,,-1,-1
+725,399f1815-7479-45a3-8f8d-d4f08bfc9604,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,33,8,14,-1,-1,29,,"[quantity: (1, 11), time: (29, 33), unit_price: (1, 26)]",02Dec@1,04Ind@2,p2,04Ind@2,True,2,17,-1,,-1,-1
+455,5db56fa6-bbbc-447c-86bd-67fa178bb927,05Ran@2,BUYER,RandomAgent,_SystemAgent,33,4,35,15,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+456,4719c944-bdc6-4f44-b616-b17a9df4ac8b,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,33,7,35,15,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,33,,-1,-1
+454,15db6105-d664-4937-b153-c7251d32a708,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,33,6,35,15,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,33,,-1,-1
+453,850f8a35-b4bf-4b03-9e8c-82f00a9cb68b,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,33,6,10,15,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,33,,-1,-1
+446,f33da2f2-f932-4a9b-9db9-a57f70778eec,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,33,6,10,15,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,33,,-1,-1
+452,9ee981bb-bb75-4e48-aa32-507917c8664a,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,33,3,10,15,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,33,,-1,-1
+447,64d6f4f4-3faf-410a-9ce5-bbb61cb56e2b,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,33,1,10,15,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,33,,-1,-1
+450,1fe2526b-6a5a-463e-b5a1-5843f408ccca,05Ran@2,BUYER,RandomAgent,_SystemAgent,33,3,35,15,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+448,fd4c3bd7-2d64-4d34-8e89-2b203c1470f8,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,33,4,10,15,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,33,,-1,-1
+754,3a5f86bb-ac85-4e2d-b4a7-11782f4707a1,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,34,18,17,-1,-1,31,,"[quantity: (1, 34), time: (31, 40), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+468,3a056540-7720-4348-a417-bcb3f272bac4,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,34,6,35,16,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,34,,-1,-1
+479,190785c7-d95b-4d5b-96d9-8106bcc1744a,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,34,4,10,16,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,34,,-1,-1
+469,522b1daf-2556-44d5-b2df-0442f56eccc4,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,34,4,35,16,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,34,,-1,-1
+622,80dce4ed-df8d-44f2-a5db-befb8048c6c8,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,34,12,26,24,-1,24,01Dec@0|02Dec@1,"[quantity: (1, 15), time: (29, 34), unit_price: (17, 34)]",01Dec@0,02Dec@1,p1,01Dec@0,False,1,17,34,,-1,-1
+476,f7530a2a-9147-4e61-8a98-73221d01d1c5,05Ran@2,BUYER,RandomAgent,_SystemAgent,34,3,35,16,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+634,efd0a96d-64bd-47ae-87b5-7eaa74673558,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,34,12,26,-1,-1,24,,"[quantity: (1, 15), time: (29, 34), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+711,6390a2ed-22ec-4981-bb8f-d51076a1a2d1,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,34,5,46,-1,-1,28,,"[quantity: (1, 5), time: (33, 38), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,15,-1,,-1,-1
+470,d229fabf-c0e5-43ed-a835-a015a9a56cb5,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,34,6,10,16,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,34,,-1,-1
+471,e55963c0-de0b-4f92-9f76-9785cdb03733,05Ran@2,BUYER,RandomAgent,_SystemAgent,34,5,35,16,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+729,4fe9c834-22b8-4fc5-beba-dc0bfc908e26,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,34,18,17,-1,-1,30,,"[quantity: (1, 52), time: (30, 40), unit_price: (1, 17)]",00Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+472,0c530824-08b0-46b3-a6d4-4aed13e13816,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,34,6,10,16,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,34,,-1,-1
+473,f4c239f1-a493-4732-aaea-5689b9799812,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,34,2,35,16,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,34,,-1,-1
+474,450c6518-32b6-458c-922f-e574d54eaf29,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,34,4,10,16,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,34,,-1,-1
+628,35f6ca9e-46c1-4ff6-b350-7f628eea099e,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,34,12,26,-1,-1,24,,"[quantity: (1, 15), time: (29, 34), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+786,60f29484-005e-4759-aea0-d6549446b3a0,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,35,20,26,-1,-1,35,,"[quantity: (1, 20), time: (35, 38), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+643,6f99b7d7-edae-482c-b013-6a44dfb971cc,00Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,35,12,26,25,-1,25,00Dec@0|02Dec@1,"[quantity: (1, 15), time: (30, 35), unit_price: (17, 34)]",00Dec@0,02Dec@1,p1,00Dec@0,False,1,17,35,,-1,-1
+498,b4e8cdf8-2f6d-44fa-b0b8-a2d1975b839f,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,35,4,10,17,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,35,,-1,-1
+648,fe2460ae-3568-46d2-9411-2a18bce3e857,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,35,12,26,25,-1,25,01Dec@0|02Dec@1,"[quantity: (1, 15), time: (30, 35), unit_price: (17, 34)]",01Dec@0,02Dec@1,p1,01Dec@0,False,1,17,35,,-1,-1
+686,0eab681d-3dc8-48f4-899c-f0a1ef43b9ae,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,35,3,52,27,-1,27,02Dec@1|05Ran@2,"[quantity: (1, 5), time: (32, 37), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,7,35,,-1,-1
+647,7c341c82-6240-463f-b55c-92ffa67f4672,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,35,15,40,25,-1,25,02Dec@1|04Ind@2,"[quantity: (1, 15), time: (30, 35), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,35,,-1,-1
+739,8f7897d8-242e-4105-bc60-e4f2c859c32a,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,35,30,17,-1,-1,30,,"[quantity: (1, 57), time: (30, 39), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+732,5045c447-4e9a-4a2b-b2eb-fcbf0e107d87,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,35,30,17,-1,-1,30,,"[quantity: (1, 31), time: (30, 36), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+487,ceebc343-d97a-44c6-b966-d05bacdd3e67,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,35,5,10,17,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,35,,-1,-1
+730,f48d2acc-cf78-4add-8f05-207c30cb31f5,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,35,30,17,-1,-1,30,,"[quantity: (1, 30), time: (30, 35), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+733,2fd6618b-ec70-4844-bbb0-67189b72a66a,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,35,30,17,-1,-1,30,,"[quantity: (1, 40), time: (30, 37), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+489,8267f02b-2f1a-4cc8-96f4-e22fc97cf876,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,35,5,10,17,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,35,,-1,-1
+486,287bbaaf-19eb-4c0d-974e-aae4ed2f278e,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,35,5,35,17,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,35,,-1,-1
+492,fd1666e8-6ab0-4981-8a68-71b903c69da8,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,35,3,35,17,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,35,,-1,-1
+493,3b0cbc40-45fc-4049-bea0-4145b2a4195d,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,35,3,35,17,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,35,,-1,-1
+494,c3b4e9e8-e01c-4308-954e-1ea2f93e38e9,05Ran@2,BUYER,RandomAgent,_SystemAgent,35,5,35,17,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+491,da65b43f-5cd4-4363-8689-811c2f32865f,05Ran@2,BUYER,RandomAgent,_SystemAgent,35,4,35,17,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+488,38a50534-8fa4-45e4-94f9-434015b11a49,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,35,6,10,17,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,35,,-1,-1
+512,2809a99f-3b6d-484b-b440-dfb5561a441e,05Ran@2,BUYER,RandomAgent,_SystemAgent,36,4,35,18,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+511,83e270c5-b2f4-43d0-8a96-dffac2cad70f,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,36,4,10,18,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,36,,-1,-1
+510,9250b373-ba17-42cf-a12b-81a62d62bb82,05Ran@2,BUYER,RandomAgent,_SystemAgent,36,5,35,18,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+509,2d73f37b-3528-4264-8392-48cc737dc6dd,05Ran@2,BUYER,RandomAgent,_SystemAgent,36,3,35,18,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+515,6b7da8d0-d768-4b1a-b3c7-218da1e9b40a,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,36,3,35,18,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,36,,-1,-1
+516,5e4c7bad-4b91-4a36-b910-269288c2b1a3,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,36,5,10,18,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,36,,-1,-1
+506,e6624025-25e2-447c-a792-a6e163cdb90c,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,36,3,10,18,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,36,,-1,-1
+504,67f122b6-c120-4ed8-a058-2ba9caccc17a,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,36,5,35,18,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,36,,-1,-1
+503,590eb00d-0a91-4fe6-9c42-c9ac22c50b49,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,36,2,10,18,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,36,,-1,-1
+502,c0d790f3-95f1-46b5-8f22-5602145b57e3,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,36,6,10,18,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,36,,-1,-1
+742,82f6b2e6-c00f-4b65-81ae-4e39ce6e297c,00Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,36,12,25,31,-1,31,00Dec@0|02Dec@1,"[quantity: (1, 15), time: (36, 41), unit_price: (17, 34)]",00Dec@0,02Dec@1,p1,00Dec@0,False,1,17,36,,-1,-1
+794,ccf3bd24-7117-43bc-8510-c4bfa3c2de04,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,36,104,17,-1,-1,36,,"[quantity: (1, 104), time: (36, 39), unit_price: (17, 34)]",01Dec@0,02Dec@1,p1,01Dec@0,False,1,2,-1,,-1,-1
+760,13434f8b-4b32-4927-9bec-22f67ea87895,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,36,27,52,-1,-1,32,,"[quantity: (1, 29), time: (36, 41), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,9,-1,,-1,-1
+777,d47d9bc2-d611-42d9-965e-dfc2419ad97a,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,36,16,37,34,-1,34,02Dec@1|05Ran@2,"[quantity: (1, 24), time: (34, 37), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,2,36,,-1,-1
+751,2635a061-7386-492e-bf45-36a25ba6ca22,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,36,29,38,-1,-1,31,,"[quantity: (1, 29), time: (36, 41), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,,-1,-1
+522,3b9c65cd-802f-4e1a-9a46-8ca405208018,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,37,4,35,19,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,37,,-1,-1
+749,74ecc1b2-4ca9-49ea-ae29-b03ccfbc6a51,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,37,3,26,-1,-1,31,,"[quantity: (1, 3), time: (35, 40), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+769,77eabfe9-956f-45b5-9351-caa14e5e57b9,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,37,3,26,-1,-1,33,,"[quantity: (1, 3), time: (35, 40), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+736,99bcb64f-631c-4fe5-a743-70c80c771877,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,37,3,26,-1,-1,30,,"[quantity: (1, 3), time: (35, 40), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+765,64018390-9e0b-4e40-8073-2c24705e7cae,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,37,8,14,33,-1,33,04Ind@2|02Dec@1,"[quantity: (1, 12), time: (33, 37), unit_price: (1, 26)]",02Dec@1,04Ind@2,p2,04Ind@2,True,2,17,-1,02Dec@1:product(1.0),-1,-1
+692,c7ca3c98-3788-4730-ac93-0d8f5c755a45,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,37,12,26,-1,-1,27,,"[quantity: (1, 15), time: (32, 37), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+520,c8f0ac9b-339c-4471-8fca-e9c85090595b,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,37,5,10,19,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,37,,-1,-1
+755,9e68290a-d035-46fc-be05-15f55841d15d,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,37,16,38,32,-1,32,02Dec@1|04Ind@2,"[quantity: (1, 17), time: (37, 42), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,02Dec@1:product(0.0625),-1,-1
+521,149f82e4-78c4-4272-b4b5-3bbf36343abe,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,37,5,10,19,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,37,,-1,-1
+808,002c7e1f-6a81-4cb3-a30e-40d5a6162d59,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,37,2,45,-1,-1,37,,"[quantity: (1, 8), time: (37, 37), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+530,d3ae9a44-dcc3-4abe-a0e7-2b0cc9b53871,05Ran@2,BUYER,RandomAgent,_SystemAgent,37,5,35,19,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+529,3ca4da77-a582-4262-b6f7-8400098705f7,05Ran@2,BUYER,RandomAgent,_SystemAgent,37,2,35,19,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+528,af13cbb9-fa0d-47b6-a39a-bcf1531950eb,05Ran@2,BUYER,RandomAgent,_SystemAgent,37,5,35,19,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+801,ef40246c-1b68-4bcd-9f60-75c4267a7622,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,37,16,17,-1,-1,37,,"[quantity: (1, 42), time: (37, 43), unit_price: (1, 17)]",00Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+525,fe47a972-d344-4aa1-b07c-6aec9c4c18d9,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,37,3,10,19,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,37,,-1,-1
+523,e25c192d-8267-4237-9bbc-471b6ad46150,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,37,4,35,19,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,37,,-1,-1
+527,4f0101fd-029d-4d46-9a71-1166c5da8fd3,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,37,7,10,19,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,37,,-1,-1
+737,7a986b5f-65fd-44ea-9855-6c7ac3972697,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,38,3,25,-1,-1,30,,"[quantity: (1, 3), time: (35, 40), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+802,104ae901-6565-402e-9232-2bf3c9145142,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,38,15,17,-1,-1,37,,"[quantity: (1, 43), time: (37, 44), unit_price: (1, 17)]",00Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+548,914b72a4-a98a-4749-80ff-da7b9fbb0759,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,38,6,10,20,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,38,,-1,-1
+550,f283490f-2081-4c87-aab7-e628dc1671fe,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,38,4,10,20,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,38,,-1,-1
+817,14e40e6d-e437-4fe2-84ed-e70d019ee36b,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,38,15,17,-1,-1,38,,"[quantity: (1, 28), time: (38, 44), unit_price: (1, 17)]",00Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+549,248cc758-464c-43e6-ac89-ed43ee9b2042,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,38,2,35,20,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,38,,-1,-1
+551,90e2da2e-d3cb-4885-9fcb-f692febb62b6,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,38,7,35,20,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,38,,-1,-1
+553,8ef6110f-8d58-4e64-8fd7-c51785b76b02,05Ran@2,BUYER,RandomAgent,_SystemAgent,38,5,35,20,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+761,39979aa4-99c3-4fce-aff9-a3e3c0951526,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,38,3,25,-1,-1,32,,"[quantity: (1, 3), time: (35, 40), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+790,03ad484e-6bca-4eca-bdeb-fd80178e546c,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,38,1,48,-1,-1,35,,"[quantity: (1, 3), time: (38, 43), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,13,-1,,-1,-1
+789,6afce678-fa03-4fbc-b787-cfaaa61f18c9,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,38,1,39,-1,-1,35,,"[quantity: (1, 3), time: (38, 43), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,,-1,-1
+759,c22bb573-df7b-4f7c-b46b-bbe7ff74bfb9,00Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,38,3,25,32,-1,32,00Dec@0|02Dec@1,"[quantity: (1, 3), time: (35, 40), unit_price: (17, 34)]",00Dec@0,02Dec@1,p1,00Dec@0,False,1,17,38,,-1,-1
+708,42b1d1cc-0473-4e61-a5c3-482d49f4609b,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,38,13,26,-1,-1,28,,"[quantity: (1, 17), time: (33, 38), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+552,a95dc4c8-b294-4615-b416-c8dad1941ef0,05Ran@2,BUYER,RandomAgent,_SystemAgent,38,4,35,20,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+545,709d2dde-cc5a-4038-9901-1e09c2114775,05Ran@2,BUYER,RandomAgent,_SystemAgent,38,2,35,20,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+722,2102a83e-3a91-4b0a-823b-bb3a471a0a74,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,38,31,17,-1,-1,29,,"[quantity: (1, 31), time: (29, 38), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+719,1d0a7127-9c53-4984-a30d-cb8d95194be6,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,38,2,50,29,-1,29,02Dec@1|05Ran@2,"[quantity: (1, 5), time: (34, 39), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,11,38,,-1,-1
+775,da5c6d32-673a-44e1-8f2b-30af3ea62d97,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,38,1,39,34,-1,34,02Dec@1|04Ind@2,"[quantity: (1, 3), time: (38, 43), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,02Dec@1:product(1.0),-1,-1
+748,fb7b2657-8ba4-48f7-8ad9-5c8f790eec88,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,38,3,25,-1,-1,31,,"[quantity: (1, 3), time: (35, 40), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+787,6a465e86-7232-4893-b72f-e6ac61a8fa56,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,38,16,17,-1,-1,35,,"[quantity: (1, 58), time: (35, 43), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,6,-1,,-1,-1
+773,4bc42078-dc93-48a6-bfe2-65b5ba25350e,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,38,12,25,34,-1,34,05Ran@2|02Dec@1,"[quantity: (1, 12), time: (34, 38), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,10,-1,02Dec@1:product(0.3333333333333333),-1,-1
+547,293b4106-ee51-4583-bad2-7c4af891a18d,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,38,4,10,20,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,38,,-1,-1
+772,58570b40-2933-4ad1-bec5-ce90df631561,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,38,3,25,-1,-1,33,,"[quantity: (1, 3), time: (35, 40), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+543,c05bfbff-0c2a-4ed1-a7c2-dd4c70e3f5cb,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,38,6,10,20,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,38,,-1,-1
+571,8900d41e-112f-44ad-95b3-55603ef06b1d,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,39,4,10,21,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,39,,-1,-1
+568,928c445e-b86a-4c5d-ad09-3052070dcf03,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,39,2,35,21,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,39,,-1,-1
+573,9e7d8571-1291-4077-ab90-df09980cca61,05Ran@2,BUYER,RandomAgent,_SystemAgent,39,5,35,21,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+819,b60b0634-b2a2-4b75-b5ca-335ef340979b,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,39,2,52,-1,-1,39,,"[quantity: (1, 2), time: (39, 44), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,13,-1,,-1,-1
+716,d165ea3a-ba86-4c0c-9078-06af4e741a77,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,39,5,38,29,-1,29,02Dec@1|04Ind@2,"[quantity: (1, 5), time: (34, 39), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,39,,-1,-1
+570,a23561fe-7a26-49aa-be28-22bd3250f23d,05Ran@2,BUYER,RandomAgent,_SystemAgent,39,2,35,21,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+569,a8984760-1d51-4404-9367-98755090ded1,05Ran@2,BUYER,RandomAgent,_SystemAgent,39,4,35,21,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+564,d5a80ced-1ae7-4258-ad0d-bc2ebddec00e,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,39,7,35,21,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,39,,-1,-1
+562,2a462a2a-5e09-44b4-bcc6-a12e825efb7f,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,39,5,10,21,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,39,,-1,-1
+567,70d71ee5-df0d-4b22-b967-e8b59f55def8,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,39,3,10,21,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,39,,-1,-1
+572,dfaff75d-b017-4b7e-b23f-5218dcd418b1,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,39,5,10,21,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,39,,-1,-1
+780,2222555e-dc93-46e0-8113-d0f90847693a,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,39,2,51,-1,-1,34,,"[quantity: (1, 3), time: (39, 44), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,11,-1,,-1,-1
+724,02367460-9bdd-46d3-bea0-fda9d34e6e04,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,39,18,24,-1,-1,29,,"[quantity: (1, 18), time: (34, 39), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+788,67e13100-b7e1-4ec5-8cbe-29ea2c53ee95,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,39,15,17,-1,-1,35,,"[quantity: (1, 58), time: (35, 44), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,6,-1,,-1,-1
+779,c7094d0b-4753-49e1-ab86-5f10a87fabd6,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,39,12,25,-1,-1,34,,"[quantity: (1, 15), time: (39, 44), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+776,470bf657-5060-443e-9434-b33fa2c4dd91,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,39,1,39,34,-1,34,02Dec@1|04Ind@2,"[quantity: (1, 3), time: (39, 44), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,39,,-1,-1
+795,0268f376-1cf1-4820-ba9d-340351583c68,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,39,2,48,-1,-1,36,,"[quantity: (1, 2), time: (39, 44), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,13,-1,,-1,-1
+800,41877731-17ba-4035-bccb-f77c7a1de48a,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,39,15,17,-1,-1,37,,"[quantity: (1, 31), time: (37, 45), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+783,4293035d-13c4-4ea3-98f4-55fabcfe508c,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,39,15,17,-1,-1,35,,"[quantity: (1, 46), time: (35, 45), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+561,87964695-7e72-4af3-89be-e5740c3fb53b,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,39,3,10,21,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,39,,-1,-1
+784,de0740b0-d09d-4e5d-9a73-4ffcc1d1b4a2,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,40,13,25,-1,-1,35,,"[quantity: (1, 17), time: (40, 45), unit_price: (17, 34)]",01Dec@0,02Dec@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+582,d57df502-c079-433d-a985-b04e1832b205,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,40,3,10,22,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,40,,-1,-1
+810,f7971722-e723-42cc-87d0-1752fc84c8b2,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,40,13,17,-1,-1,38,,"[quantity: (1, 35), time: (38, 46), unit_price: (1, 17)]",00Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+774,6a5c48ef-927b-469c-9cc1-3370f26a77e9,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,40,2,50,34,-1,34,02Dec@1|05Ran@2,"[quantity: (1, 3), time: (38, 43), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,12,-1,02Dec@1:product(1.0),-1,-1
+587,56375e46-3daa-4c06-93bf-9ea0a6315d05,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,40,2,10,22,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,40,,-1,-1
+586,bfb58076-deb4-426f-bd06-a60abd77e95a,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,40,2,10,22,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,40,,-1,-1
+585,e9f9d34b-1fd6-44b6-bbd6-1ed665907f15,05Ran@2,BUYER,RandomAgent,_SystemAgent,40,7,35,22,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+584,a1eacd65-94b4-45d6-bdf6-0bf96c488383,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,40,7,10,22,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,40,,-1,-1
+578,f801290a-8c62-4554-b8f1-fcff3147fc65,05Ran@2,BUYER,RandomAgent,_SystemAgent,40,3,35,22,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+579,a395d525-2303-425d-af33-5b36f69d32e3,05Ran@2,BUYER,RandomAgent,_SystemAgent,40,2,35,22,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+595,0a937b1a-2c0c-4ce6-a485-a4e103c20704,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,40,4,35,-1,-1,-1,BUYER,[],04Ind@2,BUYER,p3,BUYER,True,3,0,-1,,-1,-1
+767,01825645-4c7c-4d4e-b23c-acd04dc40dfe,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,40,3,52,33,-1,33,02Dec@1|05Ran@2,"[quantity: (1, 3), time: (38, 43), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,14,40,,-1,-1
+598,3a1f28f6-00e2-451f-803d-80f2dad6a6ad,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,40,4,35,-1,-1,-1,BUYER,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,,-1,-1
+826,867a74c0-b4ad-4c72-aa9c-76893ef29483,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,40,10,23,-1,-1,40,,"[quantity: (1, 10), time: (40, 44), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,13,-1,,-1,-1
+756,d3aa8351-d806-42e1-8b28-83de63c8ba8f,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,40,2,52,32,-1,32,02Dec@1|05Ran@2,"[quantity: (1, 17), time: (37, 42), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,11,40,,-1,-1
+804,f2718c1b-3ef9-405d-bebe-01a29e69c0eb,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,40,13,17,-1,-1,37,,"[quantity: (1, 48), time: (37, 46), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+814,43e15480-f9a0-4bc5-8a72-eb74c0c90924,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,40,6,26,-1,-1,38,,"[quantity: (1, 7), time: (38, 42), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,7,-1,,-1,-1
+580,bc178963-6028-4a2e-97b8-dc8d7b0e5a10,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,40,6,10,22,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,40,,-1,-1
+757,357d3b6d-0bdd-496b-96c1-eaf0a94837f3,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,41,29,40,32,-1,32,02Dec@1|04Ind@2,"[quantity: (1, 29), time: (36, 41), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,02Dec@1:product(1.0),-1,-1
+741,73724d1a-0488-41ca-b489-124860cf6006,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,41,12,26,31,-1,31,01Dec@0|02Dec@1,"[quantity: (1, 15), time: (36, 41), unit_price: (17, 34)]",01Dec@0,02Dec@1,p1,01Dec@0,False,1,17,41,,-1,-1
+828,67c17651-0be4-41c8-bd03-372b46cb0f4d,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,41,5,51,-1,-1,41,,"[quantity: (1, 19), time: (41, 44), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+744,5d05bcbc-e82e-44ae-bf41-f3f666f8d7b6,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,41,12,26,-1,-1,31,,"[quantity: (1, 15), time: (36, 41), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+746,99ce9a93-146b-4eca-9801-90997d9c45fe,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,41,12,26,-1,-1,31,,"[quantity: (1, 15), time: (36, 41), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+811,c0ef7665-5bfc-40a1-84e7-5fb34ab1e38e,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,41,8,25,-1,-1,38,,"[quantity: (1, 8), time: (41, 46), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+830,76b1421c-79cb-4460-9904-aa77e53ed2ef,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,41,8,26,-1,-1,41,,"[quantity: (1, 11), time: (41, 45), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,8,-1,,-1,-1
+602,834afffb-cc13-4059-b300-a3a8a143147d,05Ran@2,BUYER,RandomAgent,_SystemAgent,41,4,35,23,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+599,b0bb38ef-3e1c-4b78-a846-44343f498053,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,41,2,35,23,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,41,,-1,-1
+600,ebb0ea6a-a189-4f79-931e-260cbe3b6680,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,41,8,35,23,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,41,,-1,-1
+601,4a1764e7-ce92-4924-acd3-69dc95d5b65e,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,41,7,10,23,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,41,,-1,-1
+603,3a70fcd0-5683-4b2b-b29e-808ced182560,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,41,3,10,23,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,41,,-1,-1
+604,17bab495-a98a-4ecd-8bfb-94fb7f503de5,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,41,6,10,23,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,41,,-1,-1
+609,e03b50f6-76d8-4fe0-b3aa-61ad9a880b58,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,41,2,10,23,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,41,,-1,-1
+606,5557ecb7-b1c8-4c02-a9d5-48a233419c1b,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,41,2,10,23,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,41,,-1,-1
+607,189ce001-3829-4192-a27c-f53e2d77cc85,05Ran@2,BUYER,RandomAgent,_SystemAgent,41,6,35,23,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+638,6862b493-58ba-4f65-8c60-38fdf30c4927,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,42,4,35,-1,-1,-1,BUYER,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,,-1,-1
+621,d29d5328-7e7b-453a-9449-5b97fdd4a7c8,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,42,4,10,24,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,42,,-1,-1
+623,5ea9329a-98a5-4a95-9e5b-731b2658a256,05Ran@2,BUYER,RandomAgent,_SystemAgent,42,4,35,24,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+624,e8ea8646-f7db-402e-ba6a-22519f28671f,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,42,4,10,24,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,42,,-1,-1
+836,a99155c3-3fa9-4f18-b803-a361b33ea776,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,42,14,26,-1,-1,42,,"[quantity: (1, 14), time: (42, 44), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+620,42a886c8-bcb5-42d7-bd06-772e5d415332,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,42,4,10,24,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,42,,-1,-1
+758,91702bb1-2f7a-45ee-a01f-a9c6c90c557b,00Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,42,12,26,32,-1,32,00Dec@0|02Dec@1,"[quantity: (1, 16), time: (37, 42), unit_price: (17, 34)]",00Dec@0,02Dec@1,p1,00Dec@0,False,1,17,42,,-1,-1
+763,a8c71499-7dca-40c9-b25c-6f2e14371b0c,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,42,12,26,-1,-1,32,,"[quantity: (1, 16), time: (37, 42), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+635,5160fe3a-0c37-4dda-8602-b3bfec8863bb,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,42,4,35,-1,-1,-1,BUYER,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,,-1,-1
+797,2da763ef-5fe3-4b72-8dcd-58163ff6cd93,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,42,11,25,37,-1,37,01Dec@0|02Dec@1,"[quantity: (1, 14), time: (42, 47), unit_price: (17, 34)]",01Dec@0,02Dec@1,p1,01Dec@0,False,1,17,42,,-1,-1
+798,191bc817-d17b-4aab-b1df-53705dd0a13b,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,42,1,47,-1,-1,37,,"[quantity: (1, 2), time: (39, 44), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,14,-1,,-1,-1
+616,cbfcefc6-48f3-48c4-b6cc-62b6b3abc0e1,05Ran@2,BUYER,RandomAgent,_SystemAgent,42,2,35,24,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+615,f92025a6-9217-4e81-81ce-167a91cffec3,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,42,3,10,24,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,42,,-1,-1
+614,19640e8c-fa40-4959-be74-ece3187d21bb,05Ran@2,BUYER,RandomAgent,_SystemAgent,42,6,35,24,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+806,b242a9db-ff7d-46c3-b99f-f7b7eec77603,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,42,14,51,-1,-1,37,,"[quantity: (1, 17), time: (42, 47), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,11,-1,,-1,-1
+807,c66efc63-1ff3-4eb6-8774-96405b380eb6,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,42,16,38,-1,-1,37,,"[quantity: (1, 17), time: (42, 47), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,,-1,-1
+812,771f4034-1e27-414c-825f-44fd1c492213,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,42,2,52,-1,-1,38,,"[quantity: (1, 2), time: (39, 44), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,7,-1,,-1,-1
+835,56d5eda0-764f-4c46-8191-6b76e431bf05,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,42,3,25,-1,-1,42,,"[quantity: (1, 9), time: (42, 46), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,11,-1,,-1,-1
+618,89f174ab-59d8-43fb-b82a-374a581ea263,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,42,5,10,24,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,42,,-1,-1
+816,fdb8009c-b44f-4e7a-880f-e1f290e611c1,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,42,7,14,-1,-1,38,,"[quantity: (1, 10), time: (38, 42), unit_price: (1, 26)]",02Dec@1,04Ind@2,p2,04Ind@2,True,2,17,-1,,-1,-1
+660,02d6f457-6779-486e-8220-e715ccd1a6a6,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,43,6,35,-1,-1,-1,BUYER,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,,-1,-1
+821,a6f4f339-5acd-48ca-8382-340f65fec5ce,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,43,26,49,-1,-1,39,,"[quantity: (1, 28), time: (43, 48), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,12,-1,,-1,-1
+653,3a91f498-2039-4034-aef9-72e3bf83d6f5,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,43,3,10,25,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,43,,-1,-1
+652,7c328123-1a09-40fd-8ebe-e35849ad1230,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,43,7,10,25,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,43,,-1,-1
+650,ec938c0b-e2e4-47ff-9059-090ee27cd0e1,05Ran@2,BUYER,RandomAgent,_SystemAgent,43,4,35,25,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+642,cb46ec22-8a52-4c6f-88f1-4442b67b0518,05Ran@2,BUYER,RandomAgent,_SystemAgent,43,3,35,25,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+645,18c0561e-49f4-4eef-904b-95cd0cd9e91f,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,43,3,10,25,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,43,,-1,-1
+644,dc9eef27-e653-4104-835a-abb45ad4c164,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,43,2,35,25,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,43,,-1,-1
+640,2633e175-9367-422e-a8c3-7ec89769846b,05Ran@2,BUYER,RandomAgent,_SystemAgent,43,5,35,25,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+649,599d128f-97be-47c9-a064-660ad044622e,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,43,3,10,25,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,43,,-1,-1
+771,b109959d-8f46-4bf1-8e23-0bfe099cd0ab,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,43,12,26,-1,-1,33,,"[quantity: (1, 15), time: (38, 43), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+646,859e4264-9743-49f4-beb6-004660de831b,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,43,4,10,25,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,43,,-1,-1
+842,5a1f6f18-5e5b-4adf-8c24-bc14f1d57fe5,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,43,4,22,-1,-1,43,,"[quantity: (1, 6), time: (43, 47), unit_price: (1, 26)]",02Dec@1,05Ran@2,p2,05Ran@2,True,2,13,-1,,-1,-1
+766,9f58b1b3-2c76-49ef-8483-1bbd8b857dc5,00Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,43,10,26,33,-1,33,00Dec@0|02Dec@1,"[quantity: (1, 12), time: (38, 43), unit_price: (17, 34)]",00Dec@0,02Dec@1,p1,00Dec@0,False,1,17,43,,-1,-1
+840,42fc027f-8e39-4f20-856c-62af5754ec7a,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,43,34,26,-1,-1,43,,"[quantity: (1, 34), time: (43, 46), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+671,e3f35ea1-1378-4d99-9f0e-f27f569440c4,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,44,2,35,26,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,44,,-1,-1
+805,1467eee9-ea8c-4db7-9723-2b0671419341,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,44,1,39,-1,-1,37,,"[quantity: (1, 2), time: (39, 44), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,,-1,-1
+782,656f5ee4-731b-4880-9533-589a92fb2177,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,44,3,52,35,-1,35,02Dec@1|05Ran@2,"[quantity: (1, 3), time: (39, 44), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,6,44,,-1,-1
+781,2b78c218-f26b-4456-ab3f-5dfc6419bf45,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,44,12,26,-1,-1,34,,"[quantity: (1, 15), time: (39, 44), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+825,a6cc5527-51ab-4729-ad5d-b74fc2c2eb48,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,44,10,51,-1,-1,40,,"[quantity: (1, 12), time: (44, 49), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,10,-1,,-1,-1
+823,fc2eebe2-9166-4d69-88d9-7b3f91069aad,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,44,7,14,40,-1,40,04Ind@2|02Dec@1,"[quantity: (1, 10), time: (40, 44), unit_price: (1, 26)]",02Dec@1,04Ind@2,p2,04Ind@2,True,2,17,44,,-1,-1
+778,ffab42e8-96ea-4c4c-bde4-bfb84e1679c6,00Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,44,12,26,-1,-1,34,,"[quantity: (1, 15), time: (39, 44), unit_price: (17, 34)]",00Dec@0,02Dec@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+675,e159402a-6588-4913-8fb3-9c1175d494f6,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,44,2,10,26,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,44,,-1,-1
+674,0de02ca1-1918-40ff-b612-b0a3eb8d3425,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,44,6,35,26,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,44,,-1,-1
+673,f40abe2f-f47a-4e54-b90d-6c229c4e63ec,05Ran@2,BUYER,RandomAgent,_SystemAgent,44,4,35,26,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+665,d0aeeef7-21b0-4a96-a476-316dd1e1c58e,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,44,2,10,26,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,44,,-1,-1
+672,f931e6c1-b079-49b1-85db-c8cbf211edf3,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,44,5,35,26,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,44,,-1,-1
+666,d84ad975-1b5d-4083-958d-61dc9c0e2676,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,44,7,10,26,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,44,,-1,-1
+667,3ec90cc7-94be-4881-ab1c-4a728f2ef789,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,44,5,10,26,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,44,,-1,-1
+668,6ea91102-a71e-452c-978b-50b3114a0497,05Ran@2,BUYER,RandomAgent,_SystemAgent,44,3,35,26,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+676,51ed5b90-8b11-4a6a-af91-a972692cad44,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,44,4,10,26,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,44,,-1,-1
+845,51051855-5952-49db-91a7-e3c398f8aedb,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,44,8,26,-1,-1,44,,"[quantity: (1, 8), time: (44, 47), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,2,-1,,-1,-1
+822,96d4179a-0df4-4d31-a8e5-d4c976ebcdf8,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,45,1,39,40,-1,40,02Dec@1|04Ind@2,"[quantity: (1, 5), time: (45, 49), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,45,,-1,-1
+791,31fd996f-7096-4648-aa6f-5ebc444eb5c9,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,45,11,26,-1,-1,35,,"[quantity: (1, 17), time: (40, 45), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+690,8ab30d9e-e24a-4cee-8791-de355dccdbbb,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,45,2,10,27,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,45,,-1,-1
+689,b7b4ee54-150d-4a91-a627-271dd0cdceab,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,45,4,10,27,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,45,,-1,-1
+820,f1ad4891-11e1-4b18-a89d-ad0ecc90e51f,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,45,28,41,-1,-1,39,,"[quantity: (1, 28), time: (43, 48), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,,-1,-1
+687,8b7225b1-26ea-456d-adf0-74b503f0270d,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,45,5,35,27,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,45,,-1,-1
+681,8f4c75e9-6e23-44e9-8f13-07a5f80ad963,05Ran@2,BUYER,RandomAgent,_SystemAgent,45,5,35,27,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+685,432c9f1e-815e-4982-b7ca-26b08213cd77,05Ran@2,BUYER,RandomAgent,_SystemAgent,45,5,35,27,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+682,f68e8ce7-1603-4808-948e-02aaf5a4f589,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,45,6,10,27,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,45,,-1,-1
+785,ba5a99c6-089d-4598-a6b8-52c3a8a0a0ec,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,45,11,26,-1,-1,35,,"[quantity: (1, 13), time: (40, 45), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+683,d07b39a2-e9eb-49d0-9050-9710dead7c57,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,45,4,10,27,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,45,,-1,-1
+684,4c8df6cf-f064-405e-9ea3-66ec5e9ae334,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,45,4,10,27,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,45,,-1,-1
+688,2dcd1d17-aa25-45fc-81d1-8effc817b9bc,05Ran@2,BUYER,RandomAgent,_SystemAgent,45,5,35,27,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+792,0de3d5b0-254f-41bf-a268-cfddcfd3cbf5,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,46,8,26,36,-1,36,01Dec@0|02Dec@1,"[quantity: (1, 10), time: (41, 46), unit_price: (17, 34)]",01Dec@0,02Dec@1,p1,01Dec@0,False,1,17,46,,-1,-1
+832,0e82c3a6-bdc2-466d-8059-38f13b859f3f,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,46,2,9,42,-1,42,02Dec@1|01Dec@0,"[quantity: (1, 5), time: (42, 46), unit_price: (1, 17)]",01Dec@0,02Dec@1,p1,02Dec@1,True,1,17,46,,-1,-1
+709,ca70d836-122f-4d3a-a686-1859c5ac1bea,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,46,3,10,-1,-1,-1,SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,-1,,-1,-1
+706,9a041bf3-54ed-46d0-8ef3-e79f8bc49c18,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,46,3,10,28,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,True,0,0,46,,-1,-1
+705,376eabca-6e44-477f-8f56-e8dd3c288697,SELLER,01Dec@0,_SystemAgent,DecentralizingAgent,46,4,10,28,-1,-1,01Dec@0|SELLER,[],SELLER,01Dec@0,p0,SELLER,False,0,0,46,,-1,-1
+809,0a22153f-42ad-4bc9-861e-aceb3afcf695,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,46,28,52,38,-1,38,02Dec@1|05Ran@2,"[quantity: (1, 28), time: (43, 48), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,9,46,,-1,-1
+704,24c6da4c-87e6-4d41-97e8-ed75f381d8f5,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,46,3,10,28,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,False,0,0,46,,-1,-1
+703,d2dd433b-df1d-4792-919c-4ce0a1316273,05Ran@2,BUYER,RandomAgent,_SystemAgent,46,3,35,28,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+702,240e6bcb-fb3a-4984-8eeb-45518ebf3923,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,46,4,35,28,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,46,,-1,-1
+803,924935be-b21e-4c8d-a242-40c09c90dab6,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,46,8,26,-1,-1,37,,"[quantity: (1, 8), time: (41, 46), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+833,5161b3f7-9403-4a29-8fc3-25ca9cbc5e96,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,46,5,14,42,-1,42,04Ind@2|02Dec@1,"[quantity: (1, 5), time: (42, 46), unit_price: (1, 26)]",02Dec@1,04Ind@2,p2,04Ind@2,True,2,17,46,,-1,-1
+701,5fcf73f0-d9cc-4062-91b2-c119de160023,SELLER,00Dec@0,_SystemAgent,DecentralizingAgent,46,7,10,28,-1,-1,00Dec@0|SELLER,[],SELLER,00Dec@0,p0,SELLER,True,0,0,46,,-1,-1
+700,5aa3c959-35c8-429c-8ec3-6c700e28fc40,05Ran@2,BUYER,RandomAgent,_SystemAgent,46,1,35,28,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+699,885e2913-a8a0-4fac-bb32-39c63e715b6b,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,46,5,35,28,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,46,,-1,-1
+698,b3758573-4cb1-4e42-a658-d3e1af434655,05Ran@2,BUYER,RandomAgent,_SystemAgent,46,7,35,28,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+796,e49df89a-89c4-4627-af0f-b3717750cc0a,00Dec@0,03MyA@1,DecentralizingAgent,MyAgent,46,8,26,-1,-1,36,,"[quantity: (1, 8), time: (41, 46), unit_price: (17, 34)]",00Dec@0,03MyA@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+829,8e09f871-5d6d-44e4-b2e3-c2582af11970,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,46,22,17,-1,-1,41,,"[quantity: (1, 22), time: (41, 46), unit_price: (1, 17)]",01Dec@0,03MyA@1,p1,03MyA@1,True,1,2,-1,,-1,-1
+793,798557fb-ad04-4920-83c9-4a3fb1f8e8e8,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,46,8,26,-1,-1,36,,"[quantity: (1, 10), time: (41, 46), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+824,eedbdf1b-e9e7-4adf-a911-eba7a4b1fc4c,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,47,2,49,40,-1,40,02Dec@1|05Ran@2,"[quantity: (1, 5), time: (45, 49), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,13,47,,-1,-1
+717,1f2e890f-df8d-4bbb-b7b7-0137d605867c,05Ran@2,BUYER,RandomAgent,_SystemAgent,47,5,35,29,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+718,08984d33-1632-4242-9eab-81cbb144bb61,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,47,5,35,29,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,False,3,0,47,,-1,-1
+799,06d69f24-4e6c-475b-bc44-081d61c5041a,01Dec@0,03MyA@1,DecentralizingAgent,MyAgent,47,11,26,-1,-1,37,,"[quantity: (1, 14), time: (42, 47), unit_price: (17, 34)]",01Dec@0,03MyA@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+715,23ef1e79-cbd0-42e5-97b9-10ab1619bfbf,05Ran@2,BUYER,RandomAgent,_SystemAgent,47,3,35,29,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+714,7f7462a5-ab3a-41ce-a871-8b7046ab011a,05Ran@2,BUYER,RandomAgent,_SystemAgent,47,3,35,29,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+838,6e1ffaba-8d9e-4379-922a-b5dc81629a65,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,47,5,14,43,-1,43,04Ind@2|02Dec@1,"[quantity: (1, 5), time: (43, 47), unit_price: (1, 26)]",02Dec@1,04Ind@2,p2,04Ind@2,True,2,17,-1,02Dec@1:product(0.8),-1,-1
+837,646c4ed1-5fd6-4dea-abfa-19c21f60f6b4,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,47,2,9,43,-1,43,02Dec@1|01Dec@0,"[quantity: (1, 5), time: (43, 47), unit_price: (1, 17)]",01Dec@0,02Dec@1,p1,02Dec@1,True,1,17,47,,-1,-1
+720,8962728b-43a2-4de2-bb07-98108bd55228,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,47,4,35,29,-1,-1,BUYER|04Ind@2,[],04Ind@2,BUYER,p3,BUYER,True,3,0,47,,-1,-1
+818,c8d7915d-30e2-4eaf-b750-273f3fbb3d64,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,47,12,52,-1,-1,39,,"[quantity: (1, 12), time: (44, 49), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,6,-1,,-1,-1
+831,7a277adc-edd6-46d8-bf38-446dffd91891,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,47,8,46,42,-1,42,02Dec@1|05Ran@2,"[quantity: (1, 11), time: (47, 49), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,14,47,,-1,-1
+834,1255e603-8d50-4063-8330-2a2e1b695a9f,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,48,11,38,-1,-1,42,,"[quantity: (1, 11), time: (47, 49), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,,-1,-1
+841,67d09077-e2a9-4647-9695-e1ab72492c47,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,48,1,39,-1,-1,43,,"[quantity: (1, 5), time: (48, 49), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,,-1,-1
+839,70aa6ec7-a123-494b-8d0d-7a9af29d9855,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,48,4,52,43,-1,43,02Dec@1|05Ran@2,"[quantity: (1, 5), time: (48, 49), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,7,-1,02Dec@1:product(0.5),-1,-1
+727,2f2fdf02-edb2-4c0e-bc8c-ff128750f7a0,05Ran@2,BUYER,RandomAgent,_SystemAgent,48,3,35,30,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+827,edcea523-b4a1-4f36-994e-7c917b13295a,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,48,12,40,-1,-1,40,,"[quantity: (1, 12), time: (44, 49), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,,-1,-1
+815,d478baba-eb56-42f9-981a-927450dfc170,00Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,48,8,26,-1,-1,38,,"[quantity: (1, 8), time: (43, 48), unit_price: (17, 34)]",00Dec@0,02Dec@1,p1,00Dec@0,False,1,17,-1,,-1,-1
+813,c929f4ae-3bd2-4d46-87d8-e4d442b5082a,01Dec@0,02Dec@1,DecentralizingAgent,DecentralizingAgent,48,8,26,-1,-1,38,,"[quantity: (1, 12), time: (43, 48), unit_price: (17, 34)]",01Dec@0,02Dec@1,p1,01Dec@0,False,1,17,-1,,-1,-1
+738,06cb43cc-96bb-46aa-abae-3dc1769e651b,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,48,4,35,-1,-1,-1,BUYER,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,,-1,-1
+735,0723a922-e647-4bcb-9a75-74da2e67133d,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,48,5,35,-1,-1,-1,BUYER,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,,-1,-1
+731,03255c2c-8333-4674-85d0-e89bb5e9ac72,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,48,2,35,-1,-1,-1,BUYER,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,,-1,-1
+728,99f6239f-7cc0-4232-a23e-d3a899ffc666,05Ran@2,BUYER,RandomAgent,_SystemAgent,48,6,35,30,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,True,3,0,-1,05Ran@2:product(1.0),-1,-1
+847,56fcae67-8903-48ae-9305-6494bfa46719,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,48,3,46,-1,-1,44,,"[quantity: (1, 5), time: (48, 49), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,15,-1,,-1,-1
+753,e7e71f5b-3a02-423f-9c7b-d5b03fabec2c,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,49,3,35,-1,-1,-1,BUYER,[],04Ind@2,BUYER,p3,BUYER,True,3,0,-1,,-1,-1
+750,3af29ae0-f898-4a35-a848-bc680b5c268f,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,49,4,35,-1,-1,-1,BUYER,[],04Ind@2,BUYER,p3,BUYER,True,3,0,-1,,-1,-1
+743,94195782-c538-4bea-95f2-324ff905e018,04Ind@2,BUYER,IndDecentralizingAgent,_SystemAgent,49,7,35,-1,-1,-1,BUYER,[],04Ind@2,BUYER,p3,BUYER,False,3,0,-1,,-1,-1
+740,d10e68d3-43f5-4842-b0af-5e6b64f602bc,05Ran@2,BUYER,RandomAgent,_SystemAgent,49,6,35,31,-1,-1,BUYER|05Ran@2,[],05Ran@2,BUYER,p3,BUYER,False,3,0,-1,05Ran@2:product(1.0),-1,-1
+843,56294bd5-5021-4321-a662-504852c249ca,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,49,1,39,-1,-1,44,,"[quantity: (1, 5), time: (49, 49), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,,-1,-1
+844,616ccee5-207e-4a77-8917-21174ba74ce9,02Dec@1,04Ind@2,DecentralizingAgent,IndDecentralizingAgent,49,1,39,-1,-1,44,,"[quantity: (1, 5), time: (48, 49), unit_price: (26, 52)]",02Dec@1,04Ind@2,p2,02Dec@1,False,2,17,-1,,-1,-1
+846,7d637359-9eeb-4835-81cf-e3d2b3286410,02Dec@1,05Ran@2,DecentralizingAgent,RandomAgent,49,1,52,-1,-1,44,,"[quantity: (1, 5), time: (49, 49), unit_price: (26, 52)]",02Dec@1,05Ran@2,p2,02Dec@1,False,2,8,-1,,-1,-1

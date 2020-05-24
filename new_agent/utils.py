@@ -44,12 +44,12 @@ class AgentProfile:
 class AgentPlan:
 
     def getNVMPlan(self, n_lines, n_processes, n_steps, process, production_cost, current_time):
-        num_periods = 5
+        num_periods = 4
         self.nvm = NVMLib(mpnvp_number_of_periods=num_periods,
-                          mpnvp_quantities_domain_size=10,
+                          mpnvp_quantities_domain_size=20,
                           game_length=n_steps,
                           input_product_index=process,
-                          output_product_index=process,
+                          output_product_index=process+1,
                           num_intermediate_products=n_processes,
                           production_cost=production_cost)
         time = 0
@@ -58,7 +58,7 @@ class AgentPlan:
         else:
             time = current_time
     
-        nvm_sol = self.nvm.get_complete_plan(current_time=time, verbose=True)
+        nvm_sol = self.nvm.get_complete_plan(current_time=time, verbose=False)
         self.buy_plan = []
         self.sell_plan = []
         self.produce_plan = []
@@ -73,7 +73,7 @@ class AgentPlan:
                 self.produce_plan.append(step_sol[2])
 
 
-    def __init__(self, n_lines, n_processes, n_steps, process, production_cost, current_time):
+    def __init__(self):
         self.target_input = None  # How much input I want to possess at each step
         self.expected_input = None
         self.min_sell_price = None
@@ -83,7 +83,9 @@ class AgentPlan:
         self.buy_plan = None
         self.sell_plan = None
         self.produce_plan = None
-        self.getNVMPlan(n_lines, n_processes, n_steps, process, production_cost, current_time)
+        self.NVM = None
+        
+        
 
 
 class BuyPlan:
@@ -149,7 +151,7 @@ class AgentStatistics:
         Sell: Both Reject = {}   Agent Reject = {}   Partner Reject = {}    Both Accept = {}
         """.format(*params)
 
-        print(report)
+#        print(report)
 
     def on_negotiation_failure(
             self,

@@ -66,7 +66,7 @@ class MyNegotiationManager:
         # -------------------------------------------------------
         self.buyers = self.sellers = None
 
-        self._horizon = 5  # TODO: Decide this value
+        self._horizon = 4 # TODO: Decide this value
         self.init()
         """Buyer controllers and seller controllers. Each of them is responsible of covering the
         needs for one step (either buying or selling)."""
@@ -92,7 +92,7 @@ class MyNegotiationManager:
         if s < self.data.n_steps - 1:
             self.start_negotiations(s, True)
 
-    def start_negotiations(self, step: int, is_seller: bool,) -> None:
+    def start_negotiations(self, step: int, is_seller: bool) -> None:
         """
         Starts a set of negotiations to by/sell the product with the given limits
 
@@ -109,7 +109,6 @@ class MyNegotiationManager:
         if step < awi.current_step + 1:
             return
         # choose ranges for the negotiation agenda.
-        print(step)
         qvalues = self._qrange(step, is_seller)
         tvalues = self._trange(step, is_seller)
         uvalues = self._urange(is_seller)
@@ -129,24 +128,32 @@ class MyNegotiationManager:
         return self.plan.min_buy_price, self.plan.max_buy_price
 
     def _trange(self, step, is_seller):
+#        print(self.data.n_processes)
+#        print(self.data.process)
+#        print(self.data.n_steps)
+#        print(self.data.last_day)
         if is_seller:
             return (
                 self.awi.current_step + 1,
-                min(step + self._horizon, self.data.n_steps - 2),
-            )
+                min(step + self._horizon, self.data.n_steps - 2)) # why -2?
 
         return self.awi.current_step + 1, min(step + self._horizon, self.data.last_day)
+#        return self.awi.current_step + 1, step-1
+
 
     def _qrange(self, step: int, sell: bool) -> Tuple[int, int]:
-#        print(step)
+#        print(f'current: {self.awi.current_step}')
+#        print(f'step: {step}')
+#        print(f'plan: {self.plan.sell_plan}')
 #        print()
-        if step >= len(self.plan.sell_plan):
-            return 1, 1
-        elif sell:
+#        if step >= len(self.plan.sell_plan):
+#            return 1,1
+        step -= self.awi.current_step
+        if sell:
             upper_bound = self.plan.sell_plan[step]  # Sell everything
         else:
             upper_bound = self.plan.buy_plan[step]  # Production capacity
-
+#        print(f'upper: {upper_bound}')
         return 1, upper_bound
 
     def _start_negotiations(
@@ -160,14 +167,10 @@ class MyNegotiationManager:
         partners: List[str],
     ) -> None:
         _execution_fraction = 1
-        expected_quantity = int(
-            math.floor(qvalues[1] * _execution_fraction)
-        )
+        expected_quantity = int(math.floor(qvalues[1] * _execution_fraction))
 
         # negotiate with everyone
-        controller = self.add_controller(
-            sell, qvalues[1], uvalues, expected_quantity, step
-        )
+        controller = self.add_controller(sell, qvalues[1], uvalues, expected_quantity, step)
 
         if (
             qvalues[1] < qvalues[0]
@@ -196,7 +199,11 @@ class MyNegotiationManager:
     ) -> Optional[Negotiator]:
         # find negotiation parameters
         is_seller = annotation["seller"] == self.agent.id
-        tmin, tmax = issues[TIME].min_value, issues[TIME].max_value + 1
+#        tmin, tmax = issues[TIME].min_value, issues[TIME].max_value + 1
+        tmin = self.awi.current_step
+        tmax = tmin + self._horizon-1
+#        print(tmin)
+#        print(tmax)
         # find the time-step for which this negotiation should be added
         step = max(0, tmin - 1) if is_seller else min(self.awi.n_steps - 1, tmax + 1)
         # find the corresponding controller.
@@ -272,6 +279,10 @@ class MyNegotiationManager:
             )
         return controller
 
+    def _get_controller(self, mechanism) -> StepController:
+        neg = self._running_negotiations[mechanism.id]
+        return neg.negotiator.parent
+
     def all_negotiations_concluded(  # Used by add controller
         self, controller_index: int, is_seller: bool
     ) -> None:
@@ -297,6 +308,7 @@ class MyNegotiationManager:
         if quantity <= target:
             self.start_negotiations(step=controller_index, is_seller=is_seller)
             return
+
 
     def target_quantities(self, steps: Tuple[int, int], sell: bool) -> int:
         target = 0

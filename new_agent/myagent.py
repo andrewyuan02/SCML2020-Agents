@@ -45,6 +45,7 @@ from scml.scml2020.world import Failure
 from tabulate import tabulate
 
 from agent.mynegotiationmanager import MyNegotiationManager
+from agent.myothernegotiationmanager import NewStepNegotiationManager
 from agent.myindependentnegotiatonmanager import MyIndependentNegotiationManager
 from agent.utils import *
 
@@ -102,18 +103,15 @@ class MontyHall(SCML2020Agent):
 
         self.data.process = self.awi.profile.processes[0]  # is equal to input product
         self.data.production_cost = self.awi.profile.costs[0][self.data.process]
-
-        self.data.last_day = (
-            (self.data.n_processes - self.data.process)
-        )  # Last day to buy inputs
+        self.data.last_day = self.data.n_steps - (self.data.n_processes - self.data.process) # Last day to buy inputs
 
         self.data.agents = self.awi._world.agents
 
         # ================================
         # Planning Components
         # ================================
-        self.plan = AgentPlan(self.awi.n_lines, self.awi.n_processes, self.awi.n_steps, self.awi.profile.processes[0], self.awi.profile.costs[0][self.data.process], {self.awi.current_step})
-
+        self.plan = AgentPlan()
+        self.plan.getNVMPlan(self.awi.n_lines, self.awi.n_processes, self.awi.n_steps, self.data.input_product, self.data.production_cost, self.awi.current_step)
 
         self.plan.target_input = (
                 self.data.n_lines * 2
@@ -138,9 +136,12 @@ class MontyHall(SCML2020Agent):
         )  # Default profit
 
         self.plan.min_buy_price = 1
-        self.plan.max_buy_price = input_catalog_price + int(profit/2) - 1  # TODO: Predict
+        self.plan.max_buy_price = input_catalog_price
 
-        self.plan.min_sell_price = output_catalog_price - int(profit/2) + 1  # TODO: Predict
+#        self.plan.max_buy_price = input_catalog_price + int(profit/2) - 1  # TODO: Predict
+        self.plan.min_sell_price = output_catalog_price
+
+#        self.plan.min_sell_price = output_catalog_price - int(profit/2) + 1 # TODO: Predict
         self.plan.max_sell_price = (
                 output_catalog_price * 2
         )  # TODO: Predict?
@@ -149,6 +150,8 @@ class MontyHall(SCML2020Agent):
         # Negotiation Components
         # ================================
         self.negotiation_manager = MyNegotiationManager(data=self.data, plan=self.plan, awi=self.awi, agent=self)
+#        self.negotiation_manager = NewStepNegotiationManager(plan=self.plan, awi=self.awi, agent=self)
+
         # self.negotiation_manager = MyIndependentNegotiationManager(data=self.data, plan=self.plan, awi=self.awi, agent=self)
 
         # print("checkpoint")
@@ -197,41 +200,8 @@ class MontyHall(SCML2020Agent):
         Production scheduling and negotiations"""
         super().step()
         
-        self.plan = AgentPlan(self.awi.n_lines, self.awi.n_processes, self.awi.n_steps, self.awi.profile.processes[0], self.awi.profile.costs[0][self.data.process], self.awi.current_step)
-        self.plan.target_input = (
-                self.data.n_lines * 2
-        )  # How many input i need to have at each time step TODO: Predict
-
-        self.plan.target_output = self.data.n_lines * 2  # Do not have more than this amount
-
-        # self.plan.true_input = self.data.n_steps * [0]  # At step t, agent will have this many inputs for sure
-        self.plan.expected_input = []  # At step t, agent expects to receive this many inputs
-        for i in range((self.data.last_day + 1)):
-            self.plan.expected_input.append(BuyPlan(self, self.plan.target_input, self.plan.target_output, self.data.n_lines))
-
-        self.plan.available_output = 0
-        # self.plan.expected_output = self.data.n_steps * [0]
-
-        self.plan.available_money = self.data.initial_balance
-
-        input_catalog_price = self.data.catalog_price_list[self.data.input_product]
-        output_catalog_price = self.data.catalog_price_list[self.data.output_product]
-        profit = output_catalog_price - (
-                input_catalog_price + self.data.production_cost
-        )  # Default profit
-
-        self.plan.min_buy_price = 1
-        self.plan.max_buy_price = input_catalog_price + int(profit/2) - 1  # TODO: Predict
-
-        self.plan.min_sell_price = output_catalog_price - int(profit/2) + 1  # TODO: Predict
-        self.plan.max_sell_price = (
-                output_catalog_price * 2
-        )  # TODO: Predict?
-
-        # ================================
-        # Negotiation Components
-        # ================================
-        self.negotiation_manager = MyNegotiationManager(data=self.data, plan=self.plan, awi=self.awi, agent=self)
+        self.plan.getNVMPlan(self.awi.n_lines, self.awi.n_processes, self.awi.n_steps, self.data.input_product, self.data.production_cost, self.awi.current_step)
+    
         
         self.propagate_inputs()  # Plan how much to buy at each step
         self.negotiation_manager.step()
@@ -276,7 +246,7 @@ class MontyHall(SCML2020Agent):
     ) -> None:
         """Called when a negotiation the agent is a party of ends without
         agreement"""
-        # print("NEGOTIATION FAILED", self.get_current_step(),"Contract negotiation failed", annotation)
+#        print("NEGOTIATION FAILED", self.get_current_step(),"Contract negotiation failed", annotation)
         self.stat.on_negotiation_failure(partners, annotation, mechanism, state)
 
     def on_negotiation_success(
@@ -284,7 +254,7 @@ class MontyHall(SCML2020Agent):
     ) -> None:
         """Called when a negotiation the agent is a party of ends with
         agreement"""
-        # print("NEGOTIATION SUCCEEDED:", self.get_current_step(), "Contract negotiation succeeded", contract)
+#        print("NEGOTIATION SUCCEEDED:", self.get_current_step(), "Contract negotiation succeeded", contract)
         self.stat.on_negotiation_success(contract, mechanism)
 
 
@@ -296,13 +266,19 @@ class MontyHall(SCML2020Agent):
         time = contract.agreement["time"]
         if not contract.annotation["is_buy"]:  # is sell
             self.plan.available_money += quantity * unit_price
+#            self.plan.available_output -= quantity
+        else: #buy
+#            self.plan.available_money -= quantity * unit_price
+            self.plan.available_output += quantity
+
+            
 
     def on_contract_breached(
             self, contract: Contract, breaches: List[Breach], resolution: Optional[Contract]
     ) -> None:
         """Called when a breach occur. In 2020, there will be no resolution
         (i.e. resoluion is None)"""
-        print("CONTRACT BREACH:", contract)
+#        print("CONTRACT BREACH:", contract)
 
 #        if breaches[0].perpetrator == self.data.id:
 #            assert False, "You breached contract?!?!?"
@@ -348,9 +324,7 @@ class MontyHall(SCML2020Agent):
 
         for contract in contracts:  # (contract, index) tuple
             time = contract[0].agreement["time"]
-            if (
-                    time < self.get_current_step() or time >= self.data.n_steps
-            ):  # Time not valid
+            if (time < self.get_current_step() or time >= self.data.n_steps):  # Time not valid
                 continue
             if not contract[0].annotation["is_buy"]:  # is sell
                 sell_contracts.append(contract)
@@ -391,12 +365,14 @@ class MontyHall(SCML2020Agent):
             if contract.annotation["is_buy"]:
                 self.plan.expected_input[time].contract_inputs += quantity
                 self.plan.available_money -= quantity * unit_price
+
             else:  # sell
                 self.plan.available_output -= quantity
 
+
     # Contract Control and Feedback Helpers
 
-    def _sign_sell_contracts(self, sell_contracts, available_output):
+     def _sign_sell_contracts(self, sell_contracts, available_output):
         # returns sell contract indexes which are to be signed
         if len(sell_contracts) == 0 or available_output == 0:
             return []
@@ -406,22 +382,17 @@ class MontyHall(SCML2020Agent):
 
         # print('DP:', len(dp), len(dp[0]), '\nParam:', len(sell_contracts), available_output)
 
-        profit, signed_contracts = self._solve_knapsack(
-            sell_contracts, dp, len(sell_contracts) - 1, available_output
-        )
+        profit, signed_contracts = self._solve_knapsack(sell_contracts, dp, len(sell_contracts) - 1, available_output)
 
         return signed_contracts
 
     def _solve_knapsack(self, sell_contracts, dp, index, available_output):
-
         if dp[index][available_output] is not None:
             return dp[index][available_output]
 
         quantity = sell_contracts[index][0].agreement["quantity"]
         unit_price = sell_contracts[index][0].agreement["unit_price"]
-        value = (
-                unit_price * quantity
-        )  # how much is the contract worth
+        value = (unit_price * quantity)  # how much is the contract worth
         time = sell_contracts[index][0].agreement["time"]
 
         if index < 0 or available_output == 0:
@@ -474,7 +445,7 @@ class MontyHall(SCML2020Agent):
             signed_buy.append(index)
             needed_inputs[time] -= quantity
             money -= cost
-
+        print(f'contract: {signed_buy}')
         return signed_buy
 
     # ====================
@@ -542,11 +513,11 @@ class MontyHall(SCML2020Agent):
 
 competitors = [
         MontyHall,
-        #DecentralizingAgent,
-        #IndDecentralizingAgent,
-        #MovingRangeAgent,
-        #BuyCheapSellExpensiveAgent,
-        #RandomAgent,
+        DecentralizingAgent,
+        IndDecentralizingAgent,
+#        MovingRangeAgent,
+#        BuyCheapSellExpensiveAgent,
+#        RandomAgent,
 ]
 
 
@@ -617,6 +588,8 @@ def run_tournament(
             n_steps=n_steps,
             n_configs=n_configs,
             n_runs_per_world=n_runs_per_world,
+            n_processes=3
+
         )
     elif competition == "collusion":
         results = anac2020_collusion(
@@ -625,6 +598,8 @@ def run_tournament(
             n_steps=n_steps,
             n_configs=n_configs,
             n_runs_per_world=n_runs_per_world,
+            n_processes=3
+
         )
     else:
         raise ValueError(f"Unknown competition type {competition}")
@@ -636,8 +611,8 @@ def run_single_session():
     world = SCML2020World(
         **SCML2020World.generate(
             agent_types=competitors,
-            n_steps=70,
-            n_processes=4
+            n_steps=50,
+            n_processes=3
         ),
         construct_graphs=True,
     )
@@ -646,7 +621,17 @@ def run_single_session():
 
     world.run_with_progress()
 
-    fig, (profit, score) = plt.subplots(1, 2)
+    contracts = world.contracts_df
+    signed = contracts.loc[contracts.signed_at>=0, :]
+    fields = ["seller_name", "buyer_name", "delivery_time", "quantity", "unit_price",
+          "signed_at", "executed", "breached", "nullified", "erred"]
+    signed[fields].sort_values(["quantity", "unit_price"], ascending=False).head(10)
+    df1 = signed.loc[signed.executed, fields].sort_values(["quantity", "unit_price"], ascending=False).head(10)
+    df2 = signed.loc[signed.breached, fields[:-4] + ["breaches"]].sort_values(["quantity", "unit_price"], ascending=False).head(10)
+    df1.to_csv('/Users/jtsatsaros/Desktop/logs/eg1.csv')
+    df2.to_csv('/Users/jtsatsaros/Desktop/logs/eg2.csv')
+
+    fig, (profit, score) = plt.subplots(1, 2, figsize=(15, 15))
     snames = sorted(world.non_system_agent_names)
     for name in snames:
         profit.plot(100.0 * (np.asarray(world.stats[f'balance_{name}']) / world.stats[f'balance_{name}'][0] - 1.0),
@@ -657,12 +642,26 @@ def run_single_session():
     score.set(xlabel='Simulation Step', ylabel='Player Score (%)')
     fig.show()
 
+    fig, (score, profit) = plt.subplots(1, 2, figsize=(15, 15))
+    final_scores = [world.stats[f"score_{_}"][-1] * (world.stats[f"balance_{_}"][0])
+                    for _ in world.non_system_agent_names]
+    final_profits = [world.stats[f"balance_{_}"][-1] - world.stats[f"balance_{_}"][0]
+                     for _ in world.non_system_agent_names]
+    plt.setp(score.xaxis.get_majorticklabels(), rotation=45)
+    plt.setp(profit.xaxis.get_majorticklabels(), rotation=45)
+    score.bar(world.non_system_agent_names, final_scores)
+    profit.bar(world.non_system_agent_names, final_profits)
+    score.set(ylabel="Final Unnormalized Score ($)")
+    profit.set(ylabel="Final Balance  ($)")
+    
+    fig.show()
 
 
 
 def main():
 #    run()
     run_single_session()
+#    run_tournament()
 
     print("Finished...")
 

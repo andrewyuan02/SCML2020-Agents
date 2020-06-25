@@ -1,6 +1,0 @@
-# To run the generate data script:
-qsub run_game.sh
-# If we want to run in machiens that last for longer
-qsus -l long run_game.sh
-# To check on what the grid is currently running
-qstat

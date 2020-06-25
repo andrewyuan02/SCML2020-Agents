@@ -1,5 +1,0 @@
-{
-  "competitors": "[<class 'scml.scml2020.agents.decentralizing.DecentralizingAgent'>, <class 'scml.scml2020.agents.decentralizing.IndDecentralizingAgent'>, <class 'myagent.MyAgent'>]",
-  "levels": 4,
-  "steps": 111
-}

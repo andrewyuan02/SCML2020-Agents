@@ -559,7 +559,7 @@ class MontyHall(SCML2020Agent):
 
             if cost > money or quantity > needed_inputs[time]:
                 continue
-            if cost < self.awi.catalog_prices[self.awi.my_input_product] * 3:
+            if contract.agreement["unit_price"] < self.awi.catalog_prices[self.awi.my_input_product] * 3:
                 signed_buy.append(index)
                 needed_inputs[time] -= quantity
                 money -= cost

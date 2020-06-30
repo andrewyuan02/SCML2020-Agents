@@ -111,7 +111,7 @@ class NVMLib2:
         # check data exists
         assert self.check_if_data_exists() is True
 
-        # TODO: fall back plan
+        # TODO: fall back plan with self.current_time + 1, 2, etc
 
         # Get the data for quantities
         path = pathlib.Path(

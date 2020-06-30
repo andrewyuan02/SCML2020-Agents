@@ -11,7 +11,7 @@ from negmas import (
     SAONegotiator,
 )
 
-from nvm_lib2.nvm_lib2 import NVMLib2
+from .nvm_lib2.nvm_lib2 import NVMLib2
 
 
 class AgentProfile:

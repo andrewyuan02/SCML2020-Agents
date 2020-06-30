@@ -10,7 +10,7 @@ from pprint import pprint
 
 import matplotlib.pyplot as plt  # for graphs
 
-from nvm_lib.nvm_lib import NVMLib
+from .nvm_lib.nvm_lib import NVMLib
 
 from typing import Any, Dict, List, Optional, Tuple, Union
 
@@ -41,11 +41,12 @@ from scml.scml2020.utils import anac2020_collusion, anac2020_std
 from scml.scml2020.world import Failure
 from tabulate import tabulate
 
-from mynegotiationmanager import MyNegotiationManager
+from .mynegotiationmanager import MyNegotiationManager
 # from myothernegotiationmanager import NewStepNegotiationManager
-from myindependentnegotiatonmanager import MyIndependentNegotiationManager
-from utils import *
-from contractstest import solve_signer
+from .myindependentnegotiatonmanager import MyIndependentNegotiationManager
+from .utils import *
+
+# from contractstest import solve_signer
 
 
 def update_list(target_list: List[int], start_index: int, change: int):

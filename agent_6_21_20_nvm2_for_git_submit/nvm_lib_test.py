@@ -1,5 +1,5 @@
 # Needs to be called just once in the constructor of the agent
-from nvm_lib.nvm_lib import NVMLib
+from .nvm_lib.nvm_lib import NVMLib
 
 nvm = NVMLib(mpnvp_number_of_periods=3,
              mpnvp_quantities_domain_size=10,

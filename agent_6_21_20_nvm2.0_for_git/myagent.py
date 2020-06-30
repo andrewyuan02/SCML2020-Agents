@@ -643,7 +643,7 @@ competitors = [
 ]
 
 #
-def run(n_steps=100):
+def run(n_steps=51):
     """
     **Not needed for submission.** You can use this function to test your agent.
 

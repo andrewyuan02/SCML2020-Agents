@@ -115,7 +115,7 @@ class NVMLib2:
 
         # Get the data for quantities
         path = pathlib.Path(
-            __file__).parent / "data" / f"dict_qtty_num_intermediate_products_{self.num_intermediate_products}_{self.game_length}.json"
+            __file__).parent / "data2" / f"dict_qtty_num_intermediate_products_{self.num_intermediate_products}_{self.game_length}.json"
         path_string = str(path)
         q_uncertainty_model = NVMLib2.get_json_dict(path_string)
         # quantity distribution for the input product, time step distribution of probability distribution
@@ -130,7 +130,7 @@ class NVMLib2:
 
         # Get the data for prices
         price_path = pathlib.Path(
-            __file__).parent / "data" / f"dict_price_num_intermediate_products_{self.num_intermediate_products}_{self.game_length}.json"
+            __file__).parent / "data2" / f"dict_price_num_intermediate_products_{self.num_intermediate_products}_{self.game_length}.json"
         price_path_string = str(price_path)
         prices = NVMLib2.get_json_dict(price_path_string)
         p_inn = prices['p' + str(self.input_product_index)] # price distribution for the input product
@@ -178,9 +178,9 @@ class NVMLib2:
         :return:
         """
         qtty_path = pathlib.Path(
-            __file__).parent / "data" / f"dict_qtty_num_intermediate_products_{self.num_intermediate_products}_{self.game_length}.json"
+            __file__).parent / "data2" / f"dict_qtty_num_intermediate_products_{self.num_intermediate_products}_{self.game_length}.json"
         price_path = pathlib.Path(
-            __file__).parent / "data" / f"dict_price_num_intermediate_products_{self.num_intermediate_products}_{self.game_length}.json"
+            __file__).parent / "data2" / f"dict_price_num_intermediate_products_{self.num_intermediate_products}_{self.game_length}.json"
         if not qtty_path.is_file():
             raise Exception(f'The uncertainty model for quantities could not be found at {qtty_path}')
         if not price_path.is_file():

@@ -45,6 +45,7 @@ from mynegotiationmanager import MyNegotiationManager
 # from myothernegotiationmanager import NewStepNegotiationManager
 from myindependentnegotiatonmanager import MyIndependentNegotiationManager
 from utils import *
+from contractstest import solve_signer
 
 
 def update_list(target_list: List[int], start_index: int, change: int):
@@ -329,43 +330,109 @@ class MontyHall(SCML2020Agent):
     # =============================
     # Contract Control and Feedback
     # =============================
+    #
+    # def sign_all_contracts(self, contracts: List[Contract]) -> List[Optional[str]]:
+    #     """Called to ask you to sign all contracts that were concluded in
+    #     one step (day)"""
+    #
+    #     signatures = [None] * len(contracts)
+    #
+    #     contracts = zip(contracts, range(len(contracts)))
+    #     sell_contracts = []
+    #     buy_contracts = []
+    #
+    #     for contract in contracts:  # (contract, index) tuple
+    #         time = contract[0].agreement["time"]
+    #         if (time < self.get_current_step() or time >= self.data.n_steps):  # Time not valid
+    #             continue
+    #         if not contract[0].annotation["is_buy"]:  # is sell
+    #             sell_contracts.append(contract)
+    #         elif time <= self.data.last_day:
+    #             buy_contracts.append(contract)
+    #
+    #     # Sign sell contracts
+    #     #available_output = self.plan.available_output
+    #     available_output = self.get_output_inventory()
+    #     signed_sell = self._sign_sell_contracts(sell_contracts, available_output)
+    #     for index in signed_sell:
+    #         signatures[index] = self.data.id
+    #
+    #     # Sign buy contracts
+    #     signed_buy = self._sign_buy_contracts(
+    #         buy_contracts,
+    #         self.plan.available_money
+    #     )
+    #
+    #     for index in signed_buy:
+    #         signatures[index] = self.data.id
+    #
+    #     return signatures
 
-    def sign_all_contracts(self, contracts: List[Contract]) -> List[Optional[str]]:
-        """Called to ask you to sign all contracts that were concluded in
-        one step (day)"""
+    def sign_all_contracts(
+            self, contracts: List[Contract]
+    ) -> List[Optional[str]]:
 
-        signatures = [None] * len(contracts)
+        max_buy_price = self.awi.catalog_prices[self.awi.my_input_product] * 3
+        min_sell_price = self.awi.catalog_prices[self.awi.my_output_product] / 3
 
-        contracts = zip(contracts, range(len(contracts)))
-        sell_contracts = []
-        buy_contracts = []
+        contracts_temp = []
+        for y in contracts:
+            x = tuple(list(y.agreement.values()))
+            price = y.agreement['unit_price']
+            if y.annotation["is_buy"]:
+                if price < max_buy_price:
+                    contracts_temp.append(y)
+            else:
+                if price > min_sell_price:
+                    contracts_temp.append(y)
 
-        for contract in contracts:  # (contract, index) tuple
-            time = contract[0].agreement["time"]
-            if (time < self.get_current_step() or time >= self.data.n_steps):  # Time not valid
-                continue
-            if not contract[0].annotation["is_buy"]:  # is sell
-                sell_contracts.append(contract)
-            elif time <= self.data.last_day:
-                buy_contracts.append(contract)
+        contracts = contracts_temp
 
-        # Sign sell contracts
-        #available_output = self.plan.available_output
-        available_output = self.get_output_inventory()
-        signed_sell = self._sign_sell_contracts(sell_contracts, available_output)
-        for index in signed_sell:
-            signatures[index] = self.data.id
+        output = [self.id] * len(contracts)
 
-        # Sign buy contracts
-        signed_buy = self._sign_buy_contracts(
-            buy_contracts,
-            self.plan.available_money
-        )
+        input_offers: List[Tuple[int, int, int]] = []
+        output_offers: List[Tuple[int, int, int]] = []
 
-        for index in signed_buy:
-            signatures[index] = self.data.id
+        for y in contracts:
+            z = list(y.agreement.values())
+            z = [int(i) for i in z]
+            x = tuple(z)
+            if y.annotation["is_buy"]:
+                input_offers.append(tuple(x))
+            else:
+                output_offers.append(tuple(x))
 
-        return signatures
+        # print("signatures...")
+        # print(contracts)
+        # print(input_offers)
+        # print(output_offers)
+        # print(len(contracts))
+        # print(len(input_offers))
+        # print(len(output_offers))
+
+        if len(output_offers) != 0:
+            x = solve_signer(input_offers, output_offers, False)
+            buy_sign_plan = x[0]
+            sell_sign_plan = x[1]
+            # print(buy_sign_plan)
+            # print(sell_sign_plan)
+
+            counter_buy: int = 0
+            counter_sell: int = 0
+            for i in range(len(contracts)):
+                if contracts[i].annotation["is_buy"]:
+                    if i < len(buy_sign_plan):
+                        if buy_sign_plan[i] == 0:
+                            output[i] = None
+                        counter_buy = counter_buy + 1
+                else:
+                    if i < len(sell_sign_plan):
+                        if sell_sign_plan[i] == 0:
+                            output[i] = None
+                        counter_sell = counter_sell + 1
+
+        # print(output)
+        return output
 
     def on_contracts_finalized(
             self,
@@ -390,102 +457,102 @@ class MontyHall(SCML2020Agent):
 
     # Contract Control and Feedback Helpers
 
-    def _sign_sell_contracts(self, sell_contracts, available_output):
-
-        assert available_output is not None, "AVAILABLE OUTPUT IS NONE ??"
-
-        # returns sell contract indexes which are to be signed
-        if len(sell_contracts) == 0 or available_output == 0:
-            return []
-        dp = len(sell_contracts) * [
-            ((available_output + 1) * [None])
-        ]  # initialize matrix
-
-        # print('DP:', len(dp), len(dp[0]), '\nParam:', len(sell_contracts), available_output)
-
-        profit, signed_contracts = self._solve_knapsack(sell_contracts, dp, len(sell_contracts) - 1, available_output)
-
-        return signed_contracts
-
-    def _solve_knapsack(self, sell_contracts, dp, index, available_output):
-
-        # assertion checks
-        assert index >= 0, f"knapsack index negative: {index}"
-        assert available_output >= 0, f"knapsack available_output negative: {available_output}"
-        # "graceful" failure
-        if index < 0:
-            index = 0
-        if available_output < 0:
-            available_output = 0
-        if index == 0:
-            print("index is zero in solve_knapsack")
-
-        # actual algorithm
-        try:
-            if dp[index][available_output] is not None:
-                return dp[index][available_output]
-        except Exception as inst:
-            print(inst)
-            print("---------INDEX: " + str(index) + "---AVAILABLE OUTPUT: " + str(available_output))
-
-        quantity = sell_contracts[index][0].agreement["quantity"]
-        unit_price = sell_contracts[index][0].agreement["unit_price"]
-        value = (unit_price * quantity)  # how much is the contract worth
-        time = sell_contracts[index][0].agreement["time"]
-
-        # base case
-        if index <= 0 or available_output == 0:
-            result = (0, [])
-        elif quantity > available_output or unit_price < self.plan.min_sell_price:  # Not enough inputs or too cheap
-            result = self._solve_knapsack(
-                sell_contracts, dp, index - 1, available_output
-            )
-        else:
-            profit1, signed1 = self._solve_knapsack(
-                sell_contracts, dp, index - 1, available_output
-            )  # don't sign
-            profit2, signed2 = self._solve_knapsack(
-                sell_contracts, dp, index - 1, available_output - quantity
-            )  # sign
-
-            profit2 += value
-            signed2 = copy.deepcopy(signed2)
-            signed2.append(sell_contracts[index][1])
-
-            result = (profit1, signed1) if profit1 > profit2 else (profit2, signed2)
-
-        dp[index][available_output] = result
-        return result
-
-    def _sign_buy_contracts(self, buy_contracts, money):
-        buy_contracts = sorted(
-            buy_contracts,
-            key=lambda contract: (
-                contract[0].agreement["unit_price"],
-                contract[0].agreement["time"],
-                -contract[0].agreement["quantity"],
-            ),
-        )
-
-        signed_buy = []
-        needed_inputs = []
-
-        for buy_plan in self.plan.expected_input:
-            needed_inputs.append(buy_plan.get_needed())
-
-        for contract, index in buy_contracts:
-            quantity = contract.agreement["quantity"]
-            cost = contract.agreement["unit_price"] * quantity
-            time = contract.agreement["time"]
-
-            if cost > money or quantity > needed_inputs[time]:
-                continue
-
-            signed_buy.append(index)
-            needed_inputs[time] -= quantity
-            money -= cost
-        print(f'contract: {signed_buy}')
-        return signed_buy
+    # def _sign_sell_contracts(self, sell_contracts, available_output):
+    #
+    #     assert available_output is not None, "AVAILABLE OUTPUT IS NONE ??"
+    #
+    #     # returns sell contract indexes which are to be signed
+    #     if len(sell_contracts) == 0 or available_output == 0:
+    #         return []
+    #     dp = len(sell_contracts) * [
+    #         ((available_output + 1) * [None])
+    #     ]  # initialize matrix
+    #
+    #     # print('DP:', len(dp), len(dp[0]), '\nParam:', len(sell_contracts), available_output)
+    #
+    #     profit, signed_contracts = self._solve_knapsack(sell_contracts, dp, len(sell_contracts) - 1, available_output)
+    #
+    #     return signed_contracts
+    #
+    # def _solve_knapsack(self, sell_contracts, dp, index, available_output):
+    #
+    #     # assertion checks
+    #     assert index >= 0, f"knapsack index negative: {index}"
+    #     assert available_output >= 0, f"knapsack available_output negative: {available_output}"
+    #     # "graceful" failure
+    #     if index < 0:
+    #         index = 0
+    #     if available_output < 0:
+    #         available_output = 0
+    #     if index == 0:
+    #         print("index is zero in solve_knapsack")
+    #
+    #     # actual algorithm
+    #     try:
+    #         if dp[index][available_output] is not None:
+    #             return dp[index][available_output]
+    #     except Exception as inst:
+    #         print(inst)
+    #         print("---------INDEX: " + str(index) + "---AVAILABLE OUTPUT: " + str(available_output))
+    #
+    #     quantity = sell_contracts[index][0].agreement["quantity"]
+    #     unit_price = sell_contracts[index][0].agreement["unit_price"]
+    #     value = (unit_price * quantity)  # how much is the contract worth
+    #     time = sell_contracts[index][0].agreement["time"]
+    #
+    #     # base case
+    #     if index <= 0 or available_output == 0:
+    #         result = (0, [])
+    #     elif quantity > available_output or unit_price < self.plan.min_sell_price:  # Not enough inputs or too cheap
+    #         result = self._solve_knapsack(
+    #             sell_contracts, dp, index - 1, available_output
+    #         )
+    #     else:
+    #         profit1, signed1 = self._solve_knapsack(
+    #             sell_contracts, dp, index - 1, available_output
+    #         )  # don't sign
+    #         profit2, signed2 = self._solve_knapsack(
+    #             sell_contracts, dp, index - 1, available_output - quantity
+    #         )  # sign
+    #
+    #         profit2 += value
+    #         signed2 = copy.deepcopy(signed2)
+    #         signed2.append(sell_contracts[index][1])
+    #
+    #         result = (profit1, signed1) if profit1 > profit2 else (profit2, signed2)
+    #
+    #     dp[index][available_output] = result
+    #     return result
+    #
+    # def _sign_buy_contracts(self, buy_contracts, money):
+    #     buy_contracts = sorted(
+    #         buy_contracts,
+    #         key=lambda contract: (
+    #             contract[0].agreement["unit_price"],
+    #             contract[0].agreement["time"],
+    #             -contract[0].agreement["quantity"],
+    #         ),
+    #     )
+    #
+    #     signed_buy = []
+    #     needed_inputs = []
+    #
+    #     for buy_plan in self.plan.expected_input:
+    #         needed_inputs.append(buy_plan.get_needed())
+    #
+    #     for contract, index in buy_contracts:
+    #         quantity = contract.agreement["quantity"]
+    #         cost = contract.agreement["unit_price"] * quantity
+    #         time = contract.agreement["time"]
+    #
+    #         if cost > money or quantity > needed_inputs[time]:
+    #             continue
+    #
+    #         signed_buy.append(index)
+    #         needed_inputs[time] -= quantity
+    #         money -= cost
+    #     print(f'contract: {signed_buy}')
+    #     return signed_buy
 
     # ====================
     # Production Callbacks
@@ -564,7 +631,7 @@ competitors = [
 ]
 
 
-def run(n_steps=100):
+def run(n_steps=50):
     """
     **Not needed for submission.** You can use this function to test your agent.
 

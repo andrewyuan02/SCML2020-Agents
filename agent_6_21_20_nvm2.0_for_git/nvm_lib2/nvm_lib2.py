@@ -112,63 +112,73 @@ class NVMLib2:
         assert self.check_if_data_exists() is True
 
         # TODO: fall back plan with self.current_time + 1, 2, etc
+        if self.check_if_data_exists() is True:
 
-        # Get the data for quantities
-        path = pathlib.Path(
-            __file__).parent / "data2" / f"dict_qtty_num_intermediate_products_{self.num_intermediate_products}_{self.game_length}.json"
-        path_string = str(path)
-        q_uncertainty_model = NVMLib2.get_json_dict(path_string)
-        # quantity distribution for the input product, time step distribution of probability distribution
-        Q_inn = q_uncertainty_model['p' + str(self.input_product_index)]
-        # quantity distribution for the output product, time step distribution of probability distribution
-        Q_out = q_uncertainty_model['p' + str(self.output_product_index)]
+            # Get the data for quantities
+            path = pathlib.Path(
+                __file__).parent / "data2" / f"dict_qtty_num_intermediate_products_{self.num_intermediate_products}_{self.game_length}.json"
+            path_string = str(path)
+            q_uncertainty_model = NVMLib2.get_json_dict(path_string)
+            # quantity distribution for the input product, time step distribution of probability distribution
+            Q_inn = q_uncertainty_model['p' + str(self.input_product_index)]
+            # quantity distribution for the output product, time step distribution of probability distribution
+            Q_out = q_uncertainty_model['p' + str(self.output_product_index)]
 
-        #print(f"q_uncertainty_model {q_uncertainty_model}")
-        #print(f"Q_inn : {Q_inn}")
-        #print(f"Q_out : {Q_out}")
+            #print(f"q_uncertainty_model {q_uncertainty_model}")
+            #print(f"Q_inn : {Q_inn}")
+            #print(f"Q_out : {Q_out}")
 
 
-        # Get the data for prices
-        price_path = pathlib.Path(
-            __file__).parent / "data2" / f"dict_price_num_intermediate_products_{self.num_intermediate_products}_{self.game_length}.json"
-        price_path_string = str(price_path)
-        prices = NVMLib2.get_json_dict(price_path_string)
-        p_inn = prices['p' + str(self.input_product_index)] # price distribution for the input product
-        p_out = prices['p' + str(self.output_product_index)] # price distribution for the output product
+            # Get the data for prices
+            price_path = pathlib.Path(
+                __file__).parent / "data2" / f"dict_price_num_intermediate_products_{self.num_intermediate_products}_{self.game_length}.json"
+            price_path_string = str(price_path)
+            prices = NVMLib2.get_json_dict(price_path_string)
+            p_inn = prices['p' + str(self.input_product_index)] # price distribution for the input product
+            p_out = prices['p' + str(self.output_product_index)] # price distribution for the output product
 
-        print(f"QUANTITY PATH READ: {path_string}")
-        print(f"PRICE PATH READ: {price_path_string}")
-        #pprint.pprint(f"p_inn: {'p' + str(self.input_product_index)}: {p_inn}")
-        #pprint.pprint(f"p_out: {'p' + str(self.output_product_index)}: {p_out}")
-        print(f"CURRENT TIME SELF: {self.current_time}")
+            print(f"QUANTITY PATH READ: {path_string}")
+            print(f"PRICE PATH READ: {price_path_string}")
+            #pprint.pprint(f"p_inn: {'p' + str(self.input_product_index)}: {p_inn}")
+            #pprint.pprint(f"p_out: {'p' + str(self.output_product_index)}: {p_out}")
+            print(f"CURRENT TIME SELF: {self.current_time}")
 
-        # Compute minima
-        inn, out = self.compute_minima(T, q_max, Q_inn, Q_out)
+            # Compute minima
+            inn, out = self.compute_minima(T, q_max, Q_inn, Q_out)
 
-        #print(f"inn: {inn}")
-        #print(f"out: {out}")
+            #print(f"inn: {inn}")
+            #print(f"out: {out}")
 
-        # Construct ILP
-        # inn_vars, model, optimistic, out_vars, t0, time_to_generate_ILP = self.construct_ILP(
-        #     T, q_max, inn, out, p_inn, p_out, current_inventory)
+            # Construct ILP
+            # inn_vars, model, optimistic, out_vars, t0, time_to_generate_ILP = self.construct_ILP(
+            #     T, q_max, inn, out, p_inn, p_out, current_inventory)
 
-        # Solve ILP
-        #buy_plan, sell_plan, solve_time, total_time = self.get_solved_plan(T, q_max, model, t0, inn_vars, out_vars)
+            # Solve ILP
+            #buy_plan, sell_plan, solve_time, total_time = self.get_solved_plan(T, q_max, model, t0, inn_vars, out_vars)
 
-        # Construct ILP and then Solve in one step
-        buy_plan, sell_plan, solve_time, total_time, inn_vars, model, optimistic, out_vars, t0, time_to_generate_ILP = \
-            self.construct_ILP(T, q_max, inn, out, p_inn, p_out, current_inventory)
+            # Construct ILP and then Solve in one step
+            buy_plan, sell_plan, solve_time, total_time, inn_vars, model, optimistic, out_vars, t0, time_to_generate_ILP = \
+                self.construct_ILP(T, q_max, inn, out, p_inn, p_out, current_inventory)
 
-        print(f"Buy Plan: {buy_plan}")
-        print(f"Sell Plan: {sell_plan}")
+            print(f"Buy Plan: {buy_plan}")
+            print(f"Sell Plan: {sell_plan}")
 
-        # print Pretty Table
-        self.print_pretty_tables(T, q_max, current_inventory, inn, out, p_inn, p_out, buy_plan, sell_plan,
-                                 time_to_generate_ILP, solve_time, total_time, optimistic)
+            # print Pretty Table
+            self.print_pretty_tables(T, q_max, current_inventory, inn, out, p_inn, p_out, buy_plan, sell_plan,
+                                     time_to_generate_ILP, solve_time, total_time, optimistic)
 
-        # Create buy and sell plan instance attributes
-        self.buy_plan = buy_plan
-        self.sell_plan = sell_plan
+            # Create buy and sell plan instance attributes
+            self.buy_plan = buy_plan
+            self.sell_plan = sell_plan
+
+        else:
+            print("data nonexistent so using the fall back plan")
+            buy_plan = {self.current_time: 9, self.current_time+1: 9, self.current_time+2: 9,
+                        self.current_time+3: 9, self.current_time+4: 9}
+            sell_plan = {self.current_time: 5, self.current_time+1: 9, self.current_time+2: 9,
+                        self.current_time+3: 9, self.current_time+4: 9}
+            self.buy_plan = buy_plan
+            self.sell_plan = sell_plan
 
 
 

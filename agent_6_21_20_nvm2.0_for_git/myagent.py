@@ -643,7 +643,7 @@ competitors = [
 ]
 
 #
-def run(n_steps=51):
+def run(n_steps=52):
     """
     **Not needed for submission.** You can use this function to test your agent.
 
@@ -662,7 +662,7 @@ def run(n_steps=51):
 
     start = time.perf_counter()
     world = SCML2020World(
-        **SCML2020World.generate(agent_types=competitors, n_steps=n_steps, n_processes=3)
+        **SCML2020World.generate(agent_types=competitors, n_steps=n_steps, n_processes=5)
     )
     world.run()
     pprint(world.scores())

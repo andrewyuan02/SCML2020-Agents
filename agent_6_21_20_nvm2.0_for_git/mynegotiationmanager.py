@@ -67,7 +67,8 @@ class MyNegotiationManager:
         # -------------------------------------------------------
         self.buyers = self.sellers = None
 
-        self._horizon = 4  # TODO: Decide this value
+        #self._horizon = 4  # TODO: Decide this value
+        self._horizon = self.plan.horizon
         self.init()
         """Buyer controllers and seller controllers. Each of them is responsible of covering the
         needs for one step (either buying or selling)."""
@@ -93,6 +94,12 @@ class MyNegotiationManager:
 
         if s < self.data.n_steps - 1:
             self.start_negotiations(s, True)
+
+        # check plans are being updated at each step to use the new NVM plan
+        print("------------------------------NEGOTIATION------------------------------")
+        print(f"negotiation buy plan: {self.plan.buy_plan}")
+        print(f"negotiation sell plan: {self.plan.sell_plan}")
+        print("-----------------------------------------------------------------------")
 
     def start_negotiations(self, step: int, is_seller: bool) -> None:
         """
@@ -126,9 +133,16 @@ class MyNegotiationManager:
 
     def _urange(self, is_seller):
         """price range"""
+        # if is_seller:
+        #     return self.plan.min_sell_price, self.plan.max_sell_price
+        # return self.plan.min_buy_price, self.plan.max_buy_price
+
+        #TODO: MAKE A REALLY ABUSIVE URANGE
         if is_seller:
-            return self.plan.min_sell_price, self.plan.max_sell_price
-        return self.plan.min_buy_price, self.plan.max_buy_price
+            return 35, 1000
+        else:
+            return 10, 18
+
 
     def _trange(self, step, is_seller):
         """returns (min, max)"""
@@ -165,6 +179,8 @@ class MyNegotiationManager:
 
         #changing all instances of step to 0 for now
         if sell:
+            #print(f"qrange buy plan: {self.plan.buy_plan}")
+            #print(f"qrange sell plan: {self.plan.sell_plan}")
             upper_bound = self.plan.sell_plan[0]  # Sell based on the sell plan
             #upper_bound = self.plan.available_output #Sell all inventory
         else:

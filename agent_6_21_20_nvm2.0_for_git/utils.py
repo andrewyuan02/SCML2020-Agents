@@ -47,6 +47,7 @@ class AgentPlan:
     def getNVMPlan(self, n_lines, n_processes, n_steps, process: int, production_cost, current_time,
                    current_inventory: int):
         num_periods = 5
+        self.horizon = num_periods
         self.nvm = NVMLib2(mpnvp_number_of_periods=num_periods,
                            mpnvp_quantities_domain_size=20,
                            game_length=n_steps,
@@ -102,6 +103,7 @@ class AgentPlan:
         self.sell_plan = None
         self.produce_plan = None
         self.NVM = None
+        self.horizon = None
 
 
 class BuyPlan:

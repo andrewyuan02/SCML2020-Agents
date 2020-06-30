@@ -350,7 +350,8 @@ class MontyHall(SCML2020Agent):
                 buy_contracts.append(contract)
 
         # Sign sell contracts
-        available_output = self.plan.available_output
+        #available_output = self.plan.available_output
+        available_output = self.get_output_inventory()
         signed_sell = self._sign_sell_contracts(sell_contracts, available_output)
         for index in signed_sell:
             signatures[index] = self.data.id
@@ -390,6 +391,9 @@ class MontyHall(SCML2020Agent):
     # Contract Control and Feedback Helpers
 
     def _sign_sell_contracts(self, sell_contracts, available_output):
+
+        assert available_output is not None, "AVAILABLE OUTPUT IS NONE ??"
+
         # returns sell contract indexes which are to be signed
         if len(sell_contracts) == 0 or available_output == 0:
             return []
@@ -404,6 +408,19 @@ class MontyHall(SCML2020Agent):
         return signed_contracts
 
     def _solve_knapsack(self, sell_contracts, dp, index, available_output):
+
+        # assertion checks
+        assert index >= 0, f"knapsack index negative: {index}"
+        assert available_output >= 0, f"knapsack available_output negative: {available_output}"
+        # "graceful" failure
+        if index < 0:
+            index = 0
+        if available_output < 0:
+            available_output = 0
+        if index == 0:
+            print("index is zero in solve_knapsack")
+
+        # actual algorithm
         try:
             if dp[index][available_output] is not None:
                 return dp[index][available_output]
@@ -416,7 +433,8 @@ class MontyHall(SCML2020Agent):
         value = (unit_price * quantity)  # how much is the contract worth
         time = sell_contracts[index][0].agreement["time"]
 
-        if index < 0 or available_output == 0:
+        # base case
+        if index <= 0 or available_output == 0:
             result = (0, [])
         elif quantity > available_output or unit_price < self.plan.min_sell_price:  # Not enough inputs or too cheap
             result = self._solve_knapsack(
@@ -575,8 +593,8 @@ def run(n_steps=100):
 def run_tournament(
         competition="std",
         reveal_names=True,
-        n_steps=55,
-        n_configs=2,
+        n_steps=100,
+        n_configs=1,
         max_n_worlds_per_config=None,
         n_runs_per_world=1,
 ):

@@ -111,6 +111,8 @@ class NVMLib2:
         # check data exists
         assert self.check_if_data_exists() is True
 
+        # TODO: fall back plan
+
         # Get the data for quantities
         path = pathlib.Path(
             __file__).parent / "data" / f"dict_qtty_num_intermediate_products_{self.num_intermediate_products}_{self.game_length}.json"

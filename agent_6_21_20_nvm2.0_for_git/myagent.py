@@ -430,7 +430,7 @@ class MontyHall(SCML2020Agent):
                                 output[i] = None
                     counter_buy = counter_buy + 1
                 else:
-                    if price > min_sell_price:
+                    if price < min_sell_price:
                         output[i] = None
                     else:
                         if i < len(sell_sign_plan):

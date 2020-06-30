@@ -147,6 +147,9 @@ class MontyHall(SCML2020Agent):
                 output_catalog_price * 2
         )  # TODO: Predict?
 
+        #dictionaries to tally agents and respective number of successful/signed contracts
+        self.plan.successful_contracts_agents = {key: 0 for key in (self.data.supplier_list + self.data.consumer_list)}
+        self.plan.signed_contracts_agents = {key: 0 for key in (self.data.supplier_list + self.data.consumer_list)}
         # ================================
         # Negotiation Components
         # ================================
@@ -275,6 +278,14 @@ class MontyHall(SCML2020Agent):
         """Called when a negotiation the agent is a party of ends with
         agreement"""
         #        print("NEGOTIATION SUCCEEDED:", self.get_current_step(), "Contract negotiation succeeded", contract)
+
+        # increment successful contract agent ID's. assumes partner list is length 2
+        if contract.partners[0] == self.data.id:
+            self.plan.successful_contracts_agents[contract.partners[1]] += 1
+        else:
+            self.plan.successful_contracts_agents[contract.partners[0]] += 1
+        
+
         self.stat.on_negotiation_success(contract, mechanism)
 
     def on_contract_executed(self, contract: Contract) -> None:
@@ -437,8 +448,15 @@ class MontyHall(SCML2020Agent):
         """Called to inform you about the final status of all contracts in
         a step (day)"""
         self.stat.on_contracts_finalized(signed, cancelled, rejectors)
+        
 
         for contract in signed:
+            # increment signed agents. assumes partner list is size 2.
+            if contract.partners[0] == self.data.id:
+                self.plan.signed_contracts_agents[contract.partners[1]] += 1
+            else:
+                self.plan.signed_contracts_agents[contract.partners[0]] += 1
+
             quantity = contract.agreement["quantity"]
             time = contract.agreement["time"]
             unit_price = contract.agreement["unit_price"]

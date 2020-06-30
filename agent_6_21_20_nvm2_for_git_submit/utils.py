@@ -63,7 +63,7 @@ class AgentPlan:
         else:
             time = current_time
 
-        print("---------------TIME:" + str(time))
+        #print("---------------TIME:" + str(time))
 
         nvm_sol = self.nvm.create_NVM_plan()
         # clear buy, sell, and produce plans
@@ -71,26 +71,26 @@ class AgentPlan:
         self.sell_plan = []
         self.produce_plan = []
         if nvm_sol is None:
-            print("NVM PLAN IS NONE -- THIS SHOULD NOT BE HAPPENING")
+            #print("NVM PLAN IS NONE -- THIS SHOULD NOT BE HAPPENING")
             self.buy_plan = [0] * num_periods
             self.sell_plan = [0] * num_periods
             self.produce_plan = [0] * num_periods
         else:
-            print(nvm_sol)
-            print("----------FULL BUY PLAN:" + str(nvm_sol.get_buy_plan()))
-            print("----------FULL SELL PLAN:" + str(nvm_sol.get_sell_plan()))
-            print("----------FULL PRODUCE PLAN:" + str(nvm_sol.get_production_plan()))
+            #print(nvm_sol)
+            #print("----------FULL BUY PLAN:" + str(nvm_sol.get_buy_plan()))
+            #print("----------FULL SELL PLAN:" + str(nvm_sol.get_sell_plan()))
+            #print("----------FULL PRODUCE PLAN:" + str(nvm_sol.get_production_plan()))
 
             self.buy_plan.append(nvm_sol.get_buy_plan_at(0))
-            print('---------BUY PLAN:' + str(self.buy_plan[0]))
+            #print('---------BUY PLAN:' + str(self.buy_plan[0]))
             # self.sell_plan.append(nvm_sol.get_sell_plan_at(2))
             self.sell_plan.append(nvm_sol.get_sell_plan_at(0))
-            print('---------SELL PLAN:' + str(self.sell_plan[0]))
+            #print('---------SELL PLAN:' + str(self.sell_plan[0]))
             # self.produce_plan.append(nvm_sol.get_production_plan_at(1))
             self.produce_plan.append(nvm_sol.get_production_plan_at(0))
-            print('---------PRODUCE PLAN:' + str(self.produce_plan[0]))
+            #print('---------PRODUCE PLAN:' + str(self.produce_plan[0]))
 
-            # print("BUY PLAN LENGTH" + str(len(self.buy_plan)))
+            # #print("BUY PLAN LENGTH" + str(len(self.buy_plan)))
 
     def __init__(self):
         self.target_input = None  # How much input I want to possess at each step
@@ -169,7 +169,7 @@ class AgentStatistics:
         Sell: Both Reject = {}   Agent Reject = {}   Partner Reject = {}    Both Accept = {}
         """.format(*params)
 
-    #        print(report)
+    #        #print(report)
 
     def on_negotiation_failure(
             self,
@@ -236,5 +236,6 @@ class AgentStatistics:
 
     def print_supply_chain(self):
         for line in self.agent.data.supplier_matrix:
-            print(line)
-        print(self.agent.data.consumer_matrix[-1])
+            continue
+            #print(line)
+        #print(self.agent.data.consumer_matrix[-1])

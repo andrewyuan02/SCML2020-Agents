@@ -124,9 +124,9 @@ class NVMLib2:
             # quantity distribution for the output product, time step distribution of probability distribution
             Q_out = q_uncertainty_model['p' + str(self.output_product_index)]
 
-            #print(f"q_uncertainty_model {q_uncertainty_model}")
-            #print(f"Q_inn : {Q_inn}")
-            #print(f"Q_out : {Q_out}")
+            ##print(f"q_uncertainty_model {q_uncertainty_model}")
+            ##print(f"Q_inn : {Q_inn}")
+            ##print(f"Q_out : {Q_out}")
 
 
             # Get the data for prices
@@ -137,17 +137,17 @@ class NVMLib2:
             p_inn = prices['p' + str(self.input_product_index)] # price distribution for the input product
             p_out = prices['p' + str(self.output_product_index)] # price distribution for the output product
 
-            print(f"QUANTITY PATH READ: {path_string}")
-            print(f"PRICE PATH READ: {price_path_string}")
+            #print(f"QUANTITY PATH READ: {path_string}")
+            #print(f"PRICE PATH READ: {price_path_string}")
             #pprint.pprint(f"p_inn: {'p' + str(self.input_product_index)}: {p_inn}")
             #pprint.pprint(f"p_out: {'p' + str(self.output_product_index)}: {p_out}")
-            print(f"CURRENT TIME SELF: {self.current_time}")
+            #print(f"CURRENT TIME SELF: {self.current_time}")
 
             # Compute minima
             inn, out = self.compute_minima(T, q_max, Q_inn, Q_out)
 
-            #print(f"inn: {inn}")
-            #print(f"out: {out}")
+            ##print(f"inn: {inn}")
+            ##print(f"out: {out}")
 
             # Construct ILP
             # inn_vars, model, optimistic, out_vars, t0, time_to_generate_ILP = self.construct_ILP(
@@ -160,10 +160,10 @@ class NVMLib2:
             buy_plan, sell_plan, solve_time, total_time, inn_vars, model, optimistic, out_vars, t0, time_to_generate_ILP = \
                 self.construct_ILP(T, q_max, inn, out, p_inn, p_out, current_inventory)
 
-            print(f"Buy Plan: {buy_plan}")
-            print(f"Sell Plan: {sell_plan}")
+            #print(f"Buy Plan: {buy_plan}")
+            #print(f"Sell Plan: {sell_plan}")
 
-            # print Pretty Table
+            # #print Pretty Table
             self.print_pretty_tables(T, q_max, current_inventory, inn, out, p_inn, p_out, buy_plan, sell_plan,
                                      time_to_generate_ILP, solve_time, total_time, optimistic)
 
@@ -172,7 +172,7 @@ class NVMLib2:
             self.sell_plan = sell_plan
 
         else:
-            print("data nonexistent so using the fall back plan")
+            #print("data nonexistent so using the fall back plan")
             buy_plan = {self.current_time: 9, self.current_time+1: 9, self.current_time+2: 9,
                         self.current_time+3: 9, self.current_time+4: 9}
             sell_plan = {self.current_time: 5, self.current_time+1: 9, self.current_time+2: 9,
@@ -242,23 +242,23 @@ class NVMLib2:
         p_out = {t: np.random.uniform(10, 15) for t in range(0, T)}
         # Sanity check: if the price of outputs is 0 always, then the program should buy and sell nothing.
         # p_out = {t: np.random.uniform(0, 0) for t in range(0, T)}
-        # Debug print
+        # Debug #print
         # pprint.pprint(Q_inn)
         # pprint.pprint(Q_out)
         return Q_inn, Q_out, p_inn, p_out
 
     def compute_minima(self, T: int, q_max: int, Q_inn: Dict[str, Dict], Q_out):
         t0 = time.time()
-        #print("TEST PRINT Q_INN[0]: ")
-        #print(f"Q_INN[0]: {Q_inn[str(0)]}")
+        ##print("TEST #print Q_INN[0]: ")
+        ##print(f"Q_INN[0]: {Q_inn[str(0)]}")
         inn = {t: NVMLib2.compute_min_expectation(Q_inn[str(t)], q_max) for t in range(self.current_time, self.current_time + T)}
         out = {t: NVMLib2.compute_min_expectation(Q_out[str(t)], q_max) for t in range(self.current_time, self.current_time + T)}
-        print(f'took {time.time() - t0} to generate the minima')
+        #print(f'took {time.time() - t0} to generate the minima')
         # Sanity check: the expectation of the minima should be non-negative
         for t, min_data in inn.items():
             for q, the_min in min_data.items():
                 assert the_min >= 0
-        # Debug print
+        # Debug #print
         # pprint.pprint(inn)
         return inn, out
 
@@ -276,17 +276,17 @@ class NVMLib2:
         out_vars = pulp.LpVariable.dicts('out', (
             (t, k) for t, k in it.product(range(self.current_time, self.current_time + T), range(0, q_max))),
                                          lowBound=0, upBound=1, cat='Integer')
-        print(f'it took {time.time() - t0 : .4f} to generate dec. vars')
+        #print(f'it took {time.time() - t0 : .4f} to generate dec. vars')
         # Generate the objective function - the total profit of the plan. Profit = revenue - cost
         # Here, revenue is the money received from sales of outputs, and cost is the money used to buy inputs.
         model += pulp.lpSum([out_vars[t, k] * out[t][k] * p_out[str(t)] - inn_vars[t, k] * inn[t][k] * p_inn[str(t)]
                              for t, k in it.product(range(self.current_time, self.current_time + T), range(0, q_max))])
-        print(f'it took {time.time() - t0 : .4f} to generate objective function')
+        #print(f'it took {time.time() - t0 : .4f} to generate objective function')
         # Genrate the constraints. Only one quantity can be planned for at each time step for buying or selling.
         for t in range(self.current_time, self.current_time + T):
             model += sum([out_vars[t, k] for k in range(0, q_max)]) <= 1
             model += sum([inn_vars[t, k] for k in range(0, q_max)]) <= 1
-        print(f'it took {time.time() - t0 : .4f} to generate constraints ')
+        #print(f'it took {time.time() - t0 : .4f} to generate constraints ')
         # Document here: optimistic == True means no bluffing, otherwise there is bluffing going on
         optimistic = True
         if optimistic:
@@ -307,23 +307,23 @@ class NVMLib2:
         # for k in range(current_inventory+1, q_max):
         #            model += out_vars[0, k] == 0
         time_to_generate_ILP = time.time() - t0
-        print(f'it took {time_to_generate_ILP : .4f} to generate the ILP')
+        #print(f'it took {time_to_generate_ILP : .4f} to generate the ILP')
         # return inn_vars, model, optimistic, out_vars, t0, time_to_generate_ILP
 
         # solve ILP
         t0_solve = time.time()
         model.solve()
         solve_time = time.time() - t0_solve
-        print(f'it took {solve_time : .4f} sec to solve, result = {pulp.LpStatus[model.status]}')
+        #print(f'it took {solve_time : .4f} sec to solve, result = {pulp.LpStatus[model.status]}')
         total_time = time.time() - t0
-        print(f"MODEL OBJECTIVE: {pulp.value(model.objective)}")
-        # print(f'it took {total_time : .4f} sec in total, and has opt profit of {pulp.value(model.objective) : .4f}')
+        #print(f"MODEL OBJECTIVE: {pulp.value(model.objective)}")
+        # #print(f'it took {total_time : .4f} sec in total, and has opt profit of {pulp.value(model.objective) : .4f}')
         t0 = time.time()
         buy_plan = {t: sum([int(k * inn_vars[t, k].varValue) for k in range(0, q_max)])
                     for t in range(self.current_time, self.current_time + T)}
         sell_plan = {t: sum([int(k * out_vars[t, k].varValue) for k in range(0, q_max)])
                      for t in range(self.current_time, self.current_time + T)}
-        print(f'it took {time.time() - t0 : .4f} sec to produce the plan')
+        #print(f'it took {time.time() - t0 : .4f} sec to produce the plan')
 
         return buy_plan, sell_plan, solve_time, total_time, \
                inn_vars, model, optimistic, out_vars, t0, time_to_generate_ILP
@@ -332,14 +332,14 @@ class NVMLib2:
         t0_solve = time.time()
         model.solve()
         solve_time = time.time() - t0_solve
-        print(f'it took {solve_time : .4f} sec to solve, result = {pulp.LpStatus[model.status]}')
+        #print(f'it took {solve_time : .4f} sec to solve, result = {pulp.LpStatus[model.status]}')
         total_time = time.time() - t0
-        print(f"MODEL OBJECTIVE: {pulp.value(model.objective)}")
-        #print(f'it took {total_time : .4f} sec in total, and has opt profit of {pulp.value(model.objective) : .4f}')
+        #print(f"MODEL OBJECTIVE: {pulp.value(model.objective)}")
+        ##print(f'it took {total_time : .4f} sec in total, and has opt profit of {pulp.value(model.objective) : .4f}')
         t0 = time.time()
         buy_plan = {t: sum([int(k * inn_vars[t, k].varValue) for k in range(0, q_max)]) for t in range(0, T)}
         sell_plan = {t: sum([int(k * out_vars[t, k].varValue) for k in range(0, q_max)]) for t in range(0, T)}
-        print(f'it took {time.time() - t0 : .4f} sec to produce the plan')
+        #print(f'it took {time.time() - t0 : .4f} sec to produce the plan')
         return buy_plan, sell_plan, solve_time, total_time
 
     def print_pretty_tables(self, T, q_max, current_inventory, inn, out, p_inn, p_out, buy_plan, sell_plan,
@@ -360,7 +360,7 @@ class NVMLib2:
         x.add_row(
             ['S-E'] + [str(round(out[t][sell_plan[t]], 2)) for t in range(self.current_time, self.current_time + T)] +
             [str(round(total_exp_sell_qtty, 2))])
-        print(x)
+        #print(x)
         x = PrettyTable()
         x.field_names = ['statistic', 'value']
         x.add_row(['T', T])
@@ -372,7 +372,7 @@ class NVMLib2:
         x.add_row(['solve time', f'{solve_time : .4f} sec'])
         x.add_row(['total time', f'{total_time : .4f} sec'])
         x.add_row(['optimistic', f'{optimistic}'])
-        print(x)
+        #print(x)
 
     def create_NVM_plan(self) -> NVMPlan:
         buy_list = []

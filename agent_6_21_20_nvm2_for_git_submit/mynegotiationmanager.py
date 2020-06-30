@@ -96,10 +96,10 @@ class MyNegotiationManager:
             self.start_negotiations(s, True)
 
         # check plans are being updated at each step to use the new NVM plan
-        print("------------------------------NEGOTIATION------------------------------")
-        print(f"negotiation buy plan: {self.plan.buy_plan}")
-        print(f"negotiation sell plan: {self.plan.sell_plan}")
-        print("-----------------------------------------------------------------------")
+        #print("------------------------------NEGOTIATION------------------------------")
+        #print(f"negotiation buy plan: {self.plan.buy_plan}")
+        #print(f"negotiation sell plan: {self.plan.sell_plan}")
+        #print("-----------------------------------------------------------------------")
 
     def start_negotiations(self, step: int, is_seller: bool) -> None:
         """
@@ -146,10 +146,10 @@ class MyNegotiationManager:
 
     def _trange(self, step, is_seller):
         """returns (min, max)"""
-        #        print(self.data.n_processes)
-        #        print(self.data.process)
-        #        print(self.data.n_steps)
-        #        print(self.data.last_day)
+        #        #print(self.data.n_processes)
+        #        #print(self.data.process)
+        #        #print(self.data.n_steps)
+        #        #print(self.data.last_day)
 
         #negotatiate in future based on horizon
         if is_seller:
@@ -168,24 +168,24 @@ class MyNegotiationManager:
         # return self.awi.current_step + 1, min(self.awi.current_step + 2, self.data.last_day)
 
     def _qrange(self, step: int, sell: bool) -> Tuple[int, int]:
-        #        print(f'current: {self.awi.current_step}')
-        #        print(f'step: {step}')
-        #        print(f'plan: {self.plan.sell_plan}')
-        #        print()
+        #        #print(f'current: {self.awi.current_step}')
+        #        #print(f'step: {step}')
+        #        #print(f'plan: {self.plan.sell_plan}')
+        #        #print()
         #        if step >= len(self.plan.sell_plan):
         #            return 1,1
         step -= self.awi.current_step
-        #print("---------STEP: " + str(step))
+        ##print("---------STEP: " + str(step))
 
         #changing all instances of step to 0 for now
         if sell:
-            #print(f"qrange buy plan: {self.plan.buy_plan}")
-            #print(f"qrange sell plan: {self.plan.sell_plan}")
+            ##print(f"qrange buy plan: {self.plan.buy_plan}")
+            ##print(f"qrange sell plan: {self.plan.sell_plan}")
             upper_bound = self.plan.sell_plan[0]  # Sell based on the sell plan
             #upper_bound = self.plan.available_output #Sell all inventory
         else:
             upper_bound = self.plan.buy_plan[0]  # Production capacity
-        #        print(f'upper: {upper_bound}')
+        #        #print(f'upper: {upper_bound}')
         return 1, upper_bound
 
     def _start_negotiations(
@@ -234,8 +234,8 @@ class MyNegotiationManager:
         #        tmin, tmax = issues[TIME].min_value, issues[TIME].max_value + 1
         tmin = self.awi.current_step
         tmax = tmin + self._horizon - 1
-        #        print(tmin)
-        #        print(tmax)
+        #        #print(tmin)
+        #        #print(tmax)
         # find the time-step for which this negotiation should be added
         step = max(0, tmin - 1) if is_seller else min(self.awi.n_steps - 1, tmax + 1)
         # find the corresponding controller.

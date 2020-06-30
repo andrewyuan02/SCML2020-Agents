@@ -159,7 +159,7 @@ class MontyHall(SCML2020Agent):
 
         # self.negotiation_manager = MyIndependentNegotiationManager(data=self.data, plan=self.plan, awi=self.awi, agent=self)
 
-        # print("checkpoint")
+        # #print("checkpoint")
 
         # ================================
         # Stats Components
@@ -205,7 +205,7 @@ class MontyHall(SCML2020Agent):
         Production scheduling and negotiations"""
         super().step()
 
-        print("----------------------------------------------------------------AGENT ID: " + self.data.id)
+        #print("----------------------------------------------------------------AGENT ID: " + self.data.id)
 
         current_inv = self.get_output_inventory()
         self.plan.getNVMPlan(n_lines=self.awi.n_lines, n_processes=self.awi.n_processes, n_steps=self.awi.n_steps,
@@ -222,18 +222,18 @@ class MontyHall(SCML2020Agent):
         self.plan.produce_plan = []
         self.plan.produce_plan.append(self.get_input_inventory())
 
-        print('---------HACKY SELL PLAN:' + str(self.plan.sell_plan[0]))
-        print('---------HACKY PRODUCE PLAN:' + str(self.plan.produce_plan[0]))
-        print("---------INPUT INVENTORY: " + str(self.get_input_inventory()))
-        #print("---------AVAILABLE OUTPUT: " + str(self.plan.available_output))
-        print("---------OUTPUT INVENTORY: " + str(self.get_output_inventory()))
+        #print('---------HACKY SELL PLAN:' + str(self.plan.sell_plan[0]))
+        #print('---------HACKY PRODUCE PLAN:' + str(self.plan.produce_plan[0]))
+        #print("---------INPUT INVENTORY: " + str(self.get_input_inventory()))
+        ##print("---------AVAILABLE OUTPUT: " + str(self.plan.available_output))
+        #print("---------OUTPUT INVENTORY: " + str(self.get_output_inventory()))
 
 
         self.propagate_inputs()  # Plan how much to buy at each step
         self.negotiation_manager.step()
         self.schedule_production()
 
-        # print("Current step:", self.get_current_step())
+        # #print("Current step:", self.get_current_step())
 
     def propagate_inputs(self):  # each step
         excess_prev = max(self.get_input_inventory() - self.data.n_lines,
@@ -270,7 +270,7 @@ class MontyHall(SCML2020Agent):
     ) -> None:
         """Called when a negotiation the agent is a party of ends without
         agreement"""
-        #        print("NEGOTIATION FAILED", self.get_current_step(),"Contract negotiation failed", annotation)
+        #        #print("NEGOTIATION FAILED", self.get_current_step(),"Contract negotiation failed", annotation)
         self.stat.on_negotiation_failure(partners, annotation, mechanism, state)
 
     def on_negotiation_success(
@@ -278,7 +278,7 @@ class MontyHall(SCML2020Agent):
     ) -> None:
         """Called when a negotiation the agent is a party of ends with
         agreement"""
-        #        print("NEGOTIATION SUCCEEDED:", self.get_current_step(), "Contract negotiation succeeded", contract)
+        #        #print("NEGOTIATION SUCCEEDED:", self.get_current_step(), "Contract negotiation succeeded", contract)
 
         # increment successful contract agent ID's. assumes partner list is length 2
         if contract.partners[0] == self.data.id:
@@ -291,9 +291,9 @@ class MontyHall(SCML2020Agent):
 
     def on_contract_executed(self, contract: Contract) -> None:
         """Called when a contract executes successfully and fully"""
-        print("CONTRACT EXECUTED: BUY:", contract.annotation["is_buy"], contract)
-        if contract.agreement['unit_price'] > 100:
-            print("RIP")
+        #print("CONTRACT EXECUTED: BUY:", contract.annotation["is_buy"], contract)
+        #if contract.agreement['unit_price'] > 100:
+            #print("RIP")
         quantity = contract.agreement["quantity"]
         unit_price = contract.agreement["unit_price"]
         time = contract.agreement["time"]
@@ -311,7 +311,7 @@ class MontyHall(SCML2020Agent):
     ) -> None:
         """Called when a breach occur. In 2020, there will be no resolution
         (i.e. resoluion is None)"""
-        print("CONTRACT BREACH: ", contract, self.data.id)
+        #print("CONTRACT BREACH: ", contract, self.data.id)
 
         #        if breaches[0].perpetrator == self.data.id:
         #            assert False, "You breached contract?!?!?"
@@ -400,20 +400,20 @@ class MontyHall(SCML2020Agent):
     #         else:
     #             output_offers.append(tuple(x))
     #
-    #     # print("signatures...")
-    #     # print(contracts)
-    #     # print(input_offers)
-    #     # print(output_offers)
-    #     # print(len(contracts))
-    #     # print(len(input_offers))
-    #     # print(len(output_offers))
+    #     # #print("signatures...")
+    #     # #print(contracts)
+    #     # #print(input_offers)
+    #     # #print(output_offers)
+    #     # #print(len(contracts))
+    #     # #print(len(input_offers))
+    #     # #print(len(output_offers))
     #
     #     if len(output_offers) != 0:
     #         x = solve_signer(input_offers, output_offers, False)
     #         buy_sign_plan = x[0]
     #         sell_sign_plan = x[1]
-    #         # print(buy_sign_plan)
-    #         # print(sell_sign_plan)
+    #         # #print(buy_sign_plan)
+    #         # #print(sell_sign_plan)
     #
     #         max_buy_price = self.awi.catalog_prices[self.awi.my_input_product] * 3
     #         min_sell_price = self.awi.catalog_prices[self.awi.my_output_product] / 3
@@ -437,7 +437,7 @@ class MontyHall(SCML2020Agent):
     #                             output[i] = None
     #                 counter_sell = counter_sell + 1
     #
-    #     # print(output)
+    #     # #print(output)
     #     return output
 
     def on_contracts_finalized(
@@ -481,7 +481,7 @@ class MontyHall(SCML2020Agent):
             ((available_output + 1) * [None])
         ]  # initialize matrix
 
-        # print('DP:', len(dp), len(dp[0]), '\nParam:', len(sell_contracts), available_output)
+        # #print('DP:', len(dp), len(dp[0]), '\nParam:', len(sell_contracts), available_output)
 
         profit, signed_contracts = self._solve_knapsack(sell_contracts, dp, len(sell_contracts) - 1, available_output)
 
@@ -497,8 +497,8 @@ class MontyHall(SCML2020Agent):
             index = 0
         if available_output < 0:
             available_output = 0
-        if index == 0:
-            print("index is zero in solve_knapsack")
+        #if index == 0:
+            #print("index is zero in solve_knapsack")
 
         # actual algorithm
         try:
@@ -506,7 +506,7 @@ class MontyHall(SCML2020Agent):
                 return dp[index][available_output]
         except Exception as inst:
             print(inst)
-            print("---------INDEX: " + str(index) + "---AVAILABLE OUTPUT: " + str(available_output))
+            #print("---------INDEX: " + str(index) + "---AVAILABLE OUTPUT: " + str(available_output))
 
         quantity = sell_contracts[index][0].agreement["quantity"]
         unit_price = sell_contracts[index][0].agreement["unit_price"]
@@ -564,7 +564,7 @@ class MontyHall(SCML2020Agent):
                 signed_buy.append(index)
                 needed_inputs[time] -= quantity
                 money -= cost
-        print(f'contract: {signed_buy}')
+        #print(f'contract: {signed_buy}')
         return signed_buy
 
     # ====================
@@ -667,7 +667,7 @@ def run(n_steps=52):
     )
     world.run()
     pprint(world.scores())
-    print(f"Finished in {humanize_time(time.perf_counter() - start)}")
+    #print(f"Finished in {humanize_time(time.perf_counter() - start)}")
 
 
 def run_tournament(
@@ -724,8 +724,8 @@ def run_tournament(
         )
     else:
         raise ValueError(f"Unknown competition type {competition}")
-    print(tabulate(results.total_scores, headers="keys", tablefmt="psql"))
-    print(f"Finished in {humanize_time(time.perf_counter() - start)}")
+    #print(tabulate(results.total_scores, headers="keys", tablefmt="psql"))
+    #print(f"Finished in {humanize_time(time.perf_counter() - start)}")
 
 
 def run_single_session():
@@ -784,7 +784,7 @@ def main():
     #run_single_session()
     #run_tournament()
 
-    print("Finished...")
+    #print("Finished...")
 
 
 if __name__ == "__main__":

@@ -376,17 +376,17 @@ class MontyHall(SCML2020Agent):
         min_sell_price = self.awi.catalog_prices[self.awi.my_output_product] / 3
 
         contracts_temp = []
-        for y in contracts:
-            x = tuple(list(y.agreement.values()))
-            price = y.agreement['unit_price']
-            if y.annotation["is_buy"]:
-                if price < max_buy_price:
-                    contracts_temp.append(y)
-            else:
-                if price > min_sell_price:
-                    contracts_temp.append(y)
-
-        contracts = contracts_temp
+        # for y in contracts:
+        #     x = tuple(list(y.agreement.values()))
+        #     price = y.agreement['unit_price']
+        #     if y.annotation["is_buy"]:
+        #         if price < max_buy_price:
+        #             contracts_temp.append(y)
+        #     else:
+        #         if price > min_sell_price:
+        #             contracts_temp.append(y)
+        #
+        # contracts = contracts_temp
 
         output = [self.id] * len(contracts)
 
@@ -420,16 +420,23 @@ class MontyHall(SCML2020Agent):
             counter_buy: int = 0
             counter_sell: int = 0
             for i in range(len(contracts)):
+                price = contracts[i].agreement['unit_price']
                 if contracts[i].annotation["is_buy"]:
-                    if i < len(buy_sign_plan):
-                        if buy_sign_plan[i] == 0:
-                            output[i] = None
-                        counter_buy = counter_buy + 1
+                    if price > max_buy_price:
+                        output[i] = None
+                    else:
+                        if i < len(buy_sign_plan):
+                            if buy_sign_plan[i] == 0:
+                                output[i] = None
+                    counter_buy = counter_buy + 1
                 else:
-                    if i < len(sell_sign_plan):
-                        if sell_sign_plan[i] == 0:
-                            output[i] = None
-                        counter_sell = counter_sell + 1
+                    if price > min_sell_price:
+                        output[i] = None
+                    else:
+                        if i < len(sell_sign_plan):
+                            if sell_sign_plan[i] == 0:
+                                output[i] = None
+                    counter_sell = counter_sell + 1
 
         # print(output)
         return output
@@ -630,8 +637,8 @@ competitors = [
     #        RandomAgent,
 ]
 
-
-def run(n_steps=50):
+#
+def run(n_steps=100):
     """
     **Not needed for submission.** You can use this function to test your agent.
 

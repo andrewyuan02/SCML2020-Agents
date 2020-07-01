@@ -204,7 +204,7 @@ class MontyHall(SCML2020Agent):
         Production scheduling and negotiations"""
         super().step()
 
-        print("----------------------------------------------------------------AGENT ID: " + self.data.id)
+        #print("----------------------------------------------------------------AGENT ID: " + self.data.id)
 
         current_inv = self.get_output_inventory()
         self.plan.getNVMPlan(n_lines=self.awi.n_lines, n_processes=self.awi.n_processes, n_steps=self.awi.n_steps,
@@ -221,11 +221,11 @@ class MontyHall(SCML2020Agent):
         self.plan.produce_plan = []
         self.plan.produce_plan.append(self.get_input_inventory())
 
-        print('---------HACKY SELL PLAN:' + str(self.plan.sell_plan[0]))
-        print('---------HACKY PRODUCE PLAN:' + str(self.plan.produce_plan[0]))
-        print("---------INPUT INVENTORY: " + str(self.get_input_inventory()))
-        #print("---------AVAILABLE OUTPUT: " + str(self.plan.available_output))
-        print("---------OUTPUT INVENTORY: " + str(self.get_output_inventory()))
+        # print('---------HACKY SELL PLAN:' + str(self.plan.sell_plan[0]))
+        # print('---------HACKY PRODUCE PLAN:' + str(self.plan.produce_plan[0]))
+        # print("---------INPUT INVENTORY: " + str(self.get_input_inventory()))
+        # #print("---------AVAILABLE OUTPUT: " + str(self.plan.available_output))
+        # print("---------OUTPUT INVENTORY: " + str(self.get_output_inventory()))
 
 
         self.propagate_inputs()  # Plan how much to buy at each step
@@ -431,15 +431,20 @@ class MontyHall(SCML2020Agent):
                         output[i] = None
                     counter_sell = counter_sell + 1
 
+        print("signatures...before")
         for i in range(len(contracts)):
+            print(contracts[i], output[i])
             price = contracts[i].agreement['unit_price']
-            if contracts[i].annotation['is_buy']:
+            print(f"unit price: {price}")
+            print(f"max buy price: {max_buy_price}")
+            if contracts[i].annotation['buyer'] == self.id:
                 if price > max_buy_price:
+                    print("MAX PRICE EXCEEDED")
                     output[i] = None
             else:
                 if price < min_sell_price:
+                    print("MAX PRICE EXCEEDED")
                     output[i] = None
-
 
         for i in range(len(contracts)):
             if contracts[i].annotation['is_buy'] and (contracts[i].agreement['unit_price']) > max_buy_price:
@@ -447,7 +452,9 @@ class MontyHall(SCML2020Agent):
             if not contracts[i].annotation['is_buy'] and (contracts[i].agreement['unit_price']) < min_sell_price:
                 print(f" ***sell unit price: {contracts[i].agreement['unit_price']}, signed: {output[i]}")
 
-        print("sign all contracts")
+        print("signatures...final")
+        print(contracts)
+        print(output)
         for i in range(len(contracts)):
             print(contracts[i], output[i])
         return output
@@ -676,7 +683,7 @@ def run(n_steps=52):
 
     start = time.perf_counter()
     world = SCML2020World(
-        **SCML2020World.generate(agent_types=competitors, n_steps=n_steps, n_processes=5)
+        **SCML2020World.generate(agent_types=competitors, n_steps=n_steps, n_processes=3)
     )
     world.run()
     pprint(world.scores())

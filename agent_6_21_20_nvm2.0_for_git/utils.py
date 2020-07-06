@@ -88,7 +88,7 @@ class AgentPlan:
             print('---------SELL PLAN:' + str(self.sell_plan[0]))
             # self.produce_plan.append(nvm_sol.get_production_plan_at(1))
             self.produce_plan.append(nvm_sol.get_production_plan_at(0))
-            print('---------PRODUCE PLAN:' + str(self.produce_plan[0]))
+            # print('---------PRODUCE PLAN:' + str(self.produce_plan[0]))
 
             # print("BUY PLAN LENGTH" + str(len(self.buy_plan)))
 

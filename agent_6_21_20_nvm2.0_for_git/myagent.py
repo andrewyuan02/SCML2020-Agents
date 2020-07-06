@@ -46,6 +46,10 @@ from mynegotiationmanager import MyNegotiationManager
 from myindependentnegotiatonmanager import MyIndependentNegotiationManager
 from utils import *
 from contractstest import solve_signer
+import random
+
+import pandas as pd
+import numpy as np
 
 
 def update_list(target_list: List[int], start_index: int, change: int):
@@ -147,7 +151,7 @@ class MontyHall(SCML2020Agent):
                 output_catalog_price * 2
         )  # TODO: Predict?
 
-        #dictionaries to tally agents and respective number of successful/signed contracts
+        # dictionaries to tally agents and respective number of successful/signed contracts
         self.plan.successful_contracts_agents = {key: 0 for key in (self.data.supplier_list + self.data.consumer_list)}
         self.plan.signed_contracts_agents = {key: 0 for key in (self.data.supplier_list + self.data.consumer_list)}
         # ================================
@@ -204,7 +208,7 @@ class MontyHall(SCML2020Agent):
         Production scheduling and negotiations"""
         super().step()
 
-        #print("----------------------------------------------------------------AGENT ID: " + self.data.id)
+        print("----------------------------------------------------------------AGENT ID: " + self.data.id)
 
         current_inv = self.get_output_inventory()
         self.plan.getNVMPlan(n_lines=self.awi.n_lines, n_processes=self.awi.n_processes, n_steps=self.awi.n_steps,
@@ -217,16 +221,15 @@ class MontyHall(SCML2020Agent):
         # #self.plan.sell_plan.append(self.plan.available_output) #sell all inventory
         # self.plan.sell_plan.append(self.get_output_inventory())  # sell all inventory
 
-        #hacky fix to just produce all raw input
+        # hacky fix to just produce all raw input
         self.plan.produce_plan = []
         self.plan.produce_plan.append(self.get_input_inventory())
 
         # print('---------HACKY SELL PLAN:' + str(self.plan.sell_plan[0]))
-        # print('---------HACKY PRODUCE PLAN:' + str(self.plan.produce_plan[0]))
-        # print("---------INPUT INVENTORY: " + str(self.get_input_inventory()))
+        print('---------HACKY PRODUCE PLAN:' + str(self.plan.produce_plan[0]))
+        print("---------INPUT INVENTORY: " + str(self.get_input_inventory()))
         # #print("---------AVAILABLE OUTPUT: " + str(self.plan.available_output))
-        # print("---------OUTPUT INVENTORY: " + str(self.get_output_inventory()))
-
+        print("---------OUTPUT INVENTORY: " + str(self.get_output_inventory()))
 
         self.propagate_inputs()  # Plan how much to buy at each step
         self.negotiation_manager.step()
@@ -284,7 +287,6 @@ class MontyHall(SCML2020Agent):
             self.plan.successful_contracts_agents[contract.partners[1]] += 1
         else:
             self.plan.successful_contracts_agents[contract.partners[0]] += 1
-        
 
         self.stat.on_negotiation_success(contract, mechanism)
 
@@ -301,10 +303,10 @@ class MontyHall(SCML2020Agent):
             self.plan.available_money += quantity * unit_price
         #            self.plan.available_output -= quantity #we do this in the contracts finalized so we don't oversell
 
-        #this is wrong below since we only update available output in schedule_production after inputs are produced
+        # this is wrong below since we only update available output in schedule_production after inputs are produced
         else:  # buy
-           #            self.plan.available_money -= quantity * unit_price
-           self.plan.available_output += quantity
+            #            self.plan.available_money -= quantity * unit_price
+            self.plan.available_output += quantity
 
     def on_contract_breached(
             self, contract: Contract, breaches: List[Breach], resolution: Optional[Contract]
@@ -409,13 +411,13 @@ class MontyHall(SCML2020Agent):
         max_buy_price = self.awi.catalog_prices[self.awi.my_input_product] * 3.0
         min_sell_price = self.awi.catalog_prices[self.awi.my_output_product] / 3.0
 
-        #if no sell contracts, we do not call the signer solver
+        # if no sell contracts, we do not call the signer solver
         if len(output_offers) != 0:
             x = solve_signer(input_offers, output_offers, False)
-            print(f"solver signer: {x}")
+            # print(f"solver signer: {x}")
             buy_sign_plan = x[0]
             sell_sign_plan = x[1]
-            print("buy and sell plans")
+            print("buy and sell sign plans")
             print(buy_sign_plan)
             print(sell_sign_plan)
 
@@ -431,19 +433,19 @@ class MontyHall(SCML2020Agent):
                         output[i] = None
                     counter_sell = counter_sell + 1
 
-        print("signatures...before")
+        # print("signatures...before")
         for i in range(len(contracts)):
-            print(contracts[i], output[i])
+            # print(contracts[i], output[i])
             price = contracts[i].agreement['unit_price']
-            print(f"unit price: {price}")
-            print(f"max buy price: {max_buy_price}")
+            # print(f"unit price: {price}")
+            # print(f"max buy price: {max_buy_price}")
             if contracts[i].annotation['buyer'] == self.id:
                 if price > max_buy_price:
-                    print("MAX PRICE EXCEEDED")
+                    # print("MAX PRICE EXCEEDED")
                     output[i] = None
             else:
                 if price < min_sell_price:
-                    print("MAX PRICE EXCEEDED")
+                    # print("MAX PRICE EXCEEDED")
                     output[i] = None
 
         for i in range(len(contracts)):
@@ -452,11 +454,12 @@ class MontyHall(SCML2020Agent):
             if not contracts[i].annotation['is_buy'] and (contracts[i].agreement['unit_price']) < min_sell_price:
                 print(f" ***sell unit price: {contracts[i].agreement['unit_price']}, signed: {output[i]}")
 
-        print("signatures...final")
-        print(contracts)
-        print(output)
+        # print("signatures...final")
+        # print(contracts)
+        # print(output)
         for i in range(len(contracts)):
-            print(contracts[i], output[i])
+            # print(contracts[i], output[i])
+            continue
         return output
 
     def on_contracts_finalized(
@@ -468,7 +471,6 @@ class MontyHall(SCML2020Agent):
         """Called to inform you about the final status of all contracts in
         a step (day)"""
         self.stat.on_contracts_finalized(signed, cancelled, rejectors)
-        
 
         for contract in signed:
             # increment signed agents. assumes partner list is size 2.
@@ -591,12 +593,12 @@ class MontyHall(SCML2020Agent):
     # Production Callbacks
     # ====================
 
-    #shouldn't this be order production, not schedule production?
+    # shouldn't this be order production, not schedule production?
     def schedule_production(self):
         commands = self.get_commands()[self.get_current_step()]
         # input_count = self.get_input_inventory() #produce all of the raw inputs
         # input_count = self.plan.buy_plan[self.get_current_step()]
-        input_count = self.plan.produce_plan[0] #produce based off of the NVM plan
+        input_count = self.plan.produce_plan[0]  # produce based off of the NVM plan
 
         balance = self.plan.available_money
         pay_count = int(
@@ -612,7 +614,6 @@ class MontyHall(SCML2020Agent):
 
         # curr = self.awi.current_step
         # self.awi.schedule_production(process=self.data.input_product, repeats=scheduled_count, step=(curr, curr))
-
 
     def confirm_production(
             self, commands: np.ndarray, balance: int, inventory: np.ndarray
@@ -663,13 +664,17 @@ competitors = [
     #        RandomAgent,
 ]
 
+
 #
-def run(n_steps=52):
+
+
+def run(n_steps=52, n_processes=3):
     """
     **Not needed for submission.** You can use this function to test your agent.
 
     Args:
         n_steps:     The number of simulation steps.
+        n_processes: # processes.
 
     Returns:
         None
@@ -683,11 +688,102 @@ def run(n_steps=52):
 
     start = time.perf_counter()
     world = SCML2020World(
-        **SCML2020World.generate(agent_types=competitors, n_steps=n_steps, n_processes=3)
+        **SCML2020World.generate(agent_types=competitors, n_steps=n_steps, n_processes=n_processes)
     )
     world.run()
     pprint(world.scores())
     print(f"Finished in {humanize_time(time.perf_counter() - start)}")
+
+
+def run_benchmark(n_games: int, n_step_range: Tuple[int, int], n_processes_range: Tuple[int, int]) -> pd.DataFrame:
+    """Benchmarking function to run a bunch of games:
+    Parameters:
+        n_games: number of games to be run
+        n_step_range: Tuple[int, int] which describes the lower bound and upper bound (inclusive) of steps desired for the games
+        n_processes_range: Tuple[int, int] which describes the lower and upper bound (inclusive) of processes desired for the games
+    Returns:
+        df: DataFrame containing all of the scores and cumulative averages for each agent at each level"""
+
+    def run_with_save(n_steps, n_processes) -> Dict[str, float]:
+        """
+        Same as run() but with save functionality for benchmarking
+        Returns:
+            new_dict: dictionary with all the average scores of each agent at each level
+             (accumulating all xxDec@0 into just Dec@0)
+        """
+
+        start = time.perf_counter()
+        world = SCML2020World(
+            **SCML2020World.generate(agent_types=competitors, n_steps=n_steps, n_processes=n_processes)
+        )
+        world.run()
+        # pprint(world.scores())
+
+        # iterate through dictionary of agents and scores and only take "agent@x", adding up all the scores of agent@x
+        scores = world.scores()  # a dict
+        new_dict = {}
+        agent_count_dict = {}
+        for agent_name in scores:
+            if agent_name[2:] in new_dict:
+                agent_count_dict[agent_name[2:]] += 1
+                new_dict[agent_name[2:]] += scores[agent_name]
+            else:
+                agent_count_dict[agent_name[2:]] = 1
+                new_dict[agent_name[2:]] = scores[agent_name]
+
+        # divide by number of occurrences of each agent at each level
+        for agent_name in new_dict:
+            new_dict[agent_name] = new_dict[agent_name] / agent_count_dict[agent_name]
+
+        pprint(scores)
+        pprint(f"Aggregated scores: {new_dict}")
+        print(f"Finished in {humanize_time(time.perf_counter() - start)}")
+
+        return new_dict
+
+    average_score_dict = {"game length": [], "processes": []}
+    columns = ["game length", "processes"]
+    agent_names = []
+    # make column labels for all possible competitors up to upper bound of processes range
+    for i in range(n_processes_range[1]):
+        for competitor in competitors:
+            agent_name = str(type(competitor))[0:3] + f"@{i}"  # Ind@2
+            agent_names.append(agent_name)
+            columns.append(agent_name)
+            average_score_dict[agent_name] = []
+
+    print(columns)
+
+    # Run games and collect the data into average_score_dicts
+    for i in range(n_games):
+        n_steps = random.randint(n_step_range[0], n_step_range[1])
+        n_processes = random.randint(n_processes_range[0], n_processes_range[1])
+        game_score_dict = run_with_save(n_steps=n_steps, n_processes=n_processes)
+
+        average_score_dict["game length"].append(n_steps)
+        average_score_dict["processes"].append(n_processes)
+        for key in (average_score_dict.keys() - {"game length", "processes"}):
+            if key in game_score_dict: # add agent score to the average_score_dict if agent was in the game
+                assert key in average_score_dict, "assert error: agent names are put into average_score_dict wrong"
+                average_score_dict[key].append(game_score_dict[key])
+            else: # else give agent a score of NaN for this game
+                average_score_dict[key].append(np.nan)
+
+        print(f"game {i} done")
+
+    # Make DataFrame
+    df = pd.DataFrame(average_score_dict)
+    # Now we need to compute the cumulative moving average (CMA)
+    for agent_name in agent_names:
+        # this makes a new column with the CMA for agent_name
+        df[f"CMA_{agent_name}"] = df[agent_name].expanding().mean()
+
+    df.to_csv(f"C:/Users/ED2016/Documents/SCML/scml2020/benchmarks/"
+              f"games_{n_games}_step_range_{n_step_range[0]}_{n_step_range[1]}_processes_range_{n_processes_range[0]}"
+              f"_{n_processes_range[1]}.csv")
+
+    return df
+
 
 
 def run_tournament(
@@ -770,8 +866,8 @@ def run_single_session():
     df1 = signed.loc[signed.executed, fields].sort_values(["quantity", "unit_price"], ascending=False).head(10)
     df2 = signed.loc[signed.breached, fields[:-4] + ["breaches"]].sort_values(["quantity", "unit_price"],
                                                                               ascending=False).head(10)
-    #df1.to_csv('C:/Users/ED2016/Documents/SCML/scml2020/newsvendorlogs/eg17.csv')
-    #df2.to_csv('C:/Users/ED2016/Documents/SCML/scml2020/newsvendorlogs/eg18.csv')
+    # df1.to_csv('C:/Users/ED2016/Documents/SCML/scml2020/newsvendorlogs/eg17.csv')
+    # df2.to_csv('C:/Users/ED2016/Documents/SCML/scml2020/newsvendorlogs/eg18.csv')
 
     fig, (profit, score) = plt.subplots(1, 2, figsize=(15, 15))
     snames = sorted(world.non_system_agent_names)
@@ -800,10 +896,12 @@ def run_single_session():
 
 
 def main():
-    run()
-    #run_single_session()
-    #run_tournament()
+    # run()
+    # run_single_session()
+    # run_tournament()
 
+    # run_with_save(n_steps=52, n_processes=3)
+    run_benchmark(n_games=2, n_step_range=(50,50), n_processes_range=(3,3))
     print("Finished...")
 
 

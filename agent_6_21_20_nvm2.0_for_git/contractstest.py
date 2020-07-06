@@ -79,13 +79,13 @@ def solve_signer (buy_contracts:list, sel_contracts:list, prints: bool = False):
 
     time_to_generate_ILP = time.time() - t0
 
-    # if prints:
-    #     # Some prints to debug the program.
-    #     for a, b, c in result:
-    #         print(a)
-    #         print(b)
-    #         pprint.pprint(c)
-    #         print("---------------")
+    if prints:
+        # Some prints to debug the program.
+        for a, b, c in result:
+            print(a)
+            print(b)
+            pprint.pprint(c)
+            print("---------------")
 
     for l, m, r in result:
         model += sum(l) <= sum(m) - sum(r)
@@ -110,14 +110,14 @@ def solve_signer (buy_contracts:list, sel_contracts:list, prints: bool = False):
         if sign_plan_sel[key] == None:
             sign_plan_sel[key] = 0
 
-    # if prints:
-    #     print("Buy Contracts")
-    #     for i in sign_plan_buy.keys():
-    #         print(f"{i} \t {buy_contracts_copy[i]} \t {int(sign_plan_buy[i])}")
-    #
-    #     print("Sell Contracts")
-    #     for i in sign_plan_sel.keys():
-    #         print(f"{i} \t {sel_contracts_copy[i]} \t {int(sign_plan_sel[i])}")
+    if prints:
+        print("Buy Contracts")
+        for i in sign_plan_buy.keys():
+            print(f"{i} \t {buy_contracts_copy[i]} \t {int(sign_plan_buy[i])}")
+
+        print("Sell Contracts")
+        for i in sign_plan_sel.keys():
+            print(f"{i} \t {sel_contracts_copy[i]} \t {int(sign_plan_sel[i])}")
 
     buy = {}
     for i in sign_plan_buy.keys():
@@ -129,24 +129,23 @@ def solve_signer (buy_contracts:list, sel_contracts:list, prints: bool = False):
 
     return buy, sell
 
-    # if prints:
-    #     x = PrettyTable()
-    #     x.field_names = ['t'] + [t for t in range(0, T)] + ['total']
-    #
-    #     buy_list = [0 for _ in range(0, T)]
-    #     for i in sign_plan_buy.keys():
-    #         if int(sign_plan_buy[i]) == 1:
-    #             buy_list[buy_contracts_copy[i][1]] = buy_list[buy_contracts_copy[i][1]] + buy_contracts_copy[i][0]
-    #
-    #     sel_list = [0 for _ in range(0, T)]
-    #     for i in sign_plan_sel.keys():
-    #         if int(sign_plan_sel[i]) == 1:
-    #             sel_list[sel_contracts_copy[i][1]] = sel_list[sel_contracts_copy[i][1]] + sel_contracts_copy[i][0]
-    #
-    #     x.add_row(['buy'] + buy_list + [sum([b[0] if int(sign_plan_buy[i]) == 1 else 0 for i, b in enumerate(buy_contracts_copy)])])
-    #     x.add_row(['sel'] + sel_list + [sum([s[0] if int(sign_plan_sel[i]) == 1 else 0 for i, s in enumerate(sel_contracts_copy)])])
-    #     print(x)
+    if prints:
+        x = PrettyTable()
+        x.field_names = ['t'] + [t for t in range(0, T)] + ['total']
 
+        buy_list = [0 for _ in range(0, T)]
+        for i in sign_plan_buy.keys():
+            if int(sign_plan_buy[i]) == 1:
+                buy_list[buy_contracts_copy[i][1]] = buy_list[buy_contracts_copy[i][1]] + buy_contracts_copy[i][0]
+
+        sel_list = [0 for _ in range(0, T)]
+        for i in sign_plan_sel.keys():
+            if int(sign_plan_sel[i]) == 1:
+                sel_list[sel_contracts_copy[i][1]] = sel_list[sel_contracts_copy[i][1]] + sel_contracts_copy[i][0]
+
+        x.add_row(['buy'] + buy_list + [sum([b[0] if int(sign_plan_buy[i]) == 1 else 0 for i, b in enumerate(buy_contracts_copy)])])
+        x.add_row(['sel'] + sel_list + [sum([s[0] if int(sign_plan_sel[i]) == 1 else 0 for i, s in enumerate(sel_contracts_copy)])])
+        print(x)
 
 buy_contracts = [(5, 0, 0.1),
                  (1, 3, 1.5),

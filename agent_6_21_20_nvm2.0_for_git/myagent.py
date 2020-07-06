@@ -413,7 +413,7 @@ class MontyHall(SCML2020Agent):
 
         # if no sell contracts, we do not call the signer solver
         if len(output_offers) != 0:
-            x = solve_signer(buy_contracts=input_offers, sel_contracts=output_offers, prints=False)
+            x = solve_signer(buy_contracts=input_offers, sel_contracts=output_offers, inventory = self.get_output_inventory(), prints=False)
             # print(f"solver signer: {x}")
             buy_sign_plan = x[0]
             sell_sign_plan = x[1]

@@ -15,7 +15,7 @@ from traitlets import List
 # Sell contracts are all those contracts the agent is considering to sign for the purpose of selling outputs.
 
 
-def solve_signer (buy_contracts:list, sel_contracts:list, prints: bool = False):
+def solve_signer (buy_contracts:list, sel_contracts:list, inventory: int, prints: bool = False):
     # For efficiency purposes, we order the contracts by delivery times. But, before we do, we must be able to
     # recover the indices of the contracts as given to the solver, otherwise, we can't map the output to the right contracts.
     buy_contracts = [c + (i,) for i, c in enumerate(buy_contracts)]
@@ -51,7 +51,7 @@ def solve_signer (buy_contracts:list, sel_contracts:list, prints: bool = False):
     model = pulp.LpProblem('Contract_Signer_Solver', pulp.LpMaximize)
 
     # The objective function is profit.
-    model += pulp.lpSum([sel_contracts[i][0] * sel_contracts[i][2] * sel_sign_vars[s[3]]
+    model += inventory + pulp.lpSum([sel_contracts[i][0] * sel_contracts[i][2] * sel_sign_vars[s[3]]
                          for i, s in enumerate(sel_contracts)]
                         +
                         [-1.0 * buy_contracts[i][0] * buy_contracts[i][2] * buy_sign_vars[b[3]]

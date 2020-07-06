@@ -413,7 +413,7 @@ class MontyHall(SCML2020Agent):
 
         # if no sell contracts, we do not call the signer solver
         if len(output_offers) != 0:
-            x = solve_signer(input_offers, output_offers, False)
+            x = solve_signer(buy_contracts=input_offers, sel_contracts=output_offers, prints=False)
             # print(f"solver signer: {x}")
             buy_sign_plan = x[0]
             sell_sign_plan = x[1]
@@ -741,13 +741,17 @@ def run_benchmark(n_games: int, n_step_range: Tuple[int, int], n_processes_range
 
         return new_dict
 
+    t0 = time.time()
+    print("======================================BENCHMARKING STARTING======================================")
+
     average_score_dict = {"game length": [], "processes": []}
     columns = ["game length", "processes"]
     agent_names = []
     # make column labels for all possible competitors up to upper bound of processes range
     for i in range(n_processes_range[1]):
         for competitor in competitors:
-            agent_name = str(type(competitor))[0:3] + f"@{i}"  # Ind@2
+            agent_name = competitor.__name__[0:3] + f"@{i}"  # Ind@2
+            # print(f"AGENT NAME LABEL: {agent_name}")
             agent_names.append(agent_name)
             columns.append(agent_name)
             average_score_dict[agent_name] = []
@@ -758,6 +762,9 @@ def run_benchmark(n_games: int, n_step_range: Tuple[int, int], n_processes_range
     for i in range(n_games):
         n_steps = random.randint(n_step_range[0], n_step_range[1])
         n_processes = random.randint(n_processes_range[0], n_processes_range[1])
+        print(f"game {i} starting")
+        print(f"n_steps: {n_steps}")
+        print(f"n_processes: {n_processes}")
         game_score_dict = run_with_save(n_steps=n_steps, n_processes=n_processes)
 
         average_score_dict["game length"].append(n_steps)
@@ -778,9 +785,18 @@ def run_benchmark(n_games: int, n_step_range: Tuple[int, int], n_processes_range
         # this makes a new column with the CMA for agent_name
         df[f"CMA_{agent_name}"] = df[agent_name].expanding().mean()
 
+    # output to csv
     df.to_csv(f"C:/Users/ED2016/Documents/SCML/scml2020/benchmarks/"
               f"games_{n_games}_step_range_{n_step_range[0]}_{n_step_range[1]}_processes_range_{n_processes_range[0]}"
               f"_{n_processes_range[1]}.csv")
+
+    # print time taken
+    print("======================================BENCHMARKING DONE======================================")
+    time_taken = time.strftime("%H:%M:%S", time.gmtime(time.time() - t0)) # readable formatting
+    print(f"Time taken to do the benchmarking: {time_taken}")
+
+    # print the time of day
+    print(time.ctime())
 
     return df
 
@@ -901,7 +917,8 @@ def main():
     # run_tournament()
 
     # run_with_save(n_steps=52, n_processes=3)
-    run_benchmark(n_games=2, n_step_range=(50,50), n_processes_range=(3,3))
+    run_benchmark(n_games=100, n_step_range=(50, 50), n_processes_range=(3, 3))
+    run_benchmark(n_games=100, n_step_range=(50, 70), n_processes_range=(3, 5))
     print("Finished...")
 
 

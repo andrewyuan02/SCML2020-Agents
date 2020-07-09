@@ -51,7 +51,7 @@ def solve_signer (buy_contracts:list, sel_contracts:list, inventory: int, prints
     model = pulp.LpProblem('Contract_Signer_Solver', pulp.LpMaximize)
 
     # The objective function is profit.
-    model += inventory + pulp.lpSum([sel_contracts[i][0] * sel_contracts[i][2] * sel_sign_vars[s[3]]
+    model += pulp.lpSum([sel_contracts[i][0] * sel_contracts[i][2] * sel_sign_vars[s[3]]
                          for i, s in enumerate(sel_contracts)]
                         +
                         [-1.0 * buy_contracts[i][0] * buy_contracts[i][2] * buy_sign_vars[b[3]]
@@ -88,7 +88,7 @@ def solve_signer (buy_contracts:list, sel_contracts:list, inventory: int, prints
             print("---------------")
 
     for l, m, r in result:
-        model += sum(l) <= sum(m) - sum(r)
+        model += sum(l) <= inventory + sum(m) - sum(r) #added inventory
 
 
     t0_solve = time.time()

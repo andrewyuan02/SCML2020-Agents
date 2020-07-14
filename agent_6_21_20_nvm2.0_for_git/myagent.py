@@ -44,6 +44,7 @@ from tabulate import tabulate
 from mynegotiationmanager import MyNegotiationManager
 # from myothernegotiationmanager import NewStepNegotiationManager
 from myindependentnegotiatonmanager import MyIndependentNegotiationManager
+from SCMLContractsSigner import SCMLContractsSigner
 from utils import *
 from contractstest import solve_signer
 import random
@@ -149,7 +150,7 @@ class MontyHall(SCML2020Agent):
         #        self.plan.min_sell_price = output_catalog_price - int(profit/2) + 1 # TODO: Predict
         self.plan.max_sell_price = (
                 output_catalog_price * 2
-        )  # TODO: Predict?
+        )
 
         # dictionaries to tally agents and respective number of successful/signed contracts
         self.plan.successful_contracts_agents = {key: 0 for key in (self.data.supplier_list + self.data.consumer_list)}
@@ -158,11 +159,6 @@ class MontyHall(SCML2020Agent):
         # Negotiation Components
         # ================================
         self.negotiation_manager = MyNegotiationManager(data=self.data, plan=self.plan, awi=self.awi, agent=self)
-        #        self.negotiation_manager = NewStepNegotiationManager(plan=self.plan, awi=self.awi, agent=self)
-
-        # self.negotiation_manager = MyIndependentNegotiationManager(data=self.data, plan=self.plan, awi=self.awi, agent=self)
-
-        # print("checkpoint")
 
         # ================================
         # Stats Components
@@ -226,10 +222,10 @@ class MontyHall(SCML2020Agent):
         self.plan.produce_plan.append(self.get_input_inventory())
 
         # print('---------HACKY SELL PLAN:' + str(self.plan.sell_plan[0]))
-        print('---------HACKY PRODUCE PLAN:' + str(self.plan.produce_plan[0]))
-        print("---------INPUT INVENTORY: " + str(self.get_input_inventory()))
+        # print('---------HACKY PRODUCE PLAN:' + str(self.plan.produce_plan[0]))
+        # print("---------INPUT INVENTORY: " + str(self.get_input_inventory()))
         # #print("---------AVAILABLE OUTPUT: " + str(self.plan.available_output))
-        print("---------OUTPUT INVENTORY: " + str(self.get_output_inventory()))
+        # print("---------OUTPUT INVENTORY: " + str(self.get_output_inventory()))
 
         self.propagate_inputs()  # Plan how much to buy at each step
         self.negotiation_manager.step()
@@ -283,19 +279,15 @@ class MontyHall(SCML2020Agent):
         #        print("NEGOTIATION SUCCEEDED:", self.get_current_step(), "Contract negotiation succeeded", contract)
 
         # increment successful contract agent ID's. assumes partner list is length 2
-        if contract.partners[0] == self.data.id:
-            self.plan.successful_contracts_agents[contract.partners[1]] += 1
-        else:
-            self.plan.successful_contracts_agents[contract.partners[0]] += 1
 
         self.stat.on_negotiation_success(contract, mechanism)
 
     def on_contract_executed(self, contract: Contract) -> None:
         """Called when a contract executes successfully and fully"""
-        print("CONTRACT EXECUTED: BUY:", contract.annotation["is_buy"], contract)
-        print(f"catalog price * 3: {self.awi.catalog_prices[self.awi.my_input_product] * 3.0}")
-        if contract.agreement['unit_price'] > 100:
-            print("RIP")
+        # print("CONTRACT EXECUTED: BUY:", contract.annotation["is_buy"], contract)
+        # print(f"catalog price * 3: {self.awi.catalog_prices[self.awi.my_input_product] * 3.0}")
+        # if contract.agreement['unit_price'] > 100:
+        # print("RIP")
         quantity = contract.agreement["quantity"]
         unit_price = contract.agreement["unit_price"]
         time = contract.agreement["time"]
@@ -313,7 +305,7 @@ class MontyHall(SCML2020Agent):
     ) -> None:
         """Called when a breach occur. In 2020, there will be no resolution
         (i.e. resoluion is None)"""
-        print("CONTRACT BREACH: ", contract, self.data.id)
+        # print("CONTRACT BREACH: ", contract, self.data.id)
 
         #        if breaches[0].perpetrator == self.data.id:
         #            assert False, "You breached contract?!?!?"
@@ -330,8 +322,6 @@ class MontyHall(SCML2020Agent):
                 round(breach_level * quantity)
             )  # how many inputs were failed to buy
 
-            # self.plan.expected_input[self.get_current_step()].contract_inputs -= lost_count
-
             money_saved = lost_count * unit_price
             self.plan.available_money += money_saved
         else:  # perpetrator did not have enough outputs, lost money, gained ouputs
@@ -347,94 +337,33 @@ class MontyHall(SCML2020Agent):
     # Contract Control and Feedback
     # =============================
 
-    # def sign_all_contracts(self, contracts: List[Contract]) -> List[Optional[str]]:
-    #     """Called to ask you to sign all contracts that were concluded in
-    #     one step (day)"""
-    #
-    #     signatures = [None] * len(contracts)
-    #
-    #     contracts = zip(contracts, range(len(contracts)))
-    #     sell_contracts = []
-    #     buy_contracts = []
-    #
-    #     for contract in contracts:  # (contract, index) tuple
-    #         time = contract[0].agreement["time"]
-    #         if (time < self.get_current_step() or time >= self.data.n_steps):  # Time not valid
-    #             continue
-    #         if not contract[0].annotation["is_buy"]:  # is sell
-    #             sell_contracts.append(contract)
-    #         elif time <= self.data.last_day:
-    #             buy_contracts.append(contract)
-    #
-    #     # Sign sell contracts
-    #     #available_output = self.plan.available_output
-    #     available_output = self.get_output_inventory()
-    #     signed_sell = self._sign_sell_contracts(sell_contracts, available_output)
-    #     for index in signed_sell:
-    #         signatures[index] = self.data.id
-    #
-    #     # Sign buy contracts
-    #     signed_buy = self._sign_buy_contracts(
-    #         buy_contracts,
-    #         self.plan.available_money
-    #     )
-    #
-    #     for index in signed_buy:
-    #         signatures[index] = self.data.id
-    #
-    #     return signatures
+
+
+    def calculate_agent_trust(self):
+        delta = 0.2
+        trust_probabilities = {}
+        for agent in self.plan.successful_contracts_agents:
+            agree_count = self.plan.successful_contracts_agents[agent]
+            sign_count = self.plan.signed_contracts_agents[agent]
+            p = 2.0
+            if agree_count > 0 and (agent != "BUYER") and (agent != "SELLER"):
+                p = math.sqrt((-1.0 / (2.0 * agree_count)) * math.log(delta / 2.0)) + sign_count/agree_count
+            trust_probabilities[agent] = p
+        return trust_probabilities
 
     def sign_all_contracts(
             self, contracts: List[Contract]
     ) -> List[Optional[str]]:
 
-        output = [self.id] * len(contracts)
-
-        input_offers: List[Tuple[int, int, int]] = []
-        output_offers: List[Tuple[int, int, int]] = []
-
-        for y in contracts:
-            x = (y.agreement['quantity'], y.agreement['time'], y.agreement['unit_price'])
-            if y.annotation["is_buy"]:
-                input_offers.append(x)
-            else:
-                output_offers.append(x)
-
-        print("signatures...")
-        # print(contracts)
-        # print(input_offers)
-        # print(output_offers)
-        # print(len(contracts))
-        # print(len(input_offers))
-        # print(len(output_offers))
-
         max_buy_price = self.awi.catalog_prices[self.awi.my_input_product] * 3.0
         min_sell_price = self.awi.catalog_prices[self.awi.my_output_product] / 3.0
 
-        # if no sell contracts, we do not call the signer solver
-        if len(output_offers) != 0:
-            x = solve_signer(buy_contracts=input_offers, sel_contracts=output_offers, inventory = self.get_output_inventory(), prints=False)
-            # print(f"solver signer: {x}")
-            buy_sign_plan = x[0]
-            sell_sign_plan = x[1]
-            print("buy and sell sign plans")
-            print(buy_sign_plan)
-            print(sell_sign_plan)
+        signatures_final = [None] * len(contracts)
 
-            counter_buy: int = 0
-            counter_sell: int = 0
-            for i in range(len(contracts)):
-                if contracts[i].annotation["is_buy"]:
-                    if buy_sign_plan[counter_buy] == 0:
-                        output[i] = None
-                    counter_buy = counter_buy + 1
-                else:
-                    if sell_sign_plan[counter_sell] == 0:
-                        output[i] = None
-                    counter_sell = counter_sell + 1
+        map_original_indices = list(range(len(contracts)))
 
-        # SELF EXPLOIT CHECK
-        # print("signatures...before")
+        # THIS FOR LOOP SENDS ERRORS BTW
+
         # for i in range(len(contracts)):
         #     # print(contracts[i], output[i])
         #     price = contracts[i].agreement['unit_price']
@@ -443,25 +372,93 @@ class MontyHall(SCML2020Agent):
         #     if contracts[i].annotation['buyer'] == self.id:
         #         if price > max_buy_price:
         #             # print("MAX PRICE EXCEEDED")
-        #             output[i] = None
+        #             del contracts[i]
+        #             del map_original_indices[i]
         #     else:
         #         if price < min_sell_price:
         #             # print("MAX PRICE EXCEEDED")
-        #             output[i] = None
+        #             del contracts[i]
+        #             del map_original_indices[i]
 
-        for i in range(len(contracts)):
-            if contracts[i].annotation['is_buy'] and (contracts[i].agreement['unit_price']) > max_buy_price:
-                print(f" ***buy unit price: {contracts[i].agreement['unit_price']}, signed: {output[i]}")
-            if not contracts[i].annotation['is_buy'] and (contracts[i].agreement['unit_price']) < min_sell_price:
-                print(f" ***sell unit price: {contracts[i].agreement['unit_price']}, signed: {output[i]}")
+        trust_probabilities = self.calculate_agent_trust()
+        inventory = self.get_output_inventory()
+        signed = SCMLContractsSigner.sign(self.data.id, contracts, trust_probabilities, inventory)
+        signed_agreements = signed['list_of_signatures']
 
-        # print("signatures...final")
-        # print(contracts)
-        # print(output)
-        for i in range(len(contracts)):
-            # print(contracts[i], output[i])
-            continue
-        return output
+        for x in range(len(contracts)):
+            if signed_agreements[x] is not None:
+                contract = contracts[x]
+
+                assert len(contract.partners) == 2
+                assert contract.partners[0] != contract.partners[1]
+                assert contract.partners[0] == self.data.id or contract.partners[1] == self.data.id
+                if contract.partners[0] == self.data.id:
+                    self.plan.successful_contracts_agents[contract.partners[1]] += 1
+                else:
+                    self.plan.successful_contracts_agents[contract.partners[0]] += 1
+
+        #return signed_agreements
+
+        for i in range(len(map_original_indices)):
+            original_index = map_original_indices[i]
+            signatures_final[original_index] = signed_agreements[i]
+
+        return signatures_final
+#
+# <<<<<<< HEAD
+#         # if no sell contracts, we do not call the signer solver
+#         if len(output_offers) != 0:
+#             x = solve_signer(buy_contracts=input_offers, sel_contracts=output_offers, inventory = self.get_output_inventory(), prints=False)
+#             # print(f"solver signer: {x}")
+#             buy_sign_plan = x[0]
+#             sell_sign_plan = x[1]
+#             print("buy and sell sign plans")
+#             print(buy_sign_plan)
+#             print(sell_sign_plan)
+#
+#             counter_buy: int = 0
+#             counter_sell: int = 0
+#             for i in range(len(contracts)):
+#                 if contracts[i].annotation["is_buy"]:
+#                     if buy_sign_plan[counter_buy] == 0:
+#                         output[i] = None
+#                     counter_buy = counter_buy + 1
+#                 else:
+#                     if sell_sign_plan[counter_sell] == 0:
+#                         output[i] = None
+#                     counter_sell = counter_sell + 1
+#
+#         # SELF EXPLOIT CHECK
+#         # print("signatures...before")
+#         # for i in range(len(contracts)):
+#         #     # print(contracts[i], output[i])
+#         #     price = contracts[i].agreement['unit_price']
+#         #     # print(f"unit price: {price}")
+#         #     # print(f"max buy price: {max_buy_price}")
+#         #     if contracts[i].annotation['buyer'] == self.id:
+#         #         if price > max_buy_price:
+#         #             # print("MAX PRICE EXCEEDED")
+#         #             output[i] = None
+#         #     else:
+#         #         if price < min_sell_price:
+#         #             # print("MAX PRICE EXCEEDED")
+#         #             output[i] = None
+#
+#         for i in range(len(contracts)):
+#             if contracts[i].annotation['is_buy'] and (contracts[i].agreement['unit_price']) > max_buy_price:
+#                 print(f" ***buy unit price: {contracts[i].agreement['unit_price']}, signed: {output[i]}")
+#             if not contracts[i].annotation['is_buy'] and (contracts[i].agreement['unit_price']) < min_sell_price:
+#                 print(f" ***sell unit price: {contracts[i].agreement['unit_price']}, signed: {output[i]}")
+#
+#         # print("signatures...final")
+#         # print(contracts)
+#         # print(output)
+#         for i in range(len(contracts)):
+#             # print(contracts[i], output[i])
+#             continue
+#         return output
+# =======
+# >>>>>>> 1c105d1c1861d353c6160f981b0dafa964e4db33
 
     def on_contracts_finalized(
             self,
@@ -474,11 +471,17 @@ class MontyHall(SCML2020Agent):
         self.stat.on_contracts_finalized(signed, cancelled, rejectors)
 
         for contract in signed:
+            # print("signed by both parties: " + str(contract) + " timestep: " + str(self.awi.current_step))
             # increment signed agents. assumes partner list is size 2.
+            assert len(contract.partners) == 2
+            assert contract.partners[0] != contract.partners[1]
+            assert contract.partners[0] == self.data.id or contract.partners[1] == self.data.id
             if contract.partners[0] == self.data.id:
                 self.plan.signed_contracts_agents[contract.partners[1]] += 1
             else:
                 self.plan.signed_contracts_agents[contract.partners[0]] += 1
+
+    
 
             quantity = contract.agreement["quantity"]
             time = contract.agreement["time"]
@@ -491,114 +494,9 @@ class MontyHall(SCML2020Agent):
             else:  # sell
                 self.plan.available_output -= quantity
 
-    # Contract Control and Feedback Helpers
-
-    # def _sign_sell_contracts(self, sell_contracts, available_output):
-    #
-    #     assert available_output is not None, "AVAILABLE OUTPUT IS NONE ??"
-    #
-    #     # returns sell contract indexes which are to be signed
-    #     if len(sell_contracts) == 0 or available_output == 0:
-    #         return []
-    #     dp = len(sell_contracts) * [
-    #         ((available_output + 1) * [None])
-    #     ]  # initialize matrix
-    #
-    #     # print('DP:', len(dp), len(dp[0]), '\nParam:', len(sell_contracts), available_output)
-    #
-    #     profit, signed_contracts = self._solve_knapsack(sell_contracts, dp, len(sell_contracts) - 1, available_output)
-    #
-    #     return signed_contracts
-    #
-    # def _solve_knapsack(self, sell_contracts, dp, index, available_output):
-    #
-    #     # assertion checks
-    #     assert index >= 0, f"knapsack index negative: {index}"
-    #     assert available_output >= 0, f"knapsack available_output negative: {available_output}"
-    #     # "graceful" failure
-    #     if index < 0:
-    #         index = 0
-    #     if available_output < 0:
-    #         available_output = 0
-    #     if index == 0:
-    #         print("index is zero in solve_knapsack")
-    #
-    #     # actual algorithm
-    #     try:
-    #         if dp[index][available_output] is not None:
-    #             return dp[index][available_output]
-    #     except Exception as inst:
-    #         print(inst)
-    #         print("---------INDEX: " + str(index) + "---AVAILABLE OUTPUT: " + str(available_output))
-    #
-    #     quantity = sell_contracts[index][0].agreement["quantity"]
-    #     unit_price = sell_contracts[index][0].agreement["unit_price"]
-    #     value = (unit_price * quantity)  # how much is the contract worth
-    #     time = sell_contracts[index][0].agreement["time"]
-    #
-    #     # base case
-    #     if index <= 0 or available_output == 0:
-    #         result = (0, [])
-    #     elif quantity > available_output or unit_price < self.plan.min_sell_price:  # Not enough inputs or too cheap
-    #         result = self._solve_knapsack(
-    #             sell_contracts, dp, index - 1, available_output
-    #         )
-    #     else:
-    #         profit1, signed1 = self._solve_knapsack(
-    #             sell_contracts, dp, index - 1, available_output
-    #         )  # don't sign
-    #         profit2, signed2 = self._solve_knapsack(
-    #             sell_contracts, dp, index - 1, available_output - quantity
-    #         )  # sign
-    #
-    #         profit2 += value
-    #         signed2 = copy.deepcopy(signed2)
-    #         signed2.append(sell_contracts[index][1])
-    #
-    #         result = (profit1, signed1) if profit1 > profit2 else (profit2, signed2)
-    #
-    #     dp[index][available_output] = result
-    #     return result
-    #
-    # def _sign_buy_contracts(self, buy_contracts, money):
-    #     buy_contracts = sorted(
-    #         buy_contracts,
-    #         key=lambda contract: (
-    #             contract[0].agreement["unit_price"],
-    #             contract[0].agreement["time"],
-    #             -contract[0].agreement["quantity"],
-    #         ),
-    #     )
-    #
-    #     signed_buy = []
-    #     needed_inputs = []
-    #
-    #     for buy_plan in self.plan.expected_input:
-    #         needed_inputs.append(buy_plan.get_needed())
-    #
-    #     for contract, index in buy_contracts:
-    #         quantity = contract.agreement["quantity"]
-    #         cost = contract.agreement["unit_price"] * quantity
-    #         time = contract.agreement["time"]
-    #
-    #         if cost > money or quantity > needed_inputs[time]:
-    #             continue
-    #         if contract.agreement["unit_price"] < self.awi.catalog_prices[self.awi.my_input_product] * 3:
-    #             signed_buy.append(index)
-    #             needed_inputs[time] -= quantity
-    #             money -= cost
-    #     print(f'contract: {signed_buy}')
-    #     return signed_buy
-
-    # ====================
-    # Production Callbacks
-    # ====================
-
     # shouldn't this be order production, not schedule production?
     def schedule_production(self):
         commands = self.get_commands()[self.get_current_step()]
-        # input_count = self.get_input_inventory() #produce all of the raw inputs
-        # input_count = self.plan.buy_plan[self.get_current_step()]
         input_count = self.plan.produce_plan[0]  # produce based off of the NVM plan
 
         balance = self.plan.available_money
@@ -612,9 +510,6 @@ class MontyHall(SCML2020Agent):
 
         for i in range(scheduled_count):
             commands[i] = self.data.process
-
-        # curr = self.awi.current_step
-        # self.awi.schedule_production(process=self.data.input_product, repeats=scheduled_count, step=(curr, curr))
 
     def confirm_production(
             self, commands: np.ndarray, balance: int, inventory: np.ndarray
@@ -666,9 +561,6 @@ competitors = [
 ]
 
 
-#
-
-
 def run(n_steps=52, n_processes=3):
     """
     **Not needed for submission.** You can use this function to test your agent.
@@ -692,7 +584,11 @@ def run(n_steps=52, n_processes=3):
         **SCML2020World.generate(agent_types=competitors, n_steps=n_steps, n_processes=n_processes)
     )
     world.run()
-    pprint(world.scores())
+    scores = world.scores()
+    pprint(scores)
+    f = open("scores", "a")
+    f.write(scores)
+    f.close()
     print(f"Finished in {humanize_time(time.perf_counter() - start)}")
 
 
@@ -718,7 +614,6 @@ def run_benchmark(n_games: int, n_step_range: Tuple[int, int], n_processes_range
             **SCML2020World.generate(agent_types=competitors, n_steps=n_steps, n_processes=n_processes)
         )
         world.run()
-        # pprint(world.scores())
 
         # iterate through dictionary of agents and scores and only take "agent@x", adding up all the scores of agent@x
         scores = world.scores()  # a dict
@@ -743,7 +638,7 @@ def run_benchmark(n_games: int, n_step_range: Tuple[int, int], n_processes_range
         return new_dict
 
     t0 = time.time()
-    print("======================================BENCHMARKING STARTING======================================")
+    # print("======================================BENCHMARKING STARTING======================================")
 
     average_score_dict = {"game length": [], "processes": []}
     columns = ["game length", "processes"]
@@ -751,13 +646,12 @@ def run_benchmark(n_games: int, n_step_range: Tuple[int, int], n_processes_range
     # make column labels for all possible competitors up to upper bound of processes range
     for i in range(n_processes_range[1]):
         for competitor in competitors:
-            agent_name = competitor.__name__[0:3] + f"@{i}"  # Ind@2
-            # print(f"AGENT NAME LABEL: {agent_name}")
+            agent_name = competitor.__name__[0:3] + f"@{i}"
             agent_names.append(agent_name)
             columns.append(agent_name)
             average_score_dict[agent_name] = []
 
-    print(columns)
+
 
     # Run games and collect the data into average_score_dicts
     for i in range(n_games):
@@ -771,13 +665,13 @@ def run_benchmark(n_games: int, n_step_range: Tuple[int, int], n_processes_range
         average_score_dict["game length"].append(n_steps)
         average_score_dict["processes"].append(n_processes)
         for key in (average_score_dict.keys() - {"game length", "processes"}):
-            if key in game_score_dict: # add agent score to the average_score_dict if agent was in the game
+            if key in game_score_dict:  # add agent score to the average_score_dict if agent was in the game
                 assert key in average_score_dict, "assert error: agent names are put into average_score_dict wrong"
                 average_score_dict[key].append(game_score_dict[key])
-            else: # else give agent a score of NaN for this game
+            else:  # else give agent a score of NaN for this game
                 average_score_dict[key].append(np.nan)
 
-        print(f"game {i} done")
+        # print(f"game {i} done")
 
     # Make DataFrame
     df = pd.DataFrame(average_score_dict)
@@ -789,7 +683,7 @@ def run_benchmark(n_games: int, n_step_range: Tuple[int, int], n_processes_range
     # output to csv
     df.to_csv(f"C:/Users/ED2016/Documents/SCML/scml2020/benchmarks/"
               f"games_{n_games}_step_range_{n_step_range[0]}_{n_step_range[1]}_processes_range_{n_processes_range[0]}"
-              f"_{n_processes_range[1]}_signer_w_inventory_no_self_exploit.csv")
+              f"_{n_processes_range[1]}_trust_signer_inventory.csv")
 
     # print time taken
     print("======================================BENCHMARKING DONE======================================")
@@ -800,7 +694,6 @@ def run_benchmark(n_games: int, n_step_range: Tuple[int, int], n_processes_range
     print(time.ctime())
 
     return df
-
 
 
 def run_tournament(
@@ -857,8 +750,8 @@ def run_tournament(
         )
     else:
         raise ValueError(f"Unknown competition type {competition}")
-    print(tabulate(results.total_scores, headers="keys", tablefmt="psql"))
-    print(f"Finished in {humanize_time(time.perf_counter() - start)}")
+    # print(tabulate(results.total_scores, headers="keys", tablefmt="psql"))
+    # print(f"Finished in {humanize_time(time.perf_counter() - start)}")
 
 
 def run_single_session():
@@ -883,8 +776,6 @@ def run_single_session():
     df1 = signed.loc[signed.executed, fields].sort_values(["quantity", "unit_price"], ascending=False).head(10)
     df2 = signed.loc[signed.breached, fields[:-4] + ["breaches"]].sort_values(["quantity", "unit_price"],
                                                                               ascending=False).head(10)
-    # df1.to_csv('C:/Users/ED2016/Documents/SCML/scml2020/newsvendorlogs/eg17.csv')
-    # df2.to_csv('C:/Users/ED2016/Documents/SCML/scml2020/newsvendorlogs/eg18.csv')
 
     fig, (profit, score) = plt.subplots(1, 2, figsize=(15, 15))
     snames = sorted(world.non_system_agent_names)
@@ -918,8 +809,8 @@ def main():
     # run_tournament()
 
     # run_with_save(n_steps=52, n_processes=3)
-    run_benchmark(n_games=20, n_step_range=(50, 50), n_processes_range=(3, 3))
-    run_benchmark(n_games=100, n_step_range=(50, 70), n_processes_range=(3, 5))
+    run_benchmark(n_games=1, n_step_range=(50, 50), n_processes_range=(5, 5))
+    # run_benchmark(n_games=100, n_step_range=(50, 70), n_processes_range=(3, 5))
     print("Finished...")
 
 

@@ -343,7 +343,7 @@ class MontyHall(SCML2020Agent):
         for agent in self.plan.successful_contracts_agents:
             agree_count = self.plan.successful_contracts_agents[agent]
             sign_count = self.plan.signed_contracts_agents[agent]
-            p = 1.0
+            p = 2.0
             if agree_count > 0 and (agent != "BUYER") and (agent != "SELLER"):
                 p = math.sqrt((-1.0 / (2.0 * agree_count)) * math.log(delta / 2.0)) + sign_count/agree_count
             trust_probabilities[agent] = p

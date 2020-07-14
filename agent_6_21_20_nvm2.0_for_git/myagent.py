@@ -433,20 +433,21 @@ class MontyHall(SCML2020Agent):
                         output[i] = None
                     counter_sell = counter_sell + 1
 
+        # SELF EXPLOIT CHECK
         # print("signatures...before")
-        for i in range(len(contracts)):
-            # print(contracts[i], output[i])
-            price = contracts[i].agreement['unit_price']
-            # print(f"unit price: {price}")
-            # print(f"max buy price: {max_buy_price}")
-            if contracts[i].annotation['buyer'] == self.id:
-                if price > max_buy_price:
-                    # print("MAX PRICE EXCEEDED")
-                    output[i] = None
-            else:
-                if price < min_sell_price:
-                    # print("MAX PRICE EXCEEDED")
-                    output[i] = None
+        # for i in range(len(contracts)):
+        #     # print(contracts[i], output[i])
+        #     price = contracts[i].agreement['unit_price']
+        #     # print(f"unit price: {price}")
+        #     # print(f"max buy price: {max_buy_price}")
+        #     if contracts[i].annotation['buyer'] == self.id:
+        #         if price > max_buy_price:
+        #             # print("MAX PRICE EXCEEDED")
+        #             output[i] = None
+        #     else:
+        #         if price < min_sell_price:
+        #             # print("MAX PRICE EXCEEDED")
+        #             output[i] = None
 
         for i in range(len(contracts)):
             if contracts[i].annotation['is_buy'] and (contracts[i].agreement['unit_price']) > max_buy_price:
@@ -788,7 +789,7 @@ def run_benchmark(n_games: int, n_step_range: Tuple[int, int], n_processes_range
     # output to csv
     df.to_csv(f"C:/Users/ED2016/Documents/SCML/scml2020/benchmarks/"
               f"games_{n_games}_step_range_{n_step_range[0]}_{n_step_range[1]}_processes_range_{n_processes_range[0]}"
-              f"_{n_processes_range[1]}.csv")
+              f"_{n_processes_range[1]}_signer_w_inventory_no_self_exploit.csv")
 
     # print time taken
     print("======================================BENCHMARKING DONE======================================")
@@ -917,7 +918,7 @@ def main():
     # run_tournament()
 
     # run_with_save(n_steps=52, n_processes=3)
-    run_benchmark(n_games=100, n_step_range=(50, 50), n_processes_range=(3, 3))
+    run_benchmark(n_games=20, n_step_range=(50, 50), n_processes_range=(3, 3))
     run_benchmark(n_games=100, n_step_range=(50, 70), n_processes_range=(3, 5))
     print("Finished...")
 

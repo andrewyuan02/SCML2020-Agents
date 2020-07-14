@@ -30,6 +30,7 @@ from scml.scml2020.common import TIME
 from scml.scml2020.services.controllers import StepController, SyncController
 
 from mynegotiationmanager import MyNegotiationManager
+from mynegotiator import AspirationNegotiator
 
 class MyIndependentNegotiationManager:
     def __init__(

@@ -139,7 +139,7 @@ class MyNegotiationManager:
 
         #TODO: MAKE A REALLY ABUSIVE URANGE
         if is_seller:
-            return 35, 1000
+            return 35, 3000
         else:
             return 10, 18
 
